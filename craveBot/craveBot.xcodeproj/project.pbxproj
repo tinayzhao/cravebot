@@ -1,0 +1,613 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		29807FE02262AF7100B785F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29807FDF2262AF7100B785F7 /* AppDelegate.swift */; };
+		29807FE22262AF7100B785F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29807FE12262AF7100B785F7 /* ViewController.swift */; };
+		29807FE52262AF7100B785F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29807FE32262AF7100B785F7 /* Main.storyboard */; };
+		29807FE72262AF7400B785F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29807FE62262AF7400B785F7 /* Assets.xcassets */; };
+		29807FEA2262AF7400B785F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29807FE82262AF7400B785F7 /* LaunchScreen.storyboard */; };
+		29807FF52262AF7400B785F7 /* craveBotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29807FF42262AF7400B785F7 /* craveBotTests.swift */; };
+		298080002262AF7400B785F7 /* craveBotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29807FFF2262AF7400B785F7 /* craveBotUITests.swift */; };
+		298080102262B13C00B785F7 /* ChatBotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2980800F2262B13C00B785F7 /* ChatBotViewController.swift */; };
+		298080122262B16000B785F7 /* RestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298080112262B16000B785F7 /* RestaurantViewController.swift */; };
+		298080142262B16A00B785F7 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298080132262B16A00B785F7 /* Restaurant.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		29807FF12262AF7400B785F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29807FD42262AF7100B785F7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 29807FDB2262AF7100B785F7;
+			remoteInfo = craveBot;
+		};
+		29807FFC2262AF7400B785F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29807FD42262AF7100B785F7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 29807FDB2262AF7100B785F7;
+			remoteInfo = craveBot;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		29807FDC2262AF7100B785F7 /* craveBot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = craveBot.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		29807FDF2262AF7100B785F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		29807FE12262AF7100B785F7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		29807FE42262AF7100B785F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		29807FE62262AF7400B785F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		29807FE92262AF7400B785F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		29807FEB2262AF7400B785F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		29807FF02262AF7400B785F7 /* craveBotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = craveBotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		29807FF42262AF7400B785F7 /* craveBotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = craveBotTests.swift; sourceTree = "<group>"; };
+		29807FF62262AF7400B785F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		29807FFB2262AF7400B785F7 /* craveBotUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = craveBotUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		29807FFF2262AF7400B785F7 /* craveBotUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = craveBotUITests.swift; sourceTree = "<group>"; };
+		298080012262AF7400B785F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2980800F2262B13C00B785F7 /* ChatBotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBotViewController.swift; sourceTree = "<group>"; };
+		298080112262B16000B785F7 /* RestaurantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewController.swift; sourceTree = "<group>"; };
+		298080132262B16A00B785F7 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		29807FD92262AF7100B785F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29807FED2262AF7400B785F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29807FF82262AF7400B785F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		29807FD32262AF7100B785F7 = {
+			isa = PBXGroup;
+			children = (
+				29807FDE2262AF7100B785F7 /* craveBot */,
+				29807FF32262AF7400B785F7 /* craveBotTests */,
+				29807FFE2262AF7400B785F7 /* craveBotUITests */,
+				29807FDD2262AF7100B785F7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		29807FDD2262AF7100B785F7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				29807FDC2262AF7100B785F7 /* craveBot.app */,
+				29807FF02262AF7400B785F7 /* craveBotTests.xctest */,
+				29807FFB2262AF7400B785F7 /* craveBotUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29807FDE2262AF7100B785F7 /* craveBot */ = {
+			isa = PBXGroup;
+			children = (
+				29807FDF2262AF7100B785F7 /* AppDelegate.swift */,
+				29807FE12262AF7100B785F7 /* ViewController.swift */,
+				2980800E2262B12200B785F7 /* Models */,
+				2980800D2262B11000B785F7 /* ViewControllers */,
+				29807FE32262AF7100B785F7 /* Main.storyboard */,
+				29807FE62262AF7400B785F7 /* Assets.xcassets */,
+				29807FE82262AF7400B785F7 /* LaunchScreen.storyboard */,
+				29807FEB2262AF7400B785F7 /* Info.plist */,
+			);
+			path = craveBot;
+			sourceTree = "<group>";
+		};
+		29807FF32262AF7400B785F7 /* craveBotTests */ = {
+			isa = PBXGroup;
+			children = (
+				29807FF42262AF7400B785F7 /* craveBotTests.swift */,
+				29807FF62262AF7400B785F7 /* Info.plist */,
+			);
+			path = craveBotTests;
+			sourceTree = "<group>";
+		};
+		29807FFE2262AF7400B785F7 /* craveBotUITests */ = {
+			isa = PBXGroup;
+			children = (
+				29807FFF2262AF7400B785F7 /* craveBotUITests.swift */,
+				298080012262AF7400B785F7 /* Info.plist */,
+			);
+			path = craveBotUITests;
+			sourceTree = "<group>";
+		};
+		2980800D2262B11000B785F7 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2980800F2262B13C00B785F7 /* ChatBotViewController.swift */,
+				298080112262B16000B785F7 /* RestaurantViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		2980800E2262B12200B785F7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				298080132262B16A00B785F7 /* Restaurant.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		29807FDB2262AF7100B785F7 /* craveBot */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 298080042262AF7400B785F7 /* Build configuration list for PBXNativeTarget "craveBot" */;
+			buildPhases = (
+				29807FD82262AF7100B785F7 /* Sources */,
+				29807FD92262AF7100B785F7 /* Frameworks */,
+				29807FDA2262AF7100B785F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = craveBot;
+			productName = craveBot;
+			productReference = 29807FDC2262AF7100B785F7 /* craveBot.app */;
+			productType = "com.apple.product-type.application";
+		};
+		29807FEF2262AF7400B785F7 /* craveBotTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 298080072262AF7400B785F7 /* Build configuration list for PBXNativeTarget "craveBotTests" */;
+			buildPhases = (
+				29807FEC2262AF7400B785F7 /* Sources */,
+				29807FED2262AF7400B785F7 /* Frameworks */,
+				29807FEE2262AF7400B785F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				29807FF22262AF7400B785F7 /* PBXTargetDependency */,
+			);
+			name = craveBotTests;
+			productName = craveBotTests;
+			productReference = 29807FF02262AF7400B785F7 /* craveBotTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		29807FFA2262AF7400B785F7 /* craveBotUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2980800A2262AF7400B785F7 /* Build configuration list for PBXNativeTarget "craveBotUITests" */;
+			buildPhases = (
+				29807FF72262AF7400B785F7 /* Sources */,
+				29807FF82262AF7400B785F7 /* Frameworks */,
+				29807FF92262AF7400B785F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				29807FFD2262AF7400B785F7 /* PBXTargetDependency */,
+			);
+			name = craveBotUITests;
+			productName = craveBotUITests;
+			productReference = 29807FFB2262AF7400B785F7 /* craveBotUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29807FD42262AF7100B785F7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = CraveProject;
+				TargetAttributes = {
+					29807FDB2262AF7100B785F7 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					29807FEF2262AF7400B785F7 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 29807FDB2262AF7100B785F7;
+					};
+					29807FFA2262AF7400B785F7 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 29807FDB2262AF7100B785F7;
+					};
+				};
+			};
+			buildConfigurationList = 29807FD72262AF7100B785F7 /* Build configuration list for PBXProject "craveBot" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 29807FD32262AF7100B785F7;
+			productRefGroup = 29807FDD2262AF7100B785F7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				29807FDB2262AF7100B785F7 /* craveBot */,
+				29807FEF2262AF7400B785F7 /* craveBotTests */,
+				29807FFA2262AF7400B785F7 /* craveBotUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		29807FDA2262AF7100B785F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29807FEA2262AF7400B785F7 /* LaunchScreen.storyboard in Resources */,
+				29807FE72262AF7400B785F7 /* Assets.xcassets in Resources */,
+				29807FE52262AF7100B785F7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29807FEE2262AF7400B785F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29807FF92262AF7400B785F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		29807FD82262AF7100B785F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				298080142262B16A00B785F7 /* Restaurant.swift in Sources */,
+				29807FE22262AF7100B785F7 /* ViewController.swift in Sources */,
+				298080122262B16000B785F7 /* RestaurantViewController.swift in Sources */,
+				29807FE02262AF7100B785F7 /* AppDelegate.swift in Sources */,
+				298080102262B13C00B785F7 /* ChatBotViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29807FEC2262AF7400B785F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29807FF52262AF7400B785F7 /* craveBotTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29807FF72262AF7400B785F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				298080002262AF7400B785F7 /* craveBotUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		29807FF22262AF7400B785F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 29807FDB2262AF7100B785F7 /* craveBot */;
+			targetProxy = 29807FF12262AF7400B785F7 /* PBXContainerItemProxy */;
+		};
+		29807FFD2262AF7400B785F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 29807FDB2262AF7100B785F7 /* craveBot */;
+			targetProxy = 29807FFC2262AF7400B785F7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		29807FE32262AF7100B785F7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29807FE42262AF7100B785F7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		29807FE82262AF7400B785F7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29807FE92262AF7400B785F7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		298080022262AF7400B785F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		298080032262AF7400B785F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		298080052262AF7400B785F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = craveBot/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = CraveProject.craveBot;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		298080062262AF7400B785F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = craveBot/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = CraveProject.craveBot;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		298080082262AF7400B785F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = craveBotTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = CraveProject.craveBotTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/craveBot.app/craveBot";
+			};
+			name = Debug;
+		};
+		298080092262AF7400B785F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = craveBotTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = CraveProject.craveBotTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/craveBot.app/craveBot";
+			};
+			name = Release;
+		};
+		2980800B2262AF7400B785F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = craveBotUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = CraveProject.craveBotUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = craveBot;
+			};
+			name = Debug;
+		};
+		2980800C2262AF7400B785F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = craveBotUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = CraveProject.craveBotUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = craveBot;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		29807FD72262AF7100B785F7 /* Build configuration list for PBXProject "craveBot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				298080022262AF7400B785F7 /* Debug */,
+				298080032262AF7400B785F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		298080042262AF7400B785F7 /* Build configuration list for PBXNativeTarget "craveBot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				298080052262AF7400B785F7 /* Debug */,
+				298080062262AF7400B785F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		298080072262AF7400B785F7 /* Build configuration list for PBXNativeTarget "craveBotTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				298080082262AF7400B785F7 /* Debug */,
+				298080092262AF7400B785F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2980800A2262AF7400B785F7 /* Build configuration list for PBXNativeTarget "craveBotUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2980800B2262AF7400B785F7 /* Debug */,
+				2980800C2262AF7400B785F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29807FD42262AF7100B785F7 /* Project object */;
+}
