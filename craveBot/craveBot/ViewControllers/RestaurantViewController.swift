@@ -14,6 +14,7 @@ import Koloda
 class RestaurantViewController: UIViewController, KolodaViewDelegate {
     var restaurantList: [Restaurant] = []
     var currentRestaurant: Restaurant! = nil
+    
     @IBOutlet weak var kolodaView: KolodaView!
     
     override func viewDidLoad() {
@@ -22,19 +23,29 @@ class RestaurantViewController: UIViewController, KolodaViewDelegate {
         kolodaView.dataSource = self
         kolodaView.delegate = self
         
-        loadRestaurantInfo()
     }
     
-    func loadRestaurantInfo() {
-        
+    
+    @IBAction func leftButtonTapped() {
+        kolodaView?.swipe(.left)
     }
+    
+    @IBAction func rightButtonTapped() {
+        kolodaView?.swipe(.right)
+    }
+    
+    @IBAction func undoButtonTapped() {
+        kolodaView?.revertAction()
+    }
+    
     
     func kolodaDidRunOutOfCards(_ koloda: KolodaView) {
-        koloda.reloadData()
+        //TODO: ????
+        kolodaView.resetCurrentCardIndex()
     }
     
     func koloda(_ koloda: KolodaView, didSelectCardAt index: Int) {
-        UIApplication.shared.openURL(URL(string: "https://yalantis.com/")!)
+        currentRestaurant = restaurantList[index]
     }
     
     func kolodaNumberOfCards(_ koloda:KolodaView) -> Int {
@@ -46,7 +57,9 @@ class RestaurantViewController: UIViewController, KolodaViewDelegate {
     }
     
     func koloda(_ koloda: KolodaView, viewForCardAt index: Int) -> UIView {
-        return UIImageView(image: images[index])
+        currentRestaurant = restaurantList[index]
+        var newView = UIRestaurantView()
+        return UIRestaurantView()
     }
     
     func koloda(_ koloda: KolodaView, viewForCardOverlayAt index: Int) -> OverlayView? {
@@ -56,12 +69,20 @@ class RestaurantViewController: UIViewController, KolodaViewDelegate {
 }
 
 
-class UIRestaurantView: UIView {
+class UIRestaurantView: KolodaView  {
     
+    var name = ""
+    var address = ""
+    var cost = 1
+    var open =  False
+    var imageURL = ""
+    
+    @IBOutlet var image: UIImageView
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var addressLabel: UILabel!
     @IBOutlet var costLabel: UILabel!
     @IBOutlet var openLabel: UILabel!
+    
     /*
      // Only override drawRect: if you perform custom drawing.
      // An empty implementation adversely affects performance during animation.
@@ -70,4 +91,31 @@ class UIRestaurantView: UIView {
      }
      */
     
+    //below was copied from the Koloda example from git lol
+    
+    let defaultTopOffset: CGFloat = 20
+    let defaultHorizontalOffset: CGFloat = 10
+    let defaultHeightRatio: CGFloat = 1.25
+    let backgroundCardHorizontalMarginMultiplier: CGFloat = 0.25
+    let backgroundCardScalePercent: CGFloat = 1.5
+    
+    
+    override func frameForCard(at index: Int) -> CGRect {
+        if index == 0 {
+            let topOffset: CGFloat = defaultTopOffset
+            let xOffset: CGFloat = defaultHorizontalOffset
+            let width = (self.frame).width - 2 * defaultHorizontalOffset
+            let height = width * defaultHeightRatio
+            let yOffset: CGFloat = topOffset
+            let frame = CGRect(x: xOffset, y: yOffset, width: width, height: height)
+            
+            return frame
+        } else if index == 1 {
+            let horizontalMargin = -self.bounds.width * backgroundCardHorizontalMarginMultiplier
+            let width = self.bounds.width * backgroundCardScalePercent
+            let height = width * defaultHeightRatio
+            return CGRect(x: horizontalMargin, y: 0, width: width, height: height)
+        }
+        return CGRect.zero
+    }
 }

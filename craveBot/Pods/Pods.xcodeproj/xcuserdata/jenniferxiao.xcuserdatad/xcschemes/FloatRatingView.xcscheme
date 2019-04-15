@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AC072CABC8E506D54F0E983B04FC7B0E"
-               BlueprintName = "Toolbar"
+               BlueprintIdentifier = "1ECD19D434CA5F772F2D2AAB3C565665"
+               BlueprintName = "FloatRatingView"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "Toolbar.framework">
+               BuildableName = "FloatRatingView.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

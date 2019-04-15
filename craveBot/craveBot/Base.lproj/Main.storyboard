@@ -33,49 +33,103 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="nE2-lD-Mwc"/>
+                    <connections>
+                        <segue destination="0MN-Q5-4DM" kind="show" id="M3p-iv-qkW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1102" y="150"/>
+            <point key="canvasLocation" x="1158" y="113"/>
         </scene>
-        <!--View Controller-->
+        <!--Restaurants-->
         <scene sceneID="Dh0-fl-koP">
             <objects>
-                <viewController id="0MN-Q5-4DM" sceneMemberID="viewController">
+                <viewController id="0MN-Q5-4DM" customClass="RestaurantViewController" customModule="craveBot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IHh-p2-ivO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pdw-Nm-90H">
-                                <rect key="frame" x="16" y="20" width="343" height="526"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="01F-q1-dSE">
+                                <rect key="frame" x="261" y="571" width="88" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="ic_like"/>
+                                <connections>
+                                    <action selector="rightButtonTapped" destination="0MN-Q5-4DM" eventType="touchUpInside" id="bih-CK-DBN"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pdw-Nm-90H" customClass="UIRestaurantView" customModule="craveBot" customModuleProvider="target">
+                                <rect key="frame" x="16" y="74" width="343" height="481"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aFu-KW-fGT">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="472"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aFu-KW-fGT">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="371"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gAi-i9-rUq">
+                                        <rect key="frame" x="8" y="417" width="42" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vcy-Z3-doI">
+                                        <rect key="frame" x="8" y="446" width="42" height="27"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TIx-yP-gIq">
+                                        <rect key="frame" x="8" y="379" width="42" height="27"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Moy-Du-Aap">
+                                        <rect key="frame" x="77" y="382" width="42" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="aFu-KW-fGT" secondAttribute="bottom" constant="54" id="QMt-Qc-irl"/>
-                                    <constraint firstItem="aFu-KW-fGT" firstAttribute="width" secondItem="Pdw-Nm-90H" secondAttribute="width" id="Ze4-EX-ah5"/>
-                                    <constraint firstAttribute="width" secondItem="Pdw-Nm-90H" secondAttribute="height" multiplier="343:526" id="cEu-w0-kFu"/>
-                                    <constraint firstAttribute="width" constant="343" id="f2p-3N-yN8"/>
-                                    <constraint firstItem="aFu-KW-fGT" firstAttribute="centerX" secondItem="Pdw-Nm-90H" secondAttribute="centerX" id="iAa-Na-t7D"/>
-                                    <constraint firstAttribute="height" constant="526" id="r39-ro-CME"/>
-                                    <constraint firstItem="aFu-KW-fGT" firstAttribute="top" secondItem="Pdw-Nm-90H" secondAttribute="top" id="tzx-Ju-yoK"/>
-                                </constraints>
+                                <connections>
+                                    <outlet property="addressLabel" destination="Vcy-Z3-doI" id="gmr-8T-EBx"/>
+                                    <outlet property="costLabel" destination="gAi-i9-rUq" id="T0a-lQ-q1F"/>
+                                    <outlet property="image" destination="aFu-KW-fGT" id="QdY-m0-uQA"/>
+                                    <outlet property="nameLabel" destination="TIx-yP-gIq" id="kD1-xv-pvU"/>
+                                    <outlet property="openLabel" destination="Moy-Du-Aap" id="Fso-Qy-S3S"/>
+                                </connections>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6MH-Ah-ZGr">
+                                <rect key="frame" x="42" y="575" width="70" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="ic_skip"/>
+                                <connections>
+                                    <action selector="leftButtonTapped" destination="0MN-Q5-4DM" eventType="touchUpInside" id="IVn-gc-sW5"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="Pdw-Nm-90H" firstAttribute="top" secondItem="ksl-f7-gLd" secondAttribute="top" id="Vzr-JC-me5"/>
-                            <constraint firstItem="Pdw-Nm-90H" firstAttribute="leading" secondItem="IHh-p2-ivO" secondAttribute="leadingMargin" id="xQF-LB-3Ya"/>
-                        </constraints>
+                        <color key="backgroundColor" red="0.60144106220000004" green="0.15116630049999999" blue="0.14949735729999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="ksl-f7-gLd"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Restaurants" id="3ZY-ro-dch">
+                        <barButtonItem key="backBarButtonItem" title="BacktoChat" id="Bi4-av-s7b"/>
+                        <barButtonItem key="rightBarButtonItem" title="Undo" image="ic_undo" id="pgE-3S-e2z">
+                            <connections>
+                                <action selector="undoButtonTapped" destination="0MN-Q5-4DM" id="Wv2-Y9-qS1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="kolodaView" destination="Pdw-Nm-90H" id="D26-dC-ft9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bPi-Uv-M7a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1828" y="149.77511244377811"/>
+            <point key="canvasLocation" x="1868" y="112.89355322338831"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="i6F-on-qHZ">
@@ -96,4 +150,9 @@
             <point key="canvasLocation" x="337" y="150"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ic_like" width="76" height="68"/>
+        <image name="ic_skip" width="114" height="102"/>
+        <image name="ic_undo" width="21.5" height="21.5"/>
+    </resources>
 </document>

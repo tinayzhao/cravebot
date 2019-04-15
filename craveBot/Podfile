@@ -10,7 +10,7 @@ target 'craveBot' do
   pod "Koloda"
   pod 'SwiftLocation', '~> 3.2.3'
   pod 'Toolbar'
-
+  pod 'FloatRatingView'
   # Pods for craveBot
 
   target 'craveBotTests' do
