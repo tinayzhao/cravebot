@@ -1,0 +1,37 @@
+PODS:
+  - Alamofire (5.0.0-beta.5)
+  - Koloda (4.7):
+    - pop (~> 1.0)
+  - pop (1.0.12)
+  - SwiftLocation (3.2.3):
+    - SwiftyJSON (~> 4.0.0-alpha.1)
+  - SwiftyJSON (4.0.0)
+  - Toolbar (0.5.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 5.0.0-beta.5)
+  - Koloda
+  - SwiftLocation (~> 3.2.3)
+  - SwiftyJSON (~> 4.0)
+  - Toolbar
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - Koloda
+    - pop
+    - SwiftLocation
+    - SwiftyJSON
+    - Toolbar
+
+SPEC CHECKSUMS:
+  Alamofire: 9afb08f7f43efcc71c072374e720fcf67521317d
+  Koloda: f456d003d2ce15ef9f10c2874a444f1f570b490c
+  pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
+  SwiftLocation: a3c3bc2023118171ef3572188a31def94aa0892c
+  SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
+  Toolbar: 240546f9a531266f639b713994b8b9eb7bb3391b
+
+PODFILE CHECKSUM: 74f7c7dfc9c80b9381b024d93f15eff792318e64
+
+COCOAPODS: 1.5.3

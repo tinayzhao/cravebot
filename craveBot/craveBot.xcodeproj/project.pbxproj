@@ -17,6 +17,9 @@
 		298080102262B13C00B785F7 /* ChatBotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2980800F2262B13C00B785F7 /* ChatBotViewController.swift */; };
 		298080122262B16000B785F7 /* RestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298080112262B16000B785F7 /* RestaurantViewController.swift */; };
 		298080142262B16A00B785F7 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298080132262B16A00B785F7 /* Restaurant.swift */; };
+		5794393103BC3A7C0DD2B975 /* Pods_craveBotUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AA32620F393CBC9A83C797F /* Pods_craveBotUITests.framework */; };
+		67704F30467965DAA12EA97E /* Pods_craveBotTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BC11038243D164E319889F1 /* Pods_craveBotTests.framework */; };
+		B4789815697214F4E4402CFC /* Pods_craveBot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C1AE61461DD8A7ED35BECEC /* Pods_craveBot.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		06E5DC638331D3BBEE335A00 /* Pods-craveBotTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-craveBotTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-craveBotTests/Pods-craveBotTests.release.xcconfig"; sourceTree = "<group>"; };
 		29807FDC2262AF7100B785F7 /* craveBot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = craveBot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29807FDF2262AF7100B785F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		29807FE12262AF7100B785F7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +57,14 @@
 		2980800F2262B13C00B785F7 /* ChatBotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBotViewController.swift; sourceTree = "<group>"; };
 		298080112262B16000B785F7 /* RestaurantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewController.swift; sourceTree = "<group>"; };
 		298080132262B16A00B785F7 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		3A9E3F89D13BAF6B75C44D43 /* Pods-craveBot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-craveBot.release.xcconfig"; path = "Pods/Target Support Files/Pods-craveBot/Pods-craveBot.release.xcconfig"; sourceTree = "<group>"; };
+		3C1AE61461DD8A7ED35BECEC /* Pods_craveBot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_craveBot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		473216DD839E9F7E4A941BD2 /* Pods-craveBotTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-craveBotTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-craveBotTests/Pods-craveBotTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4BC11038243D164E319889F1 /* Pods_craveBotTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_craveBotTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FE97228F82AB3750A77FB07 /* Pods-craveBotUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-craveBotUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-craveBotUITests/Pods-craveBotUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6AA32620F393CBC9A83C797F /* Pods_craveBotUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_craveBotUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		751CE630EE7F3B55784E1F57 /* Pods-craveBotUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-craveBotUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-craveBotUITests/Pods-craveBotUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		88D9158852C95ED80FD0FE57 /* Pods-craveBot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-craveBot.debug.xcconfig"; path = "Pods/Target Support Files/Pods-craveBot/Pods-craveBot.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4789815697214F4E4402CFC /* Pods_craveBot.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67704F30467965DAA12EA97E /* Pods_craveBotTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5794393103BC3A7C0DD2B975 /* Pods_craveBotUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +102,8 @@
 				29807FF32262AF7400B785F7 /* craveBotTests */,
 				29807FFE2262AF7400B785F7 /* craveBotUITests */,
 				29807FDD2262AF7100B785F7 /* Products */,
+				6DEA8AF8D67C14C8AF5D7D4E /* Pods */,
+				E800C37FCFAC3AF9352EA93F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -150,6 +167,29 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		6DEA8AF8D67C14C8AF5D7D4E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				88D9158852C95ED80FD0FE57 /* Pods-craveBot.debug.xcconfig */,
+				3A9E3F89D13BAF6B75C44D43 /* Pods-craveBot.release.xcconfig */,
+				473216DD839E9F7E4A941BD2 /* Pods-craveBotTests.debug.xcconfig */,
+				06E5DC638331D3BBEE335A00 /* Pods-craveBotTests.release.xcconfig */,
+				751CE630EE7F3B55784E1F57 /* Pods-craveBotUITests.debug.xcconfig */,
+				4FE97228F82AB3750A77FB07 /* Pods-craveBotUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E800C37FCFAC3AF9352EA93F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3C1AE61461DD8A7ED35BECEC /* Pods_craveBot.framework */,
+				4BC11038243D164E319889F1 /* Pods_craveBotTests.framework */,
+				6AA32620F393CBC9A83C797F /* Pods_craveBotUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -157,9 +197,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 298080042262AF7400B785F7 /* Build configuration list for PBXNativeTarget "craveBot" */;
 			buildPhases = (
+				1F6B3DD9C9906BAF8AEC4F28 /* [CP] Check Pods Manifest.lock */,
 				29807FD82262AF7100B785F7 /* Sources */,
 				29807FD92262AF7100B785F7 /* Frameworks */,
 				29807FDA2262AF7100B785F7 /* Resources */,
+				D12F2D4E1906F6421E3C6B30 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -174,6 +216,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 298080072262AF7400B785F7 /* Build configuration list for PBXNativeTarget "craveBotTests" */;
 			buildPhases = (
+				DDDF4DE0F2AB2F8D5588D194 /* [CP] Check Pods Manifest.lock */,
 				29807FEC2262AF7400B785F7 /* Sources */,
 				29807FED2262AF7400B785F7 /* Frameworks */,
 				29807FEE2262AF7400B785F7 /* Resources */,
@@ -192,6 +235,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2980800A2262AF7400B785F7 /* Build configuration list for PBXNativeTarget "craveBotUITests" */;
 			buildPhases = (
+				C051DA273AF4C45B0E5C11D2 /* [CP] Check Pods Manifest.lock */,
 				29807FF72262AF7400B785F7 /* Sources */,
 				29807FF82262AF7400B785F7 /* Frameworks */,
 				29807FF92262AF7400B785F7 /* Resources */,
@@ -275,6 +319,107 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1F6B3DD9C9906BAF8AEC4F28 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-craveBot-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C051DA273AF4C45B0E5C11D2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-craveBotUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D12F2D4E1906F6421E3C6B30 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-craveBot/Pods-craveBot-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Koloda/Koloda.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftLocation/SwiftLocation.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/Toolbar/Toolbar.framework",
+				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Koloda.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftLocation.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toolbar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-craveBot/Pods-craveBot-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DDDF4DE0F2AB2F8D5588D194 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-craveBotTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		29807FD82262AF7100B785F7 /* Sources */ = {
@@ -458,6 +603,7 @@
 		};
 		298080052262AF7400B785F7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88D9158852C95ED80FD0FE57 /* Pods-craveBot.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -475,6 +621,7 @@
 		};
 		298080062262AF7400B785F7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A9E3F89D13BAF6B75C44D43 /* Pods-craveBot.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -492,6 +639,7 @@
 		};
 		298080082262AF7400B785F7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 473216DD839E9F7E4A941BD2 /* Pods-craveBotTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -512,6 +660,7 @@
 		};
 		298080092262AF7400B785F7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06E5DC638331D3BBEE335A00 /* Pods-craveBotTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -532,6 +681,7 @@
 		};
 		2980800B2262AF7400B785F7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 751CE630EE7F3B55784E1F57 /* Pods-craveBotUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -551,6 +701,7 @@
 		};
 		2980800C2262AF7400B785F7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4FE97228F82AB3750A77FB07 /* Pods-craveBotUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

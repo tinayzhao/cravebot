@@ -1,0 +1,6 @@
+framework module Pods_craveBotTests {
+  umbrella header "Pods-craveBotTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
