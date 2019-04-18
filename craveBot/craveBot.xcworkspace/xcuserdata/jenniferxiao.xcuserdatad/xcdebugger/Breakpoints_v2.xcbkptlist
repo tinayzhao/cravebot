@@ -10,90 +10,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "craveBot/ViewControllers/RestaurantViewController.swift"
-            timestampString = "577088403.029292"
+            timestampString = "577312527.875823"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "14"
             endingLineNumber = "14"
             landmarkName = "unknown"
             landmarkType = "0">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "craveBot.RestaurantViewController.__allocating_init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; craveBot.RestaurantViewController"
-                  moduleName = "craveBot"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jenniferxiao/CraveProject/cravebot/craveBot/craveBot/ViewControllers/RestaurantViewController.swift"
-                  timestampString = "577088404.224252"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "4">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "craveBot.RestaurantViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; craveBot.RestaurantViewController"
-                  moduleName = "craveBot"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jenniferxiao/CraveProject/cravebot/craveBot/craveBot/ViewControllers/RestaurantViewController.swift"
-                  timestampString = "577088404.2297519"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "15"
-                  endingLineNumber = "15"
-                  offsetFromSymbolStart = "49">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "craveBot.RestaurantViewController.__allocating_init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;craveBot.RestaurantViewController&gt;"
-                  moduleName = "craveBot"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jenniferxiao/CraveProject/cravebot/craveBot/craveBot/ViewControllers/RestaurantViewController.swift"
-                  timestampString = "577088404.233168"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "4">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "craveBot.RestaurantViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;craveBot.RestaurantViewController&gt;"
-                  moduleName = "craveBot"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jenniferxiao/CraveProject/cravebot/craveBot/craveBot/ViewControllers/RestaurantViewController.swift"
-                  timestampString = "577088404.236943"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "15"
-                  endingLineNumber = "15"
-                  offsetFromSymbolStart = "41">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "craveBot.RestaurantViewController.__deallocating_deinit"
-                  moduleName = "craveBot"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jenniferxiao/CraveProject/cravebot/craveBot/craveBot/ViewControllers/RestaurantViewController.swift"
-                  timestampString = "577088404.241241"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "16">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

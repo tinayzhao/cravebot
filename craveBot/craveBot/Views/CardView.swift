@@ -10,7 +10,7 @@ import Foundation
 import FloatRatingView
 
 import UIKit
-/Users/jenniferxiao/CraveProject/cravebot/craveBot/craveBot/ViewControllers/ChatBotViewController.swift
+
 class CardView: UIView {
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var RestaurantName: UILabel!

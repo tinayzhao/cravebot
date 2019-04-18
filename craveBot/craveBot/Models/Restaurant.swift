@@ -16,6 +16,10 @@ import UIKit
         self.json = json
     }
     
+    /*init(jsonObject: JSONObject) {
+        self.json = JSON(jsonObject)
+    }*/
+    
     var name: String? {
         return self.json["name"].stringValue
     }

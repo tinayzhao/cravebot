@@ -46,7 +46,7 @@
 /* Begin PBXFileReference section */
 		06E5DC638331D3BBEE335A00 /* Pods-craveBotTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-craveBotTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-craveBotTests/Pods-craveBotTests.release.xcconfig"; sourceTree = "<group>"; };
 		291913102268B5D8000498C5 /* RestaurantExamples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantExamples.swift; sourceTree = "<group>"; };
-		291913122268B92F000498C5 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = data.json; path = craveBot/Models/data.json; sourceTree = SOURCE_ROOT; };
+		291913122268B92F000498C5 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = data.json; path = craveBot/data.json; sourceTree = SOURCE_ROOT; };
 		29237F212265B70200B332EE /* CardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
 		29237F232265B76600B332EE /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		29807FDC2262AF7100B785F7 /* craveBot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = craveBot.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,6 +140,7 @@
 				2919130F2268B572000498C5 /* Views */,
 				29807FDF2262AF7100B785F7 /* AppDelegate.swift */,
 				29807FE12262AF7100B785F7 /* ViewController.swift */,
+				291913122268B92F000498C5 /* data.json */,
 				2980800E2262B12200B785F7 /* Models */,
 				2980800D2262B11000B785F7 /* ViewControllers */,
 				29807FE32262AF7100B785F7 /* Main.storyboard */,
@@ -182,7 +183,6 @@
 			children = (
 				298080132262B16A00B785F7 /* Restaurant.swift */,
 				291913102268B5D8000498C5 /* RestaurantExamples.swift */,
-				291913122268B92F000498C5 /* data.json */,
 			);
 			path = Models;
 			sourceTree = "<group>";

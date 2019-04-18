@@ -12,12 +12,14 @@ import SwiftyJSON
 
 class ChatBotViewController: UIViewController {
     
+    var restaurantList : [Restaurant] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
     
-    @IBAction func tempRestaurantTest(_ sender: Any) {
+    @IBAction func tempButton(_ sender: Any) {
         performSegue(withIdentifier: "chatbotToRestaurantSegue", sender: self)
     }
     
@@ -33,12 +35,46 @@ class ChatBotViewController: UIViewController {
         
     }
     
+    func getRestaurantList(){
+        //test: with preloaded json
+        let path = Bundle.main.path(forResource: "data", ofType: "json")
+        
+        print(path)
+        let jsonData = NSData(contentsOfFile:path!)
+        do {
+            let json = try JSON(data: jsonData! as Data)
+            let jsonList = json["businesses"].arrayValue.map {$0["name"].stringValue}
+            for item in jsonList {
+                let restarauntJSON = JSON(item)
+                restaurantList.append(Restaurant(json: restarauntJSON))
+            }
+            print("success")
+        }catch let error {
+                print(error.localizedDescription)
+        }
+        
+        /*do {
+          //  let data = try Data(contentsOf: URL(fileURLWithPath: path!), options: .alwaysMapped)
+           // if let dataFromString = data.data(using: .utf8, allowLossyConversion: false) {
+             //   let json = JSON(data: dataFromString)
+               // let restaurantList = json["businesses"]
+            }
+            //let jsonObj = JSONSerializer.toJson(data)
+            //print(jsonObj)
+            //let json = JSON(data: data)
+            
+        } catch let error {
+            print(error.localizedDescription)
+        }
+ */
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "chatbotToRestaurantSegue"){
             if let dest = segue.destination as? RestaurantViewController {
-                let path = Bundle.main.path(forResource: "data.json", ofType: "Data", inDirectory: "craveBot/Models")
-                let json = JSON(data: path)
-                dest.restaurantList = json["businesses"]
+                
+                getRestaurantList()
+                dest.restaurantList = restaurantList
             }
         }
     }
