@@ -5,12 +5,14 @@ target 'craveBot' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
 
-  pod 'Alamofire', '~> 5.0.0-beta.5'
+  pod 'Alamofire', '~> 4.0.0'
   pod 'SwiftyJSON', '~> 4.0'
   pod "Koloda"
   pod 'SwiftLocation', '~> 3.2.3'
   pod 'Toolbar'
   pod 'FloatRatingView'
+  pod 'Kingfisher'
+
   # Pods for craveBot
 
   target 'craveBotTests' do

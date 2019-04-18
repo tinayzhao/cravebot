@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import SwiftyJSON
 
 class ChatBotViewController: UIViewController {
     
@@ -16,20 +17,30 @@ class ChatBotViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
     
+    @IBAction func tempRestaurantTest(_ sender: Any) {
+        performSegue(withIdentifier: "chatbotToRestaurantSegue", sender: self)
+    }
+    
     func getNextMesssage() -> String{
         return ""
     }
     
-    func getBackgroundImage() {
-        
+    func getBackgroundImage() -> UIImage {
+        return UIImage()
     }
     
     func changeBackgroundImage(){
         
     }
     
-    func sendMessage(){
-        
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "chatbotToRestaurantSegue"){
+            if let dest = segue.destination as? RestaurantViewController {
+                let path = Bundle.main.path(forResource: "data.json", ofType: "Data", inDirectory: "craveBot/Models")
+                let json = JSON(data: path)
+                dest.restaurantList = json["businesses"]
+            }
+        }
     }
 
 }

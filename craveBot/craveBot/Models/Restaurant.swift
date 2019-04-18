@@ -6,6 +6,8 @@
 //  Copyright © 2019 CraveProject. All rights reserved.
 //
 import SwiftyJSON
+import Foundation
+import UIKit
 
 @objc class Restaurant: NSObject {
     private var json: JSON
@@ -14,13 +16,10 @@ import SwiftyJSON
         self.json = json
     }
     
-    init(jsonObject: JSONObject) {
-        self.json = JSON(jsonObject)
-    }
-    
     var name: String? {
         return self.json["name"].stringValue
     }
+    
     var rating: Double? {
         return self.json["rating"].doubleValue
     }
@@ -40,6 +39,10 @@ import SwiftyJSON
     var open: Bool? {
         //TODO:
         return Bool(self.json["isOpen"].stringValue)
+    }
+    
+    var cost: Double? {
+        return Double(self.json["cost"].stringValue)
     }
     //hours?
     //
