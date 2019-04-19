@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2916903422699FE200384325 /* restaurant.json in Resources */ = {isa = PBXBuildFile; fileRef = 2916903322699FE200384325 /* restaurant.json */; };
+		291690362269AE0500384325 /* KolodaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291690352269AE0500384325 /* KolodaView.swift */; };
+		291690382269B1A300384325 /* CardHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291690372269B1A300384325 /* CardHeaderView.swift */; };
+		2916903A2269B1AD00384325 /* CardHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 291690392269B1AD00384325 /* CardHeaderView.xib */; };
+		2916903C2269B1B700384325 /* CandidateCardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2916903B2269B1B600384325 /* CandidateCardCell.xib */; };
+		2916903E2269B1BF00384325 /* CardHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2916903D2269B1BF00384325 /* CardHeaderView.swift */; };
+		291913112268B5D8000498C5 /* RestaurantExamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291913102268B5D8000498C5 /* RestaurantExamples.swift */; };
+		291913132268B92F000498C5 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 291913122268B92F000498C5 /* data.json */; };
+		29237F222265B70300B332EE /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29237F212265B70200B332EE /* CardView.xib */; };
+		29237F242265B76600B332EE /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29237F232265B76600B332EE /* CardView.swift */; };
 		29807FE02262AF7100B785F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29807FDF2262AF7100B785F7 /* AppDelegate.swift */; };
 		29807FE22262AF7100B785F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29807FE12262AF7100B785F7 /* ViewController.swift */; };
 		29807FE52262AF7100B785F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29807FE32262AF7100B785F7 /* Main.storyboard */; };
@@ -41,6 +51,16 @@
 
 /* Begin PBXFileReference section */
 		06E5DC638331D3BBEE335A00 /* Pods-craveBotTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-craveBotTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-craveBotTests/Pods-craveBotTests.release.xcconfig"; sourceTree = "<group>"; };
+		2916903322699FE200384325 /* restaurant.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = restaurant.json; sourceTree = "<group>"; };
+		291690352269AE0500384325 /* KolodaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KolodaView.swift; sourceTree = "<group>"; };
+		291690372269B1A300384325 /* CardHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardHeaderView.swift; path = "../../../../../Downloads/SwipeCardView-master/SwipeCardView/CardHeaderView.swift"; sourceTree = "<group>"; };
+		291690392269B1AD00384325 /* CardHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CardHeaderView.xib; path = "../../../../../Downloads/SwipeCardView-master/SwipeCardView/CardHeaderView.xib"; sourceTree = "<group>"; };
+		2916903B2269B1B600384325 /* CandidateCardCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CandidateCardCell.xib; path = "../../../../../Downloads/SwipeCardView-master/SwipeCardView/CandidateCardCell.xib"; sourceTree = "<group>"; };
+		2916903D2269B1BF00384325 /* CardHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardHeaderView.swift; path = "../../../../../Downloads/SwipeCardView-master/SwipeCardView/CardHeaderView.swift"; sourceTree = "<group>"; };
+		291913102268B5D8000498C5 /* RestaurantExamples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantExamples.swift; sourceTree = "<group>"; };
+		291913122268B92F000498C5 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = data.json; path = craveBot/data.json; sourceTree = SOURCE_ROOT; };
+		29237F212265B70200B332EE /* CardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
+		29237F232265B76600B332EE /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		29807FDC2262AF7100B785F7 /* craveBot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = craveBot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29807FDF2262AF7100B785F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		29807FE12262AF7100B785F7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +115,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2919130F2268B572000498C5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				291690372269B1A300384325 /* CardHeaderView.swift */,
+				291690392269B1AD00384325 /* CardHeaderView.xib */,
+				29237F232265B76600B332EE /* CardView.swift */,
+				29237F212265B70200B332EE /* CardView.xib */,
+				2916903D2269B1BF00384325 /* CardHeaderView.swift */,
+				2916903B2269B1B600384325 /* CandidateCardCell.xib */,
+				291690352269AE0500384325 /* KolodaView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		29807FD32262AF7100B785F7 = {
 			isa = PBXGroup;
 			children = (
@@ -120,8 +154,11 @@
 		29807FDE2262AF7100B785F7 /* craveBot */ = {
 			isa = PBXGroup;
 			children = (
+				2919130F2268B572000498C5 /* Views */,
 				29807FDF2262AF7100B785F7 /* AppDelegate.swift */,
 				29807FE12262AF7100B785F7 /* ViewController.swift */,
+				291913122268B92F000498C5 /* data.json */,
+				2916903322699FE200384325 /* restaurant.json */,
 				2980800E2262B12200B785F7 /* Models */,
 				2980800D2262B11000B785F7 /* ViewControllers */,
 				29807FE32262AF7100B785F7 /* Main.storyboard */,
@@ -163,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				298080132262B16A00B785F7 /* Restaurant.swift */,
+				291913102268B5D8000498C5 /* RestaurantExamples.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -298,8 +336,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2916903A2269B1AD00384325 /* CardHeaderView.xib in Resources */,
 				29807FEA2262AF7400B785F7 /* LaunchScreen.storyboard in Resources */,
 				29807FE72262AF7400B785F7 /* Assets.xcassets in Resources */,
+				29237F222265B70300B332EE /* CardView.xib in Resources */,
+				291913132268B92F000498C5 /* data.json in Resources */,
+				2916903C2269B1B700384325 /* CandidateCardCell.xib in Resources */,
+				2916903422699FE200384325 /* restaurant.json in Resources */,
 				29807FE52262AF7100B785F7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -376,6 +419,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-craveBot/Pods-craveBot-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/FloatRatingView/FloatRatingView.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Koloda/Koloda.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftLocation/SwiftLocation.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
@@ -388,6 +432,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FloatRatingView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Koloda.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftLocation.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
@@ -428,10 +473,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				291690362269AE0500384325 /* KolodaView.swift in Sources */,
 				298080142262B16A00B785F7 /* Restaurant.swift in Sources */,
 				29807FE22262AF7100B785F7 /* ViewController.swift in Sources */,
+				291913112268B5D8000498C5 /* RestaurantExamples.swift in Sources */,
 				298080122262B16000B785F7 /* RestaurantViewController.swift in Sources */,
+				291690382269B1A300384325 /* CardHeaderView.swift in Sources */,
 				29807FE02262AF7100B785F7 /* AppDelegate.swift in Sources */,
+				2916903E2269B1BF00384325 /* CardHeaderView.swift in Sources */,
+				29237F242265B76600B332EE /* CardView.swift in Sources */,
 				298080102262B13C00B785F7 /* ChatBotViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

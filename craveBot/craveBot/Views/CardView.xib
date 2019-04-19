@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="IRANYekanMobileRegular.ttf">
+            <string>IRANYekanMobile</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CardView" customModule="craveBot" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jqh-C1-dzG" customClass="CardHeaderView" customModule="craveBot" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="g0Z-aH-Quj">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="416"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="416" id="9tH-7z-sy0"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="g0Z-aH-Quj" secondAttribute="trailing" id="4gR-Mz-P9z"/>
+                        <constraint firstItem="g0Z-aH-Quj" firstAttribute="top" secondItem="jqh-C1-dzG" secondAttribute="top" id="9wq-KU-cOy"/>
+                        <constraint firstItem="g0Z-aH-Quj" firstAttribute="leading" secondItem="jqh-C1-dzG" secondAttribute="leading" id="fUr-I0-eVc"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="VBu-bl-Uv0"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dTP-BR-BgR">
+                    <rect key="frame" x="0.0" y="348" width="375" height="68"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restaurant Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dp2-xR-ePM">
+                            <rect key="frame" x="24" y="8" width="327" height="52"/>
+                            <fontDescription key="fontDescription" name="IRANYekanMobile" family="IRANYekanMobile" pointSize="22"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="0.74360552226027399" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstItem="dp2-xR-ePM" firstAttribute="top" secondItem="dTP-BR-BgR" secondAttribute="topMargin" id="IAq-fL-io2"/>
+                        <constraint firstItem="dp2-xR-ePM" firstAttribute="leading" secondItem="dTP-BR-BgR" secondAttribute="leading" constant="24" id="M67-NZ-MyD"/>
+                        <constraint firstItem="dp2-xR-ePM" firstAttribute="bottom" secondItem="dTP-BR-BgR" secondAttribute="bottomMargin" id="heE-SQ-t3A"/>
+                        <constraint firstItem="dp2-xR-ePM" firstAttribute="centerX" secondItem="dTP-BR-BgR" secondAttribute="centerX" id="s0H-UX-F7D"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jXY-np-OBv">
+                    <rect key="frame" x="16" y="455" width="343" height="199"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="60Q-iY-Drw">
+                            <rect key="frame" x="0.0" y="37" width="200" height="25"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="200" id="QTg-aO-FqY"/>
+                                <constraint firstAttribute="height" constant="25" id="psk-Ty-zJf"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="IRANYekanMobile" family="IRANYekanMobile" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Open Now" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qxE-mz-9Wi">
+                            <rect key="frame" x="0.0" y="8" width="99" height="25"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="99" id="1dP-nG-BE2"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="IRANYekanMobile" family="IRANYekanMobile" pointSize="19"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12 AM - 12 PM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uha-bu-Uqi">
+                            <rect key="frame" x="134" y="10" width="115" height="25"/>
+                            <fontDescription key="fontDescription" name="IRANYekanMobile" family="IRANYekanMobile" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Take me there" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9uQ-pd-cWw">
+                            <rect key="frame" x="0.0" y="87" width="106" height="25"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="106" id="YY4-Uz-OUi"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="IRANYekanMobile" family="IRANYekanMobile" pointSize="16"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1234 Apple St. Berkeley, CA " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v1W-lJ-mM4">
+                            <rect key="frame" x="0.0" y="62" width="280" height="21"/>
+                            <fontDescription key="fontDescription" name="IRANYekanMobile" family="IRANYekanMobile" pointSize="13"/>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="v1W-lJ-mM4" secondAttribute="trailing" constant="63" id="17I-2J-T6o"/>
+                        <constraint firstItem="60Q-iY-Drw" firstAttribute="leading" secondItem="v1W-lJ-mM4" secondAttribute="leading" id="2IR-Nf-WtI"/>
+                        <constraint firstItem="60Q-iY-Drw" firstAttribute="top" secondItem="qxE-mz-9Wi" secondAttribute="bottom" constant="4" id="6tR-pZ-CMR"/>
+                        <constraint firstItem="qxE-mz-9Wi" firstAttribute="leading" secondItem="60Q-iY-Drw" secondAttribute="leading" id="7k8-LM-UwX"/>
+                        <constraint firstItem="uha-bu-Uqi" firstAttribute="leading" secondItem="qxE-mz-9Wi" secondAttribute="trailing" constant="35" id="VWu-MO-jE9"/>
+                        <constraint firstItem="v1W-lJ-mM4" firstAttribute="leading" secondItem="9uQ-pd-cWw" secondAttribute="leading" id="Won-8N-XUs"/>
+                        <constraint firstItem="9uQ-pd-cWw" firstAttribute="top" secondItem="v1W-lJ-mM4" secondAttribute="bottom" constant="4" id="YWG-Fd-72E"/>
+                        <constraint firstItem="qxE-mz-9Wi" firstAttribute="top" secondItem="jXY-np-OBv" secondAttribute="topMargin" id="b09-1n-yYy"/>
+                        <constraint firstItem="qxE-mz-9Wi" firstAttribute="firstBaseline" secondItem="uha-bu-Uqi" secondAttribute="firstBaseline" id="hnS-is-Dsx"/>
+                        <constraint firstItem="60Q-iY-Drw" firstAttribute="top" secondItem="uha-bu-Uqi" secondAttribute="bottom" constant="2" id="ixC-8f-RQA"/>
+                        <constraint firstItem="qxE-mz-9Wi" firstAttribute="leading" secondItem="jXY-np-OBv" secondAttribute="leading" id="kZD-Ue-Mo7"/>
+                        <constraint firstAttribute="bottom" secondItem="9uQ-pd-cWw" secondAttribute="bottom" constant="87" id="mAv-PX-d34"/>
+                        <constraint firstItem="v1W-lJ-mM4" firstAttribute="top" secondItem="60Q-iY-Drw" secondAttribute="bottom" id="nLf-EL-92b"/>
+                        <constraint firstItem="9uQ-pd-cWw" firstAttribute="centerY" secondItem="jXY-np-OBv" secondAttribute="centerY" id="qeN-As-BRv"/>
+                        <constraint firstItem="60Q-iY-Drw" firstAttribute="top" secondItem="jXY-np-OBv" secondAttribute="top" constant="37" id="r3e-Lc-xdJ"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wud-uI-LOH" customClass="FloatRatingView" customModule="FloatRatingView">
+                    <rect key="frame" x="68" y="413" width="238" height="34"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="wud-uI-LOH" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="413" id="0Jr-Yg-7Fz"/>
+                <constraint firstItem="dTP-BR-BgR" firstAttribute="centerX" secondItem="wud-uI-LOH" secondAttribute="centerX" id="373-b3-Zlr"/>
+                <constraint firstItem="wud-uI-LOH" firstAttribute="centerX" secondItem="jXY-np-OBv" secondAttribute="centerX" id="3eS-FK-mll"/>
+                <constraint firstItem="jqh-C1-dzG" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="5sG-qL-Xf8"/>
+                <constraint firstItem="jqh-C1-dzG" firstAttribute="leading" secondItem="dTP-BR-BgR" secondAttribute="leading" id="Drm-Q7-7dj"/>
+                <constraint firstItem="dTP-BR-BgR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="348" id="GiY-p6-a1R"/>
+                <constraint firstItem="dTP-BR-BgR" firstAttribute="top" secondItem="jqh-C1-dzG" secondAttribute="bottom" constant="98" id="HUC-Yp-vcH"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="jXY-np-OBv" secondAttribute="bottom" constant="13" id="O8H-Br-36v"/>
+                <constraint firstItem="jqh-C1-dzG" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="RM3-qX-2zp"/>
+                <constraint firstAttribute="trailing" secondItem="jqh-C1-dzG" secondAttribute="trailing" id="XE1-OU-TjR"/>
+                <constraint firstItem="jXY-np-OBv" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" id="eeT-7t-SRY"/>
+                <constraint firstItem="wud-uI-LOH" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="68" id="exA-1v-dx1"/>
+                <constraint firstItem="jXY-np-OBv" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="455" id="hgO-uC-pYH"/>
+                <constraint firstItem="jXY-np-OBv" firstAttribute="top" secondItem="wud-uI-LOH" secondAttribute="bottom" constant="8" symbolic="YES" id="ql2-Ed-Tv6"/>
+                <constraint firstItem="jqh-C1-dzG" firstAttribute="trailing" secondItem="dTP-BR-BgR" secondAttribute="trailing" id="qsm-mT-et0"/>
+                <constraint firstItem="jXY-np-OBv" firstAttribute="top" secondItem="dTP-BR-BgR" secondAttribute="bottom" constant="39" id="sth-nA-Plw"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="RestaurantName" destination="dp2-xR-ePM" id="Tqm-2d-2ZC"/>
+                <outlet property="address" destination="v1W-lJ-mM4" id="Diy-kn-sq6"/>
+                <outlet property="cost" destination="9uQ-pd-cWw" id="hAQ-kk-kPP"/>
+                <outlet property="distance" destination="60Q-iY-Drw" id="Af3-oI-KcR"/>
+                <outlet property="hours" destination="uha-bu-Uqi" id="Rbh-Ze-DGg"/>
+                <outlet property="image" destination="g0Z-aH-Quj" id="wfn-69-eKp"/>
+                <outlet property="openStatus" destination="qxE-mz-9Wi" id="KXW-gt-KfE"/>
+                <outlet property="rating" destination="wud-uI-LOH" id="SFz-OS-F7c"/>
+            </connections>
+            <point key="canvasLocation" x="32.799999999999997" y="9.4452773613193415"/>
+        </view>
+    </objects>
+</document>
