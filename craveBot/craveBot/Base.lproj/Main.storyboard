@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SzD-3U-i3a">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SzD-3U-i3a">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,24 +17,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Esw-xL-afy" userLabel="background">
-                                <rect key="frame" x="0.0" y="32" width="375" height="667"/>
-                            </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eg0-ZW-cnd">
-                                <rect key="frame" x="139" y="382" width="97" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eg0-ZW-cnd">
+                                <rect key="frame" x="139" y="451" width="97" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VSw-Wx-lFg">
-                                <rect key="frame" x="164" y="420" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="tempButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7JZ-uK-bG1"/>
-                                    <action selector="tempRestaurantTest:" destination="umy-lE-FVn" eventType="touchUpInside" id="OAb-iy-VMY"/>
-                                </connections>
-                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Esw-xL-afy" userLabel="background">
+                                <rect key="frame" x="0.0" y="42" width="375" height="667"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -54,9 +45,8 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <exit id="umy-lE-FVn" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1158" y="113"/>
+            <point key="canvasLocation" x="1412" y="89"/>
         </scene>
         <!--Restaurants-->
         <scene sceneID="Dh0-fl-koP">
@@ -77,7 +67,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pdw-Nm-90H" customClass="CardView" customModule="craveBot" customModuleProvider="target">
-                                <rect key="frame" x="16" y="74" width="343" height="481"/>
+                                <rect key="frame" x="16" y="30" width="343" height="525"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6MH-Ah-ZGr">
@@ -120,7 +110,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bPi-Uv-M7a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1868" y="112.89355322338831"/>
+            <point key="canvasLocation" x="2164" y="89"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="i6F-on-qHZ">
@@ -133,17 +123,61 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="WZd-6u-Nls"/>
+                        <segue destination="SD1-ef-hHw" kind="relationship" relationship="rootViewController" id="Ohn-io-hAY"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gX9-2W-f3h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="337" y="150"/>
+            <point key="canvasLocation" x="-1905" y="89"/>
+        </scene>
+        <!--Loading Screen View Controller-->
+        <scene sceneID="E15-Ra-isT">
+            <objects>
+                <viewController id="SD1-ef-hHw" customClass="LoadingScreenViewController" customModule="craveBot" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tZ9-Hi-ttq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="craveLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Psc-vz-I1r">
+                                <rect key="frame" x="111.5" y="345" width="152" height="41"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Psc-vz-I1r" firstAttribute="centerX" secondItem="0XS-C0-uAE" secondAttribute="centerX" id="2XY-ku-pbq"/>
+                            <constraint firstItem="Psc-vz-I1r" firstAttribute="centerY" secondItem="0XS-C0-uAE" secondAttribute="centerY" id="cPz-ui-Cd2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0XS-C0-uAE"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="dFl-Vb-FBC"/>
+                    <connections>
+                        <segue destination="wvR-qc-kRE" kind="show" identifier="toBotSegue" id="hmH-Hx-a56"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sOM-fF-O0T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1114" y="89"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="uJg-Bp-6F1">
+            <objects>
+                <viewController id="wvR-qc-kRE" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="33t-7z-HnA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="QCa-dS-Zkq"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Aw1-Zs-UGz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-198" y="89"/>
         </scene>
     </scenes>
     <resources>
-        <image name="ic_like" width="76" height="68"/>
-        <image name="ic_skip" width="114" height="102"/>
-        <image name="ic_undo" width="21.5" height="21.5"/>
+        <image name="craveLogo" width="152" height="41"/>
+        <image name="ic_like" width="38" height="34"/>
+        <image name="ic_skip" width="38" height="34"/>
+        <image name="ic_undo" width="21" height="21"/>
     </resources>
 </document>
