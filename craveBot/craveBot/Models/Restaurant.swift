@@ -13,6 +13,7 @@ import UIKit
     private var json: JSON
     
     init(json: JSON) {
+        //print(json)
         self.json = json
     }
     
@@ -29,25 +30,27 @@ import UIKit
     }
     
     var address: String? {
-        return self.json["address"].stringValue
+        return self.json["location"]["address1"].stringValue + ", " + self.json["location"]["city"].stringValue
+        
     }
     
     var imageURL: String? {
-        return self.json["imageURL"].stringValue
+        //print(self.json["image_url"].stringValue)
+        return self.json["image_url"].stringValue
     }
     
     var distance: Double? {
-        return self.json["distance"].doubleValue
+        return Double(round(1000*self.json["distance"].doubleValue)/1000)
     }
     
     var open: Bool? {
         //TODO:
-        return Bool(self.json["isOpen"].stringValue)
+        return self.json["is_open"].boolValue
     }
     
-    var cost: Double? {
-        return Double(self.json["cost"].stringValue)
-    }
+    //var cost: Double? {
+      //  return Double(self.json["cost"].stringValue)
+   // }
     //hours?
     //
     

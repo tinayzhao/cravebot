@@ -1,4 +1,5 @@
 from yelpapi import YelpAPI
+import json
 
 yelp_api = YelpAPI("Hp8pY32pxeXSNL8oAaQIRHT2cKs4A711Jn-5cJof-rSE1SicUkneft1NKY_gdHk8mJoCMVY7iZARi13lqYCgpz65MXqYwN6vBqYpAnBovBbxN45Vf-u0MNdjgMAvXHYx")
 
@@ -25,7 +26,9 @@ try:
             dict['is_open'] = not response['businesses'][i]['is_closed']
             #print(dict)
             retlst.append(dict)
-        print(retlst)
+        #print(retlst)
+        jsonVersion = json.dumps(dict)
+        print(json.loads(jsonVersion))
 
     except:
         print("You gave us an invalid type of food!")

@@ -1,0 +1,62 @@
+[
+    {
+        "name": "Gadani",
+        "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/TheVOEMBUxYd97peX7KgKA/o.jpg",
+        "rating": 4,
+        "location": {
+            "address1": "139 Berkeley Sq",
+            "address2": "",
+            "address3": "",
+            "city": "Berkeley",
+            "zip_code": "94704",
+            "country": "US",
+            "state": "CA",
+            "display_address": [
+                "139 Berkeley Sq",
+                "Berkeley, CA 94704"
+            ]
+        },
+        "distance": 0.41527704661286347,
+        "is_open": true
+    },
+    {
+        "name": "UJI Time Dessert",
+        "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/iASe08fQ8pGkoH1zAhEhTw/o.jpg",
+        "rating": 4,
+        "location": {
+            "address1": "2575 Telegraph Ave",
+            "address2": "",
+            "address3": "",
+            "city": "Berkeley",
+            "zip_code": "94704",
+            "country": "US",
+            "state": "CA",
+            "display_address": [
+                "2575 Telegraph Ave",
+                "Berkeley, CA 94704"
+            ]
+        },
+        "distance": 0.9710856204202416,
+        "is_open": true
+    },
+    {
+        "name": "iScream",
+        "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/jz674LSszyn70gkd_aYf7g/o.jpg",
+        "rating": 4.5,
+        "location": {
+            "address1": "1819 Solano Ave",
+            "address2": "",
+            "address3": "",
+            "city": "Berkeley",
+            "zip_code": "94707",
+            "country": "US",
+            "state": "CA",
+            "display_address": [
+                "1819 Solano Ave",
+                "Berkeley, CA 94707"
+            ]
+        },
+        "distance": 1.6087728565444648,
+        "is_open": true
+    }
+]

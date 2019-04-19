@@ -37,18 +37,21 @@ class ChatBotViewController: UIViewController {
     
     func getRestaurantList(){
         //test: with preloaded json
-        let path = Bundle.main.path(forResource: "data", ofType: "json")
+        let path = Bundle.main.path(forResource: "restaurant", ofType: "json")
         
-        print(path)
+        //print(path)
         let jsonData = NSData(contentsOfFile:path!)
         do {
             let json = try JSON(data: jsonData! as Data)
-            let jsonList = json["businesses"].arrayValue.map {$0["name"].stringValue}
+            //print(json)
+            let jsonList = json.arrayValue
             for item in jsonList {
+                print(item)
                 let restarauntJSON = JSON(item)
+                print(restarauntJSON)
                 restaurantList.append(Restaurant(json: restarauntJSON))
             }
-            print("success")
+           // print("success")
         }catch let error {
                 print(error.localizedDescription)
         }

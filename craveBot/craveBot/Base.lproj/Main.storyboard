@@ -76,7 +76,7 @@
                                     <action selector="rightButtonTapped" destination="0MN-Q5-4DM" eventType="touchUpInside" id="bih-CK-DBN"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pdw-Nm-90H" customClass="CardView" customModule="craveBot" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pdw-Nm-90H" customClass="KolodaView" customModule="Koloda">
                                 <rect key="frame" x="16" y="74" width="343" height="481"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
@@ -138,7 +138,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gX9-2W-f3h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="337" y="150"/>
+            <point key="canvasLocation" x="337" y="113"/>
         </scene>
     </scenes>
     <resources>

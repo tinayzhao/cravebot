@@ -11,7 +11,7 @@ import FloatRatingView
 
 import UIKit
 
-class CardView: UIView {
+class CardView: UIView, FloatRatingViewDelegate {
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var RestaurantName: UILabel!
     @IBOutlet weak var rating: FloatRatingView!
@@ -27,4 +27,6 @@ class CardView: UIView {
         
         return UINib(nibName: "CardView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! CardView
     }
+    
+    
 }
