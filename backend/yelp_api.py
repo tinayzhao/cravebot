@@ -1,23 +1,39 @@
 from yelpapi import YelpAPI
+import json
 
 yelp_api = YelpAPI("Hp8pY32pxeXSNL8oAaQIRHT2cKs4A711Jn-5cJof-rSE1SicUkneft1NKY_gdHk8mJoCMVY7iZARi13lqYCgpz65MXqYwN6vBqYpAnBovBbxN45Vf-u0MNdjgMAvXHYx")
-#response = yelp_api.search_query(term='asldkajs', location='berkley, ca')
-response = yelp_api.search_query(location = "berk", price = "6")
 
-# need to find the attribute that is mispelled/wrong
-# check if location can query data
+users_location = "berkeley"
+users_term = "ice cream"
+users_price = "1"
+limit = 5
 
-# check if location and term can query data
-    #
-if len(response['businesses']) == 0:
-    print("dun fucked up")
-else:
-    print(response)
-    # print(response['businesses'][0]['name'])
-    # print(response['businesses'][0]['image_url'])
-    # print(response['businesses'][0]['rating'])
-    # print(response['businesses'][0]['location'])
-    # print(response['businesses'][0]['is_closed'])
+try:
+    response = yelp_api.search_query(location = users_location)
+    try:
+        response = yelp_api.search_query(location = users_location, term = users_term, price = users_price)
+
+        retlst = []
+        limit = min(limit, len(response))
+
+        for i in range (limit):
+            dict = {}
+            dict['name'] = response['businesses'][i]['name']
+            dict['image_url'] = response['businesses'][i]['image_url']
+            dict['rating'] = response['businesses'][i]['rating']
+            dict['location'] = response['businesses'][i]['location']
+            dict['distance'] = response['businesses'][i]['distance']/1609.34
+            dict['is_open'] = not response['businesses'][i]['is_closed']
+            #print(dict)
+            retlst.append(dict)
+        #print(retlst)
+        jsonVersion = json.dumps(dict)
+        print(json.loads(jsonVersion))
+
+    except:
+        print("You gave us an invalid type of food!")
+except:
+    print("You gave us an invalid location!")
 
 # Name
 # Image

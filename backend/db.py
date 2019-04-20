@@ -13,12 +13,12 @@ def main(info):
     price = info[max_price]
     # userExist = False
     cur.execute("SELECT user_id FROM current_search WHERE user_id = ?", (uid,))
-    data = cursor.fetchall()
+    data = cur.fetchall()
     if len(data) != 0:
         conn.row_factory = dict_factory
         cur.execute("SELECT location, max_price, type FROM current_search WHERE user_id = ?", (uid,))
         oldInfo = cursor.fetchone()
-        
+
 
         for i in range(len(oldInfo)):
             if info[]
@@ -49,3 +49,24 @@ def initialize_db():
     type text NOT NULL,
     type2 text
     )")
+
+def check_location():
+    #no_loc = cur
+    cur.execute("SELECT location FROM current_search WHERE user_id = ?", (uid,))
+    data = cur.fetchall()
+    return (data == None)
+        
+    #no_loc_id = list(no_loc.fetchall())
+    #return no_loc_id
+
+def check_price():
+    no_price = cur
+    no_price.execute("SELECT user_id FROM current_search WHERE price IS NULL")
+    no_price_id = list(no_price.fetchall())
+    return no_price_id
+
+def check_foodtype():
+    no_food = cur
+    no_food.execute("SELECT user_id FROM current_search WHERE type IS NULL")
+    no_food_id = list(no_food.fetchall())
+    return no_food_id

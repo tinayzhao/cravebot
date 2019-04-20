@@ -1,6 +1,7 @@
 PODS:
-  - Alamofire (5.0.0-beta.5)
+  - Alamofire (4.0.1)
   - FloatRatingView (3.0)
+  - Kingfisher (5.3.1)
   - Koloda (4.7):
     - pop (~> 1.0)
   - pop (1.0.12)
@@ -10,8 +11,9 @@ PODS:
   - Toolbar (0.5.0)
 
 DEPENDENCIES:
-  - Alamofire (~> 5.0.0-beta.5)
+  - Alamofire (~> 4.0.0)
   - FloatRatingView
+  - Kingfisher
   - Koloda
   - SwiftLocation (~> 3.2.3)
   - SwiftyJSON (~> 4.0)
@@ -21,6 +23,7 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - FloatRatingView
+    - Kingfisher
     - Koloda
     - pop
     - SwiftLocation
@@ -28,14 +31,15 @@ SPEC REPOS:
     - Toolbar
 
 SPEC CHECKSUMS:
-  Alamofire: 9afb08f7f43efcc71c072374e720fcf67521317d
+  Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
   FloatRatingView: 0f7b45733124516ac6b8f535e5b5f4fa2e122180
+  Kingfisher: d9e7e0b209b59b8f9873aa2f37654e81a7beea51
   Koloda: f456d003d2ce15ef9f10c2874a444f1f570b490c
   pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
   SwiftLocation: a3c3bc2023118171ef3572188a31def94aa0892c
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
   Toolbar: 240546f9a531266f639b713994b8b9eb7bb3391b
 
-PODFILE CHECKSUM: 09e7e38f5ee53ee4787051f76a6dc22f07394bf9
+PODFILE CHECKSUM: b65b05c6a79e75995c687e6b9d2cc0b94b555586
 
 COCOAPODS: 1.5.3

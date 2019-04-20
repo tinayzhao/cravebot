@@ -6,41 +6,51 @@
 //  Copyright © 2019 CraveProject. All rights reserved.
 //
 import SwiftyJSON
+import Foundation
+import UIKit
 
 @objc class Restaurant: NSObject {
     private var json: JSON
     
     init(json: JSON) {
+        //print(json)
         self.json = json
     }
     
-    init(jsonObject: JSONObject) {
+    /*init(jsonObject: JSONObject) {
         self.json = JSON(jsonObject)
-    }
+    }*/
     
     var name: String? {
         return self.json["name"].stringValue
     }
+    
     var rating: Double? {
         return self.json["rating"].doubleValue
     }
     
     var address: String? {
-        return self.json["address"].stringValue
+        return self.json["location"]["address1"].stringValue + ", " + self.json["location"]["city"].stringValue
+        
     }
     
     var imageURL: String? {
-        return self.json["imageURL"].stringValue
+        //print(self.json["image_url"].stringValue)
+        return self.json["image_url"].stringValue
     }
     
     var distance: Double? {
-        return self.json["distance"].doubleValue
+        return Double(round(1000*self.json["distance"].doubleValue)/1000)
     }
     
     var open: Bool? {
         //TODO:
-        return Bool(self.json["isOpen"].stringValue)
+        return self.json["is_open"].boolValue
     }
+    
+    //var cost: Double? {
+      //  return Double(self.json["cost"].stringValue)
+   // }
     //hours?
     //
     
