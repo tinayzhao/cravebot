@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 import Koloda
+import Kingfisher
+import FloatRatingView
 
 
 //to do for jennifer, do the restaurant by the end of the week
@@ -65,18 +67,33 @@ class RestaurantViewController: UIViewController, KolodaViewDelegate, KolodaView
         let v = CardView.instanceFromNib()
         currentRestaurant = restaurantList[index]
         
+        if (currentRestaurant != nil) {
+            print(currentRestaurant!)
+            print(currentRestaurant.imageURL!)
+        }
         let url = URL(string: currentRestaurant.imageURL!)
-        //v.image.kf.setImage(with: url)
-        v.address.text = currentRestaurant.address
-        v.distance.text = String(currentRestaurant.distance!)
-        v.hours.text = "9AM to 9AM"
-        v.rating.rating = currentRestaurant.rating!
+        v.image.kf.setImage(with: url)
+        v.address.text =  currentRestaurant.address!
+        v.distance.text  = String(currentRestaurant.distance!) + " away"
+        v.hours.text = ""
+        v.rating.maxRating = 5
         
+        v.RestaurantName.text = currentRestaurant.name!
+
+        v.rating.delegate = v
+        v.rating.contentMode = UIView.ContentMode.scaleAspectFit
+        v.rating.type = .halfRatings
+        v.rating.rating = currentRestaurant.rating!
+        v.rating.emptyImage = UIImage(named: "StarEmpty")
+        v.rating.fullImage = UIImage(named: "StarFull")
+        v.rating.editable = false
         
         if (currentRestaurant.open == true) {
             v.openStatus.text = "Open"
+            v.openStatus.textColor = UIColor.green
         } else {
             v.openStatus.text = "Closed"
+            v.openStatus.textColor = UIColor.red
         }
         
         return v
@@ -85,60 +102,9 @@ class RestaurantViewController: UIViewController, KolodaViewDelegate, KolodaView
     
     
     
-    func koloda(_ koloda: KolodaView, viewForCardOverlayAt index: Int) -> OverlayView? {
+    /*func koloda(_ koloda: KolodaView, viewForCardOverlayAt index: Int) -> OverlayView? {
         return Bundle.main.loadNibNamed("OverlayView", owner: self, options: nil)![0] as? OverlayView
-    }
+    }*/
 
 }
 
-
-class UIRestaurantView: KolodaView  {
-    
-    var name = ""
-    var address = ""
-    var cost = 1
-    var open =  false
-    var imageURL = ""
-    
-    @IBOutlet var image: UIImageView!
-    @IBOutlet var nameLabel: UILabel!
-    @IBOutlet var addressLabel: UILabel!
-    @IBOutlet var costLabel: UILabel!
-    @IBOutlet var openLabel: UILabel!
-    
-    /*
-     // Only override drawRect: if you perform custom drawing.
-     // An empty implementation adversely affects performance during animation.
-     override func drawRect(rect: CGRect) {
-     // Drawing code
-     }
-     */
-    
-    //below was copied from the Koloda example from git lol
-    
-    let defaultTopOffset: CGFloat = 20
-    let defaultHorizontalOffset: CGFloat = 10
-    let defaultHeightRatio: CGFloat = 1.25
-    let backgroundCardHorizontalMarginMultiplier: CGFloat = 0.25
-    let backgroundCardScalePercent: CGFloat = 1.5
-    
-    
-    override func frameForCard(at index: Int) -> CGRect {
-        if index == 0 {
-            let topOffset: CGFloat = defaultTopOffset
-            let xOffset: CGFloat = defaultHorizontalOffset
-            let width = (self.frame).width - 2 * defaultHorizontalOffset
-            let height = width * defaultHeightRatio
-            let yOffset: CGFloat = topOffset
-            let frame = CGRect(x: xOffset, y: yOffset, width: width, height: height)
-            
-            return frame
-        } else if index == 1 {
-            let horizontalMargin = -self.bounds.width * backgroundCardHorizontalMarginMultiplier
-            let width = self.bounds.width * backgroundCardScalePercent
-            let height = width * defaultHeightRatio
-            return CGRect(x: horizontalMargin, y: 0, width: width, height: height)
-        }
-        return CGRect.zero
-    }
-}

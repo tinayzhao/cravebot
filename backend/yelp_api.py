@@ -1,36 +1,47 @@
 from yelpapi import YelpAPI
+import json
 
 yelp_api = YelpAPI("Hp8pY32pxeXSNL8oAaQIRHT2cKs4A711Jn-5cJof-rSE1SicUkneft1NKY_gdHk8mJoCMVY7iZARi13lqYCgpz65MXqYwN6vBqYpAnBovBbxN45Vf-u0MNdjgMAvXHYx")
 
-users_location = "berkeley"
-users_term = "ice cream"
-users_price = "1"
-limit = 5
+def yelp_call(*args):
+    users_location = "berkeley"
+    users_term = ""
+    users_price = ""
+    limit = 5
 
-try:
-    response = yelp_api.search_query(location = users_location)
     try:
-        response = yelp_api.search_query(location = users_location, term = users_term, price = users_price)
+        response = yelp_api.search_query(location = users_location)
+        try:
+            response = yelp_api.search_query(location = users_location, term = users_term, price = users_price)
 
-        retlst = []
-        limit = min(limit, len(response))
+            retlst = []
+            limit = min(limit, len(response))
 
-        for i in range (limit):
+            for i in range (limit):
+                dict = {}
+                dict['name'] = response['businesses'][i]['name']
+                dict['image_url'] = response['businesses'][i]['image_url']
+                dict['rating'] = response['businesses'][i]['rating']
+                dict['location'] = response['businesses'][i]['location']
+                dict['distance'] = response['businesses'][i]['distance']/1609.34
+                dict['price'] = response['businesses'][i]['price']
+                dict['is_open'] = not response['businesses'][i]['is_closed']
+                #print(dict)
+                retlst.append(dict)
+            #print(retlst)
+            jsonVersion = json.dumps(dict)
+            print(json.loads(jsonVersion))
+
+        except:
             dict = {}
-            dict['name'] = response['businesses'][i]['name']
-            dict['image_url'] = response['businesses'][i]['image_url']
-            dict['rating'] = response['businesses'][i]['rating']
-            dict['location'] = response['businesses'][i]['location']
-            dict['distance'] = response['businesses'][i]['distance']/1609.34
-            dict['is_open'] = not response['businesses'][i]['is_closed']
-            #print(dict)
-            retlst.append(dict)
-        print(retlst)
-
+            dict['error'] = 'food'
+            print("You gave us an invalid type of food!")
+            print(dict)
     except:
-        print("You gave us an invalid type of food!")
-except:
-    print("You gave us an invalid location!")
+        dict = {}
+        dict['error'] = 'location'
+        print("You gave us an invalid location!")
+        print(dict)
 
 # Name
 # Image
