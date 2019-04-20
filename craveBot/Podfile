@@ -12,6 +12,8 @@ target 'craveBot' do
   pod 'Toolbar'
   pod 'FloatRatingView'
   pod 'Kingfisher'
+  pod 'CLTypingLabel'
+  pod 'lottie-ios'
 
   # Pods for craveBot
 

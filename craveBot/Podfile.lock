@@ -1,9 +1,11 @@
 PODS:
   - Alamofire (4.0.1)
+  - CLTypingLabel (0.3.0)
   - FloatRatingView (3.0)
   - Kingfisher (5.3.1)
   - Koloda (4.7):
     - pop (~> 1.0)
+  - lottie-ios (3.0.4)
   - pop (1.0.12)
   - SwiftLocation (3.2.3):
     - SwiftyJSON (~> 4.0.0-alpha.1)
@@ -12,9 +14,11 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.0.0)
+  - CLTypingLabel
   - FloatRatingView
   - Kingfisher
   - Koloda
+  - lottie-ios
   - SwiftLocation (~> 3.2.3)
   - SwiftyJSON (~> 4.0)
   - Toolbar
@@ -22,9 +26,11 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - CLTypingLabel
     - FloatRatingView
     - Kingfisher
     - Koloda
+    - lottie-ios
     - pop
     - SwiftLocation
     - SwiftyJSON
@@ -32,14 +38,16 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
+  CLTypingLabel: e5f3adf9467a38664a505e6475c23946c3b3c424
   FloatRatingView: 0f7b45733124516ac6b8f535e5b5f4fa2e122180
   Kingfisher: d9e7e0b209b59b8f9873aa2f37654e81a7beea51
   Koloda: f456d003d2ce15ef9f10c2874a444f1f570b490c
+  lottie-ios: 55a2de40418f8de2b155efaba4d4d1a025a5c570
   pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
   SwiftLocation: a3c3bc2023118171ef3572188a31def94aa0892c
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
   Toolbar: 240546f9a531266f639b713994b8b9eb7bb3391b
 
-PODFILE CHECKSUM: b65b05c6a79e75995c687e6b9d2cc0b94b555586
+PODFILE CHECKSUM: ea8e80c79ff4df357b26ba1262137ce43f938b3c
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.1

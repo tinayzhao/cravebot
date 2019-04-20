@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19259BDD226A313B001AE9F0 /* TempChatBotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19259BDC226A313B001AE9F0 /* TempChatBotViewController.swift */; };
+		19259BDF226A3784001AE9F0 /* chefSpeaks.json in Resources */ = {isa = PBXBuildFile; fileRef = 19259BDE226A3784001AE9F0 /* chefSpeaks.json */; };
+		19259BE3226A3816001AE9F0 /* CLTypingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19259BE2226A3816001AE9F0 /* CLTypingLabel.swift */; };
 		291913112268B5D8000498C5 /* RestaurantExamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291913102268B5D8000498C5 /* RestaurantExamples.swift */; };
 		291913132268B92F000498C5 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 291913122268B92F000498C5 /* data.json */; };
 		29237F222265B70300B332EE /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29237F212265B70200B332EE /* CardView.xib */; };
@@ -45,6 +48,9 @@
 
 /* Begin PBXFileReference section */
 		06E5DC638331D3BBEE335A00 /* Pods-craveBotTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-craveBotTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-craveBotTests/Pods-craveBotTests.release.xcconfig"; sourceTree = "<group>"; };
+		19259BDC226A313B001AE9F0 /* TempChatBotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempChatBotViewController.swift; sourceTree = "<group>"; };
+		19259BDE226A3784001AE9F0 /* chefSpeaks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chefSpeaks.json; sourceTree = "<group>"; };
+		19259BE2226A3816001AE9F0 /* CLTypingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLTypingLabel.swift; sourceTree = "<group>"; };
 		291913102268B5D8000498C5 /* RestaurantExamples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantExamples.swift; sourceTree = "<group>"; };
 		291913122268B92F000498C5 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = data.json; path = craveBot/data.json; sourceTree = SOURCE_ROOT; };
 		29237F212265B70200B332EE /* CardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
@@ -144,7 +150,9 @@
 				2980800D2262B11000B785F7 /* ViewControllers */,
 				29807FE32262AF7100B785F7 /* Main.storyboard */,
 				29807FE62262AF7400B785F7 /* Assets.xcassets */,
+				19259BE2226A3816001AE9F0 /* CLTypingLabel.swift */,
 				29807FE82262AF7400B785F7 /* LaunchScreen.storyboard */,
+				19259BDE226A3784001AE9F0 /* chefSpeaks.json */,
 				29807FEB2262AF7400B785F7 /* Info.plist */,
 			);
 			path = craveBot;
@@ -172,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				29807FE12262AF7100B785F7 /* LoadingScreenviewController.swift */,
+				19259BDC226A313B001AE9F0 /* TempChatBotViewController.swift */,
 				2980800F2262B13C00B785F7 /* ChatBotViewController.swift */,
 				298080112262B16000B785F7 /* RestaurantViewController.swift */,
 			);
@@ -318,6 +327,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19259BDF226A3784001AE9F0 /* chefSpeaks.json in Resources */,
 				29807FEA2262AF7400B785F7 /* LaunchScreen.storyboard in Resources */,
 				29807FE72262AF7400B785F7 /* Assets.xcassets in Resources */,
 				29237F222265B70300B332EE /* CardView.xib in Resources */,
@@ -395,14 +405,16 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-craveBot/Pods-craveBot-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-craveBot/Pods-craveBot-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/CLTypingLabel/CLTypingLabel.framework",
 				"${BUILT_PRODUCTS_DIR}/FloatRatingView/FloatRatingView.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Koloda/Koloda.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftLocation/SwiftLocation.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/Toolbar/Toolbar.framework",
+				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
 				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -410,17 +422,19 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CLTypingLabel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FloatRatingView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Koloda.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftLocation.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toolbar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-craveBot/Pods-craveBot-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-craveBot/Pods-craveBot-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DDDF4DE0F2AB2F8D5588D194 /* [CP] Check Pods Manifest.lock */ = {
@@ -452,10 +466,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19259BE3226A3816001AE9F0 /* CLTypingLabel.swift in Sources */,
 				298080142262B16A00B785F7 /* Restaurant.swift in Sources */,
 				29807FE22262AF7100B785F7 /* LoadingScreenviewController.swift in Sources */,
 				291913112268B5D8000498C5 /* RestaurantExamples.swift in Sources */,
 				298080122262B16000B785F7 /* RestaurantViewController.swift in Sources */,
+				19259BDD226A313B001AE9F0 /* TempChatBotViewController.swift in Sources */,
 				29807FE02262AF7100B785F7 /* AppDelegate.swift in Sources */,
 				29237F242265B76600B332EE /* CardView.swift in Sources */,
 				298080102262B13C00B785F7 /* ChatBotViewController.swift in Sources */,
