@@ -1,11 +1,22 @@
-import spacy
+from spellchecker import SpellChecker
 
-nlp = spacy.load("en_core_web_sm")
+spell = SpellChecker()
 
-hunspell = spaCyHunSpell(nlp, 'mac')
-nlp.add_pipe(hunspell)
+def check(*args):
+    users_location = args[0]
+    users_term = args[1]
 
-doc = nlp('I can haz cheezeburger.')
-haz = doc[2]
-print(haz._.hunspell_spell)  # False
-print(haz._.hunspell_suggest)  # ['ha', 'haze', 'hazy', 'has', 'hat', 'had', 'hag', 'ham', 'hap', 'hay', 'haw', 'ha z']
+    bool_location = users_location != ""
+    bool_term = users_term != ""
+
+    lst = [];
+    if (bool_location):
+        lst.append(users_location)
+    if (bool_term):
+        lst.append(users_term)
+    mispelled = spell.unknown(lst)
+
+    suggestions = []
+    for word in misspelled:
+        suggestions.append(spell.candidates(word))
+    return suggestions

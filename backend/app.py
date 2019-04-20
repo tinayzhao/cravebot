@@ -3,7 +3,8 @@
 #send request back to frontend
 import sqlite3
 import json
-import yelp_api as yelp_api
+from yelp_api import yelp_call
+from nlp import check
 
 from flask import Flask, request, jsonify
 
@@ -22,20 +23,22 @@ def get_messages():
 @app.route('/api/backend', methods = ['POST'])
 def main():
     json = request.get_json()
-    #Jennifer's JSON {Location: Berkeley}
-    #{Message Type: "Location", Message: "Berkeley"}
-    #Message type: Location, Category, Extra: [Price, Category]
-    #yelp_call(json['Location'], json['Category1'], json['Category2'], json['Price'])
-    return jsonify(yelp_call(json['Location'], json['Category'], json['Price']))
+    mispelled_words = check(json['Location'], json['Category'])
+    if len(mispelled_words) > 0:
+        return jsonify(mispelled_words)
+    else:
+        return jsonify(yelp_call(json['Location'], json['Category'], price_conversion(json['Price'])))
 
-
-    #else:
-    #    return jsonify({'messages': "Seems like your location settings are off. :( Would you mind giving the city you are located in? \n"})
-		#check_database()
-
-#@app.route('/test', methods = ['GET'])
-#def test():
-#    return jsonify(message = "hello world")
+def price_conversion(str):
+    retStr = "1"
+    num = int(str)
+    if num < 30:
+        retStr += ", 2"
+    elif num < 60:
+        retStr += ", 2, 3"
+    else:
+        retStr += ", 2, 3, 4"
+    return retStr
 
 
 if __name__ == '__main__':
