@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 
+
 		19259BDD226A313B001AE9F0 /* TempChatBotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19259BDC226A313B001AE9F0 /* TempChatBotViewController.swift */; };
 		19259BDF226A3784001AE9F0 /* chefSpeaks.json in Resources */ = {isa = PBXBuildFile; fileRef = 19259BDE226A3784001AE9F0 /* chefSpeaks.json */; };
 		19259BE3226A3816001AE9F0 /* CLTypingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19259BE2226A3816001AE9F0 /* CLTypingLabel.swift */; };
@@ -55,6 +56,7 @@
 
 /* Begin PBXFileReference section */
 		06E5DC638331D3BBEE335A00 /* Pods-craveBotTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-craveBotTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-craveBotTests/Pods-craveBotTests.release.xcconfig"; sourceTree = "<group>"; };
+
 
 		19259BDC226A313B001AE9F0 /* TempChatBotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempChatBotViewController.swift; sourceTree = "<group>"; };
 		19259BDE226A3784001AE9F0 /* chefSpeaks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chefSpeaks.json; sourceTree = "<group>"; };
@@ -342,7 +344,9 @@
 			buildActionMask = 2147483647;
 			files = (
 
+
 				19259BDF226A3784001AE9F0 /* chefSpeaks.json in Resources */,
+
 
 				29807FEA2262AF7400B785F7 /* LaunchScreen.storyboard in Resources */,
 				29807FE72262AF7400B785F7 /* Assets.xcassets in Resources */,
@@ -485,14 +489,16 @@
 			buildActionMask = 2147483647;
 			files = (
 
-				291690362269AE0500384325 /* KolodaView.swift in Sources */,
 
+				291690362269AE0500384325 /* KolodaView.swift in Sources */,
 				298080142262B16A00B785F7 /* Restaurant.swift in Sources */,
 				29807FE22262AF7100B785F7 /* LoadingScreenviewController.swift in Sources */,
 				291913112268B5D8000498C5 /* RestaurantExamples.swift in Sources */,
 				298080122262B16000B785F7 /* RestaurantViewController.swift in Sources */,
 
+
 				19259BDD226A313B001AE9F0 /* TempChatBotViewController.swift in Sources */,
+
 
 				29807FE02262AF7100B785F7 /* AppDelegate.swift in Sources */,
 				2916903E2269B1BF00384325 /* CardHeaderView.swift in Sources */,
