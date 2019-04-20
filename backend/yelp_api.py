@@ -11,7 +11,6 @@ def yelp_call(*args):
 
     bool_location = users_location != ""
     bool_term = users_term != ""
-    #bool_term2 = users_term2 != ""
     bool_price = users_price != ""
     if bool_location and not bool_term and not bool_price:
         try:
