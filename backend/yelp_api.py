@@ -4,7 +4,7 @@ import json
 yelp_api = YelpAPI("Hp8pY32pxeXSNL8oAaQIRHT2cKs4A711Jn-5cJof-rSE1SicUkneft1NKY_gdHk8mJoCMVY7iZARi13lqYCgpz65MXqYwN6vBqYpAnBovBbxN45Vf-u0MNdjgMAvXHYx")
 
 users_location = "berkeley"
-users_term = "ice cream"
+users_term = "ice cadasdaseam"
 users_price = "1"
 limit = 5
 
@@ -23,6 +23,7 @@ try:
             dict['rating'] = response['businesses'][i]['rating']
             dict['location'] = response['businesses'][i]['location']
             dict['distance'] = response['businesses'][i]['distance']/1609.34
+            dict['price'] = response['businesses'][i]['price']
             dict['is_open'] = not response['businesses'][i]['is_closed']
             #print(dict)
             retlst.append(dict)
@@ -31,9 +32,15 @@ try:
         print(json.loads(jsonVersion))
 
     except:
+        dict = {}
+        dict['error'] = 'food'
         print("You gave us an invalid type of food!")
+        print(dict)
 except:
+    dict = {}
+    dict['error'] = 'location'
     print("You gave us an invalid location!")
+    print(dict)
 
 # Name
 # Image
