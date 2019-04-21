@@ -7,11 +7,13 @@ target 'craveBot' do
 
   pod 'Alamofire', '~> 4.0.0'
   pod 'SwiftyJSON', '~> 4.0'
-  pod "Koloda"
+  pod 'Koloda'
   pod 'SwiftLocation', '~> 3.2.3'
   pod 'Toolbar'
   pod 'FloatRatingView'
   pod 'Kingfisher'
+  pod 'CLTypingLabel'
+  pod 'lottie-ios'
 
   # Pods for craveBot
 
