@@ -14,15 +14,15 @@ import Lottie
 class TempChatBotViewController: UIViewController {
     
     var chefAnimation: AnimationView?
-    @IBOutlet var craveBotText: CLTypingLabel!
     
+    @IBOutlet var craveBotText: CLTypingLabel!
     @IBOutlet var input: UITextField!
     @IBOutlet var sendButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        craveBotText.charInterval = 0.05 // makes text type faster
+        craveBotText.charInterval = 0.05
         
         chefAnimation = AnimationView(name: "chefSpeaks")
         chefAnimation?.frame = CGRect.init(x: 0, y: 0, width: self.view.frame.width * 2, height: self.view.frame.height * 2)
@@ -40,8 +40,6 @@ class TempChatBotViewController: UIViewController {
         }
         
         craveBotText.text = "Hello! \n What would you like to eat? \n Input the type fam!"
-        
-    
     }
     
     

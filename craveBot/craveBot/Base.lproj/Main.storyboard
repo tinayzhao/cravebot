@@ -67,7 +67,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pdw-Nm-90H" customClass="KolodaView" customModule="Koloda">
-                                <rect key="frame" x="16" y="74" width="343" height="481"/>
+                                <rect key="frame" x="16" y="30" width="343" height="525"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6MH-Ah-ZGr">
@@ -169,7 +169,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chatBubble" translatesAutoresizingMaskIntoConstraints="NO" id="Vpf-WG-wpe">
                                 <rect key="frame" x="37.5" y="94" width="300" height="167"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ab5-L9-Vwb" customClass="CLTypingLabel" customModule="craveBot" customModuleProvider="target">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ab5-L9-Vwb" customClass="CLTypingLabel" customModule="CLTypingLabel">
                                 <rect key="frame" x="37.5" y="120" width="300" height="99"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="99" id="Vqg-Nh-j0V"/>
@@ -218,7 +218,7 @@
                         <viewLayoutGuide key="safeArea" id="QCa-dS-Zkq"/>
                     </view>
                     <connections>
-                        <outlet property="craveBotText" destination="ab5-L9-Vwb" id="DGC-Jh-e70"/>
+                        <outlet property="craveBotText" destination="ab5-L9-Vwb" id="1C3-7P-2hd"/>
                         <outlet property="input" destination="AVQ-Xf-y7y" id="S0U-LR-84A"/>
                         <outlet property="sendButton" destination="fIn-rY-tpP" id="tCA-oj-d7c"/>
                     </connections>

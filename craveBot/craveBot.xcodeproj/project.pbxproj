@@ -7,17 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-
-
 		19259BDD226A313B001AE9F0 /* TempChatBotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19259BDC226A313B001AE9F0 /* TempChatBotViewController.swift */; };
 		19259BDF226A3784001AE9F0 /* chefSpeaks.json in Resources */ = {isa = PBXBuildFile; fileRef = 19259BDE226A3784001AE9F0 /* chefSpeaks.json */; };
-		19259BE3226A3816001AE9F0 /* CLTypingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19259BE2226A3816001AE9F0 /* CLTypingLabel.swift */; };
-		2916903422699FE200384325 /* restaurant.json in Resources */ = {isa = PBXBuildFile; fileRef = 2916903322699FE200384325 /* restaurant.json */; };
-		291690362269AE0500384325 /* KolodaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291690352269AE0500384325 /* KolodaView.swift */; };
-		291690382269B1A300384325 /* CardHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291690372269B1A300384325 /* CardHeaderView.swift */; };
-		2916903A2269B1AD00384325 /* CardHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 291690392269B1AD00384325 /* CardHeaderView.xib */; };
-		2916903C2269B1B700384325 /* CandidateCardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2916903B2269B1B600384325 /* CandidateCardCell.xib */; };
-		2916903E2269B1BF00384325 /* CardHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2916903D2269B1BF00384325 /* CardHeaderView.swift */; };
+		2916903422699FE200384325 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		291690362269AE0500384325 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		2916903C2269B1B700384325 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		2916903E2269B1BF00384325 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		291913112268B5D8000498C5 /* RestaurantExamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291913102268B5D8000498C5 /* RestaurantExamples.swift */; };
 		291913132268B92F000498C5 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 291913122268B92F000498C5 /* data.json */; };
 		29237F222265B70300B332EE /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29237F212265B70200B332EE /* CardView.xib */; };
@@ -56,11 +51,8 @@
 
 /* Begin PBXFileReference section */
 		06E5DC638331D3BBEE335A00 /* Pods-craveBotTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-craveBotTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-craveBotTests/Pods-craveBotTests.release.xcconfig"; sourceTree = "<group>"; };
-
-
 		19259BDC226A313B001AE9F0 /* TempChatBotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempChatBotViewController.swift; sourceTree = "<group>"; };
 		19259BDE226A3784001AE9F0 /* chefSpeaks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chefSpeaks.json; sourceTree = "<group>"; };
-		19259BE2226A3816001AE9F0 /* CLTypingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLTypingLabel.swift; sourceTree = "<group>"; };
 		291913102268B5D8000498C5 /* RestaurantExamples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantExamples.swift; sourceTree = "<group>"; };
 		291913122268B92F000498C5 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = data.json; path = craveBot/data.json; sourceTree = SOURCE_ROOT; };
 		29237F212265B70200B332EE /* CardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
@@ -122,13 +114,8 @@
 		2919130F2268B572000498C5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				291690372269B1A300384325 /* CardHeaderView.swift */,
-				291690392269B1AD00384325 /* CardHeaderView.xib */,
 				29237F232265B76600B332EE /* CardView.swift */,
 				29237F212265B70200B332EE /* CardView.xib */,
-				2916903D2269B1BF00384325 /* CardHeaderView.swift */,
-				2916903B2269B1B600384325 /* CandidateCardCell.xib */,
-				291690352269AE0500384325 /* KolodaView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -161,12 +148,10 @@
 				2919130F2268B572000498C5 /* Views */,
 				29807FDF2262AF7100B785F7 /* AppDelegate.swift */,
 				291913122268B92F000498C5 /* data.json */,
-				2916903322699FE200384325 /* restaurant.json */,
 				2980800E2262B12200B785F7 /* Models */,
 				2980800D2262B11000B785F7 /* ViewControllers */,
 				29807FE32262AF7100B785F7 /* Main.storyboard */,
 				29807FE62262AF7400B785F7 /* Assets.xcassets */,
-				19259BE2226A3816001AE9F0 /* CLTypingLabel.swift */,
 				29807FE82262AF7400B785F7 /* LaunchScreen.storyboard */,
 				19259BDE226A3784001AE9F0 /* chefSpeaks.json */,
 				29807FEB2262AF7400B785F7 /* Info.plist */,
@@ -343,17 +328,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-
-
 				19259BDF226A3784001AE9F0 /* chefSpeaks.json in Resources */,
-
-
 				29807FEA2262AF7400B785F7 /* LaunchScreen.storyboard in Resources */,
 				29807FE72262AF7400B785F7 /* Assets.xcassets in Resources */,
 				29237F222265B70300B332EE /* CardView.xib in Resources */,
 				291913132268B92F000498C5 /* data.json in Resources */,
-				2916903C2269B1B700384325 /* CandidateCardCell.xib in Resources */,
-				2916903422699FE200384325 /* restaurant.json in Resources */,
+				2916903C2269B1B700384325 /* (null) in Resources */,
+				2916903422699FE200384325 /* (null) in Resources */,
 				29807FE52262AF7100B785F7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -488,20 +469,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-
-
-				291690362269AE0500384325 /* KolodaView.swift in Sources */,
+				291690362269AE0500384325 /* (null) in Sources */,
 				298080142262B16A00B785F7 /* Restaurant.swift in Sources */,
 				29807FE22262AF7100B785F7 /* LoadingScreenviewController.swift in Sources */,
 				291913112268B5D8000498C5 /* RestaurantExamples.swift in Sources */,
 				298080122262B16000B785F7 /* RestaurantViewController.swift in Sources */,
-
-
 				19259BDD226A313B001AE9F0 /* TempChatBotViewController.swift in Sources */,
-
-
 				29807FE02262AF7100B785F7 /* AppDelegate.swift in Sources */,
-				2916903E2269B1BF00384325 /* CardHeaderView.swift in Sources */,
+				2916903E2269B1BF00384325 /* (null) in Sources */,
 				29237F242265B76600B332EE /* CardView.swift in Sources */,
 				298080102262B13C00B785F7 /* ChatBotViewController.swift in Sources */,
 			);
