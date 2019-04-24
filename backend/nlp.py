@@ -14,7 +14,7 @@ def check(*args):
         lst.append(users_location)
     if (bool_term):
         lst.append(users_term)
-    mispelled = spell.unknown(lst)
+    misspelled = spell.unknown(lst)
 
     suggestions = []
     for word in misspelled:
