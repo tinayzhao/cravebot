@@ -1,7 +1,3 @@
-#processes frontend requests
-#get json -> get relevant data
-#send request back to frontend
-import sqlite3
 import json
 from yelp_api import yelp_call
 from nlp import check
@@ -10,15 +6,6 @@ from flask import Flask, request, jsonify
 
 
 app = Flask(__name__)
-
-'''Example
-@app.route('/api/get_messages', methods = ['POST'])
-def get_messages():
-    json = request.get_json()
-    if json['user'] == "larry":
-        return jsonify({'messages':['test1', 'test2']})
-    return jsonify({'error':'no user found'})
-'''
 
 @app.route('/api/backend', methods = ['POST'])
 def main():
