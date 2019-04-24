@@ -10,11 +10,20 @@ app = Flask(__name__)
 @app.route('/api/backend', methods = ['POST'])
 def main():
     json = request.get_json()
+    ret = {}
     misspelled_words = check(json['location'], json['category'])
     if len(misspelled_words) > 0:
-        return jsonify(mispelled_words)
+        msg = "Perhaps you meant to type "
+        for i in range(len(misspelled_words)):
+            for j in range(len(misspelled_words[i])):
+                msg += misspelled_words[i][0].capitalize() + " instead?"
+                break
+        ret['message'] = msg
+        ret['restaurants'] = []
     else:
-        return jsonify(yelp_call(json['location'], json['category'], price_conversion(json['price'])))
+        ret['restaurants'] = yelp_call(json['location'], json['category'], price_conversion(json['price']))
+        ret['message'] = ""
+    return jsonify(ret)
 
 def price_conversion(str):
     retStr = "1"

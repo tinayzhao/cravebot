@@ -18,5 +18,5 @@ def check(*args):
 
     suggestions = []
     for word in misspelled:
-        suggestions.append(spell.candidates(word))
+        suggestions.append(list(spell.candidates(word)))
     return suggestions
