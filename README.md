@@ -58,3 +58,17 @@ To test custom requests to the backend, download the app [Postmates](https://www
 3. Before following Step 21 and clicking **Send**, inside the box that sends Send Request Url, input ```http://localhost:5000/api/backend```
 ![](https://i.imgur.com/UkgL2xP.png) 
 4. Inside your terminal, go to the directory with ```app.py``` and run ```flask run```. Then, click the ```Send button``` inside Postman and you should see the result printed out in the terminal!
+
+### Frontend Setup
+Requirements: Mac with XCode
+
+To install all the libraries:
+1. cd into the "craveBot" 
+2. Run ``pod install``` 
+3. "craveBot.xcworkspace" should have been created. 
+
+To run the frontend:
+1. Open craveBot.xcworkspace in XCode
+2. To test location setting: in the navbar of XCode go: "Debug -> "Simulate Location" -> "San Francisco, CA" or some other location
+3. Click the triangle play button and an iphone simulator should run
+
