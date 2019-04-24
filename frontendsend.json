@@ -1,0 +1,18 @@
+{
+    "category": "dessert",
+    "price": "12",
+    "location": {
+        "address1": "2575 Telegraph Ave",
+        "address2": "",
+        "address3": "",
+        "city": "Berkeley",
+        "zip_code": "94704",
+        "country": "US",
+        "state": "CA",
+        "display_address": [
+            "2575 Telegraph Ave",
+            "Berkeley, CA 94704"
+        ]
+    },
+    "message": "chocolate pancakes"
+}
