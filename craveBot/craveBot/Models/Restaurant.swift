@@ -48,9 +48,9 @@ import UIKit
         return self.json["is_open"].boolValue
     }
     
-    //var cost: Double? {
-      //  return Double(self.json["cost"].stringValue)
-   // }
+    var cost: String? {
+        return self.json["cost"].stringValue
+    }
     //hours?
     //
     

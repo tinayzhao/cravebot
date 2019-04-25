@@ -26,6 +26,8 @@ def main():
     return jsonify(ret)
 
 def price_conversion(str):
+    if str == "":
+        return ""
     retStr = "1"
     num = int(str)
     if num < 30:
