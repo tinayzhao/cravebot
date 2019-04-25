@@ -159,16 +159,16 @@ class TempChatBotViewController: UIViewController, CLLocationManagerDelegate {
     // for incorrect input / bad requests
     func deleteInfo(_ currentQuestion: Int) {
         if currentQuestion == 1 {
-            query.location = nil
+            query.location = ""
         } else if currentQuestion == 2 {
-            query.category = nil
+            query.category = ""
         } else if currentQuestion == 3 {
-            query.price = nil
+            query.price = ""
         }
         query.curr -= 1
-        print(self.questionNumber)
-        print(query.curr)
     }
+    
+    
 
 
     func askQuestion(_ n: Int) {
