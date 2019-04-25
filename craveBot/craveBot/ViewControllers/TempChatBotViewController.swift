@@ -82,19 +82,11 @@ class TempChatBotViewController: UIViewController, CLLocationManagerDelegate {
 
 
     @IBAction func sendToBot(_ sender: Any) {
-        // updateInfo()
-        // send self.query to Yelp api via backend
-        // clear user input
-        // if (returned json is nil or has error message)
-            // sayBadInput()
-            // deleteInfo() updates self.query to reset that particular value to nil
-            // askQuestion()
-        // else:
-            // askQuestion()
+
 
         let userInput = input.text
-        query.message = userInput
-        updateInfo(query.curr, userInput!)
+        query.message = userInput                   // query message updated
+        updateInfo(self.query.curr, userInput!)     // query appropriate info updated as well as +1 to curr atrribute
         let json = query.getDictObject()
         //let postParameters = JSONSerialization.data(withJSONObject: json, options: .prettyPrinted)
         let url = "http://localhost:5000/api/backend"
@@ -107,18 +99,20 @@ class TempChatBotViewController: UIViewController, CLLocationManagerDelegate {
 
                     let messageData = json["message"].stringValue
                     if (messageData == "") {
-                        self.sayBadInput(messageData)
-                        self.deleteInfo(self.query.curr)
-                        self.askQuestion(self.query.curr)
+                        print("messageData was empty string")
+                        self.sayBadInput(messageData)       // simple message
+                        self.deleteInfo(self.query.curr)    // deletes appropriate info and -1 from curr attribute
+                        self.askQuestion(self.query.curr)   // asks the appropriate question
                     } else {
                         let resData = JSON(json["restaurants"].dictionaryObject)
                         self.updateRestaurantList(resData)
                     }
                 case .failure(let error):
+                    print(".failure was entered")
                     print(error)
-                    self.sayBadInput()
-                    self.deleteInfo(self.query.curr)
-                    self.askQuestion(self.query.curr)
+                    self.sayBadInput()                      // simple message
+                    self.deleteInfo(self.query.curr)        // deletes appropriate info and -1 from curr attribute
+                    self.askQuestion(self.query.curr)       // asks the appropriate question
             }
         }
     }
@@ -173,11 +167,11 @@ class TempChatBotViewController: UIViewController, CLLocationManagerDelegate {
 
     // for incorrect input / bad requests
     func deleteInfo(_ currentQuestion: Int) {
-        if currentQuestion == 0 {
+        if currentQuestion == 1 {
             query.location = nil
-        } else if currentQuestion == 1 {
-            query.category = nil
         } else if currentQuestion == 2 {
+            query.category = nil
+        } else if currentQuestion == 3 {
             query.price = nil
         }
         query.curr -= 1
@@ -186,7 +180,7 @@ class TempChatBotViewController: UIViewController, CLLocationManagerDelegate {
 
     func askQuestion(_ n: Int) {
         if n == 0 {
-            craveBotText.text = "Where would you \n like to eat today?"
+            craveBotText.text = "Okay! Where would you \n like to eat today?"
         } else if n == 1 {
             craveBotText.text = "What kind of food \n are you craving?"
         } else if n == 2 {
@@ -194,7 +188,7 @@ class TempChatBotViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
 
-    func sayBadInput(_ message: String = "Sorry, I don't understad.") {
+    func sayBadInput(_ message: String = "Sorry, I don't understand.") {
         craveBotText.text = message
     }
 

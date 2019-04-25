@@ -258,6 +258,7 @@
         <image name="ic_undo" width="21" height="21"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="EOU-N6-FR4"/>
         <segue reference="W6g-lT-Utw"/>
     </inferredMetricsTieBreakers>
 </document>
