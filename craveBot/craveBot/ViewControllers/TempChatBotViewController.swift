@@ -73,17 +73,18 @@ class TempChatBotViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBAction func sendToBot(_ sender: Any) {
         
-        // updateInfo() and...
+        // updateInfo()
+        // send self.query to Yelp api via backend
         // clear user input
         
         // if (returned json is nil or has error message)
         
             // sayBadInput()
-            // deleteInfo()
+            // deleteInfo() updates self.query to reset that particular value to nil
             // askQuestion()
         
         // else:
-            // store returned JSON for segueing to RestaurantViewController
+        
             // askQuestion()
     }
     
@@ -95,6 +96,7 @@ class TempChatBotViewController: UIViewController, CLLocationManagerDelegate {
         } else if currentQuestion == 2 {
             query.price = newData
         }
+        query.curr += 1
     }
     
     // for incorrect input / bad requests
@@ -106,6 +108,7 @@ class TempChatBotViewController: UIViewController, CLLocationManagerDelegate {
         } else if currentQuestion == 2 {
             query.price = nil
         }
+        query.curr -= 1
     }
     
     
@@ -113,9 +116,9 @@ class TempChatBotViewController: UIViewController, CLLocationManagerDelegate {
         if n == 0 {
             craveBotText.text = "Okay! Where would you \n like to eat today?"
         } else if n == 1 {
-            craveBotText.text = "What kind of food are you craving?"
+            craveBotText.text = "What kind of food \n are you craving?"
         } else if n == 2 {
-            craveBotText.text = "How much are you looking to spend?"
+            craveBotText.text = "How much are you \n looking to spend?"
         }
     }
     
