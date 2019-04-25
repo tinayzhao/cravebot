@@ -84,8 +84,9 @@ class TempChatBotViewController: UIViewController, CLLocationManagerDelegate {
             // askQuestion()
         
         // else:
-        
+            // store returned JSON somewhere for RestaurantViewController
             // askQuestion()
+        
     }
     
     func updateInfo(_ currentQuestion: Int, _ newData: String) {
@@ -132,7 +133,7 @@ class TempChatBotViewController: UIViewController, CLLocationManagerDelegate {
         chefAnimation?.play { (finished) in
             self.chefAnimation?.play() {(finished) in self.chefAnimation?.play()}
         }
-        
+    
     }
     
     
