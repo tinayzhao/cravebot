@@ -20,18 +20,10 @@ class TempChatBotViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet var input: UITextField!
     @IBOutlet var sendButton: UIButton!
     
-    // the three pieces of information for the search
-    var userLocation: String?
-    var foodType: String?
-    var foodPrice: String?
+    var query = Query()
     
     let manager = CLLocationManager()
-    
-    // 0 means we're on first question
-    // 1 means we're on the second question
-    // 2 means we're on the third question
-    
-    var currentQuestion = 0
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -81,18 +73,41 @@ class TempChatBotViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBAction func sendToBot(_ sender: Any) {
         
-        // send the information to backend and get returned json
+        // updateInfo() and...
+        // clear user input
         
         // if (returned json is nil or has error message)
         
             // sayBadInput()
-            // askQuestion(n: self.currentQuestion)
-            // clear user input
+            // deleteInfo()
+            // askQuestion()
+        
         // else:
-            // store the json information so we can prepare to segue if they swipe
-            // self.currentQuestion += 1
-            // clear user input
+            // store returned JSON for segueing to RestaurantViewController
+            // askQuestion()
     }
+    
+    func updateInfo(_ currentQuestion: Int, _ newData: String) {
+        if currentQuestion == 0 {
+            query.location = newData
+        } else if currentQuestion == 1 {
+            query.type = newData
+        } else if currentQuestion == 2 {
+            query.price = newData
+        }
+    }
+    
+    // for incorrect input / bad requests
+    func deleteInfo(_ currentQuestion: Int) {
+        if currentQuestion == 0 {
+            query.location = nil
+        } else if currentQuestion == 1 {
+            query.type = nil
+        } else if currentQuestion == 2 {
+            query.price = nil
+        }
+    }
+    
     
     func askQuestion(_ n: Int) {
         if n == 0 {
