@@ -184,7 +184,8 @@ class TempChatBotViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
 
-    func sayBadInput(_ message: String = "Sorry, I don't understand.") {
+    func sayBadInput(_ message: String = "Sorry, I don't understad.") {
+        chefwiggle()
         craveBotText.text = message
     }
 
