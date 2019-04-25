@@ -17,7 +17,6 @@ import Alamofire
 class TempChatBotViewController: UIViewController, CLLocationManagerDelegate {
 
     var chefAnimation: AnimationView?
-    var questionNumber: Int = 0
 
     @IBOutlet var craveBotText: CLTypingLabel!
     @IBOutlet var input: UITextField!
@@ -31,6 +30,13 @@ class TempChatBotViewController: UIViewController, CLLocationManagerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //gesture recognizer setup
+        
+        let leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(swipeAction(swipe:)))
+        leftSwipe.direction = UISwipeGestureRecognizer.Direction.left
+        self.view.addGestureRecognizer(leftSwipe)
+        
 
         // sets up location manager
         manager.delegate = self
@@ -88,7 +94,7 @@ class TempChatBotViewController: UIViewController, CLLocationManagerDelegate {
 
         let userInput = input.text
         query.message = userInput
-        updateInfo(questionNumber, userInput!)
+        updateInfo(query.curr, userInput!)
         let json = query.getDictObject()
         //let postParameters = JSONSerialization.data(withJSONObject: json, options: .prettyPrinted)
         let url = "http://localhost:5000/api/backend"
@@ -102,17 +108,17 @@ class TempChatBotViewController: UIViewController, CLLocationManagerDelegate {
                     let messageData = json["message"].stringValue
                     if (messageData == "") {
                         self.sayBadInput(messageData)
-                        self.deleteInfo(self.questionNumber)
-                        self.askQuestion(self.questionNumber)
+                        self.deleteInfo(self.query.curr)
+                        self.askQuestion(self.query.curr)
                     } else {
                         let resData = JSON(json["restaurants"].dictionaryObject)
                         self.updateRestaurantList(resData)
-                        self.questionNumber += 1
                     }
                 case .failure(let error):
                     print(error)
                     self.sayBadInput()
-                    self.deleteInfo(self.questionNumber)
+                    self.deleteInfo(self.query.curr)
+                    self.askQuestion(self.query.curr)
             }
         }
     }
@@ -180,7 +186,7 @@ class TempChatBotViewController: UIViewController, CLLocationManagerDelegate {
 
     func askQuestion(_ n: Int) {
         if n == 0 {
-            craveBotText.text = "Okay! Where would you \n like to eat today?"
+            craveBotText.text = "Where would you \n like to eat today?"
         } else if n == 1 {
             craveBotText.text = "What kind of food \n are you craving?"
         } else if n == 2 {
@@ -200,8 +206,17 @@ class TempChatBotViewController: UIViewController, CLLocationManagerDelegate {
         }
 
     }
+}
 
-
-
-
+extension UIViewController {
+    @objc func swipeAction(swipe:UISwipeGestureRecognizer) {
+        switch swipe.direction.rawValue {
+        case 1:
+            performSegue(withIdentifier: "swipeRight", sender: self)
+        case 2:
+            performSegue(withIdentifier: "swipeLeft", sender: self)
+        default:
+            break
+        }
+    }
 }
