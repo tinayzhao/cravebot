@@ -10,8 +10,9 @@ import Foundation
 import UIKit
 import CLTypingLabel
 import Lottie
+import CoreLocation
 
-class TempChatBotViewController: UIViewController {
+class TempChatBotViewController: UIViewController, CLLocationManagerDelegate {
     
     var chefAnimation: AnimationView?
     
@@ -19,11 +20,38 @@ class TempChatBotViewController: UIViewController {
     @IBOutlet var input: UITextField!
     @IBOutlet var sendButton: UIButton!
     
+    let manager = CLLocationManager()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // sets up location manager
+        manager.delegate = self
+        manager.desiredAccuracy = kCLLocationAccuracyBest
+        manager.requestWhenInUseAuthorization()
+        manager.startUpdatingLocation()
+        
+        let userLocation: CLLocation? = manager.location
+        
+        if (userLocation != nil) {
+            CLGeocoder().reverseGeocodeLocation(userLocation!) { (CLPlacemark, error) in
+                if error != nil {
+                    print ("Error <line 40>")
+                } else {
+                    if let place = CLPlacemark?[0] {
+                        let city = place.locality!
+                        let state = place.administrativeArea!
+                        self.input.text = city + ", " + state
+                    }
+                }
+            }
+        }
+        
+        // sets text speed
         craveBotText.charInterval = 0.05
         
+        // place the chef icon in the middle of the view
         chefAnimation = AnimationView(name: "chefSpeaks")
         chefAnimation?.frame = CGRect.init(x: 0, y: 0, width: self.view.frame.width * 2, height: self.view.frame.height * 2)
         chefAnimation?.center = self.view.center
@@ -39,7 +67,7 @@ class TempChatBotViewController: UIViewController {
             self.chefAnimation?.play() {(finished) in self.chefAnimation?.play()}
         }
         
-        craveBotText.text = "Hello! \n What would you like to eat? \n Input the type fam!"
+        craveBotText.text = "Hi there! I'm Cravebot\n Where would you like\nto eat today?"
     }
     
     

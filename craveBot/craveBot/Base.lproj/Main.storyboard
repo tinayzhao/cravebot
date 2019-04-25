@@ -167,14 +167,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chatBubble" translatesAutoresizingMaskIntoConstraints="NO" id="Vpf-WG-wpe">
-                                <rect key="frame" x="37.5" y="50" width="300" height="167"/>
+                                <rect key="frame" x="37.5" y="70" width="300" height="133.5"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ab5-L9-Vwb" customClass="CLTypingLabel" customModule="CLTypingLabel">
-                                <rect key="frame" x="37.5" y="76" width="300" height="99"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ab5-L9-Vwb" customClass="CLTypingLabel" customModule="CLTypingLabel">
+                                <rect key="frame" x="37.5" y="95" width="300" height="99"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="99" id="Vqg-Nh-j0V"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
@@ -204,8 +204,8 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ab5-L9-Vwb" firstAttribute="width" secondItem="QCa-dS-Zkq" secondAttribute="width" multiplier="0.8" id="0gu-09-svH"/>
-                            <constraint firstItem="ab5-L9-Vwb" firstAttribute="top" secondItem="QCa-dS-Zkq" secondAttribute="top" constant="56" id="1ac-cJ-z6z"/>
-                            <constraint firstItem="Vpf-WG-wpe" firstAttribute="height" secondItem="33t-7z-HnA" secondAttribute="height" multiplier="0.25" id="6A2-Pc-HgN"/>
+                            <constraint firstItem="ab5-L9-Vwb" firstAttribute="top" secondItem="QCa-dS-Zkq" secondAttribute="top" constant="75" id="1ac-cJ-z6z"/>
+                            <constraint firstItem="Vpf-WG-wpe" firstAttribute="height" secondItem="33t-7z-HnA" secondAttribute="height" multiplier="0.2" id="6A2-Pc-HgN"/>
                             <constraint firstItem="AVQ-Xf-y7y" firstAttribute="leading" secondItem="QCa-dS-Zkq" secondAttribute="leading" constant="37" id="DNu-wd-m4S"/>
                             <constraint firstItem="QCa-dS-Zkq" firstAttribute="trailing" secondItem="fIn-rY-tpP" secondAttribute="trailing" constant="38" id="Gei-kP-tAy"/>
                             <constraint firstItem="Vpf-WG-wpe" firstAttribute="width" secondItem="33t-7z-HnA" secondAttribute="width" multiplier="0.8" id="JBQ-Z5-vNA"/>
@@ -213,7 +213,7 @@
                             <constraint firstItem="QCa-dS-Zkq" firstAttribute="bottom" secondItem="AVQ-Xf-y7y" secondAttribute="bottom" constant="19" id="aZS-EG-Slm"/>
                             <constraint firstItem="Vpf-WG-wpe" firstAttribute="centerX" secondItem="QCa-dS-Zkq" secondAttribute="centerX" id="ldD-kc-VWg"/>
                             <constraint firstItem="ab5-L9-Vwb" firstAttribute="centerX" secondItem="QCa-dS-Zkq" secondAttribute="centerX" id="m8r-Zu-xms"/>
-                            <constraint firstItem="Vpf-WG-wpe" firstAttribute="top" secondItem="QCa-dS-Zkq" secondAttribute="top" constant="30" id="wuK-2M-qH9"/>
+                            <constraint firstItem="Vpf-WG-wpe" firstAttribute="top" secondItem="QCa-dS-Zkq" secondAttribute="top" constant="50" id="wuK-2M-qH9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QCa-dS-Zkq"/>
                     </view>

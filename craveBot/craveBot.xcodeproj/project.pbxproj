@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		19259BDD226A313B001AE9F0 /* TempChatBotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19259BDC226A313B001AE9F0 /* TempChatBotViewController.swift */; };
 		19259BDF226A3784001AE9F0 /* chefSpeaks.json in Resources */ = {isa = PBXBuildFile; fileRef = 19259BDE226A3784001AE9F0 /* chefSpeaks.json */; };
+		1958CF4D227155BE00ECFCC3 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1958CF4C227155BE00ECFCC3 /* CoreLocation.framework */; };
 		2916903422699FE200384325 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		291690362269AE0500384325 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		2916903C2269B1B700384325 /* (null) in Resources */ = {isa = PBXBuildFile; };
@@ -53,6 +54,7 @@
 		06E5DC638331D3BBEE335A00 /* Pods-craveBotTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-craveBotTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-craveBotTests/Pods-craveBotTests.release.xcconfig"; sourceTree = "<group>"; };
 		19259BDC226A313B001AE9F0 /* TempChatBotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempChatBotViewController.swift; sourceTree = "<group>"; };
 		19259BDE226A3784001AE9F0 /* chefSpeaks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chefSpeaks.json; sourceTree = "<group>"; };
+		1958CF4C227155BE00ECFCC3 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		291913102268B5D8000498C5 /* RestaurantExamples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantExamples.swift; sourceTree = "<group>"; };
 		291913122268B92F000498C5 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = data.json; path = craveBot/data.json; sourceTree = SOURCE_ROOT; };
 		29237F212265B70200B332EE /* CardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1958CF4D227155BE00ECFCC3 /* CoreLocation.framework in Frameworks */,
 				B4789815697214F4E4402CFC /* Pods_craveBot.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -213,6 +216,7 @@
 		E800C37FCFAC3AF9352EA93F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1958CF4C227155BE00ECFCC3 /* CoreLocation.framework */,
 				3C1AE61461DD8A7ED35BECEC /* Pods_craveBot.framework */,
 				4BC11038243D164E319889F1 /* Pods_craveBotTests.framework */,
 				6AA32620F393CBC9A83C797F /* Pods_craveBotUITests.framework */,
