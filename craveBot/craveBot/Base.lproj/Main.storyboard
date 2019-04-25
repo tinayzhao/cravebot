@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SzD-3U-i3a">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SzD-3U-i3a">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -46,7 +46,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1412" y="89"/>
+            <point key="canvasLocation" x="689" y="89"/>
         </scene>
         <!--Restaurants-->
         <scene sceneID="Dh0-fl-koP">
@@ -110,7 +110,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bPi-Uv-M7a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2164" y="89"/>
+            <point key="canvasLocation" x="1362" y="89"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="i6F-on-qHZ">
@@ -185,16 +185,15 @@
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AVQ-Xf-y7y">
                                 <rect key="frame" x="37" y="618" width="223" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="223" id="lzA-kX-IWY"/>
-                                    <constraint firstAttribute="height" constant="30" id="qWI-Et-Q91"/>
-                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fIn-rY-tpP">
-                                <rect key="frame" x="293" y="607" width="44" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fIn-rY-tpP">
+                                <rect key="frame" x="293" y="616" width="44" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="aAz-Ky-042"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="Send">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -209,13 +208,15 @@
                             <constraint firstItem="ab5-L9-Vwb" firstAttribute="width" secondItem="QCa-dS-Zkq" secondAttribute="width" multiplier="0.8" id="0gu-09-svH"/>
                             <constraint firstItem="ab5-L9-Vwb" firstAttribute="top" secondItem="QCa-dS-Zkq" secondAttribute="top" constant="75" id="1ac-cJ-z6z"/>
                             <constraint firstItem="Vpf-WG-wpe" firstAttribute="height" secondItem="33t-7z-HnA" secondAttribute="height" multiplier="0.2" id="6A2-Pc-HgN"/>
-                            <constraint firstItem="AVQ-Xf-y7y" firstAttribute="leading" secondItem="QCa-dS-Zkq" secondAttribute="leading" constant="37" id="DNu-wd-m4S"/>
-                            <constraint firstItem="QCa-dS-Zkq" firstAttribute="trailing" secondItem="fIn-rY-tpP" secondAttribute="trailing" constant="38" id="Gei-kP-tAy"/>
                             <constraint firstItem="Vpf-WG-wpe" firstAttribute="width" secondItem="33t-7z-HnA" secondAttribute="width" multiplier="0.8" id="JBQ-Z5-vNA"/>
-                            <constraint firstItem="QCa-dS-Zkq" firstAttribute="bottom" secondItem="fIn-rY-tpP" secondAttribute="bottom" constant="25" id="SlQ-ZD-7oh"/>
-                            <constraint firstItem="QCa-dS-Zkq" firstAttribute="bottom" secondItem="AVQ-Xf-y7y" secondAttribute="bottom" constant="19" id="aZS-EG-Slm"/>
+                            <constraint firstItem="AVQ-Xf-y7y" firstAttribute="centerY" secondItem="fIn-rY-tpP" secondAttribute="centerY" id="WMx-Zr-5D0"/>
+                            <constraint firstItem="QCa-dS-Zkq" firstAttribute="bottom" secondItem="AVQ-Xf-y7y" secondAttribute="bottom" constant="19" id="inh-yC-FM9"/>
                             <constraint firstItem="Vpf-WG-wpe" firstAttribute="centerX" secondItem="QCa-dS-Zkq" secondAttribute="centerX" id="ldD-kc-VWg"/>
                             <constraint firstItem="ab5-L9-Vwb" firstAttribute="centerX" secondItem="QCa-dS-Zkq" secondAttribute="centerX" id="m8r-Zu-xms"/>
+                            <constraint firstItem="QCa-dS-Zkq" firstAttribute="bottom" secondItem="fIn-rY-tpP" secondAttribute="bottom" constant="16" id="p9Q-1f-vaS"/>
+                            <constraint firstItem="AVQ-Xf-y7y" firstAttribute="leading" secondItem="QCa-dS-Zkq" secondAttribute="leading" constant="37" id="qTM-bA-NSE"/>
+                            <constraint firstItem="QCa-dS-Zkq" firstAttribute="trailing" secondItem="fIn-rY-tpP" secondAttribute="trailing" constant="38" id="qes-3S-xgG"/>
+                            <constraint firstItem="fIn-rY-tpP" firstAttribute="leading" secondItem="AVQ-Xf-y7y" secondAttribute="trailing" constant="33" id="qkL-BZ-6QT"/>
                             <constraint firstItem="Vpf-WG-wpe" firstAttribute="top" secondItem="QCa-dS-Zkq" secondAttribute="top" constant="50" id="wuK-2M-qH9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QCa-dS-Zkq"/>
@@ -234,8 +235,8 @@
     <resources>
         <image name="chatBubble" width="322" height="222"/>
         <image name="craveLogo" width="152" height="41"/>
-        <image name="ic_like" width="38" height="34"/>
-        <image name="ic_skip" width="38" height="34"/>
-        <image name="ic_undo" width="21" height="21"/>
+        <image name="ic_like" width="76" height="68"/>
+        <image name="ic_skip" width="114" height="102"/>
+        <image name="ic_undo" width="21.5" height="21.5"/>
     </resources>
 </document>

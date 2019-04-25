@@ -11,16 +11,20 @@ import UIKit
 import CLTypingLabel
 import Lottie
 import CoreLocation
+import SwiftyJSON
+import Alamofire
 
 class TempChatBotViewController: UIViewController, CLLocationManagerDelegate {
     
     var chefAnimation: AnimationView?
+    var questionNumber: Int = 0
 
     @IBOutlet var craveBotText: CLTypingLabel!
     @IBOutlet var input: UITextField!
     @IBOutlet var sendButton: UIButton!
     
     var query = Query()
+    var restaurantList: [Restaurant] = []
     
     let manager = CLLocationManager()
 
@@ -72,27 +76,89 @@ class TempChatBotViewController: UIViewController, CLLocationManagerDelegate {
     
     
     @IBAction func sendToBot(_ sender: Any) {
-        
         // updateInfo()
         // send self.query to Yelp api via backend
         // clear user input
-        
         // if (returned json is nil or has error message)
-        
             // sayBadInput()
             // deleteInfo() updates self.query to reset that particular value to nil
             // askQuestion()
-        
         // else:
-        
             // askQuestion()
+        
+        let userInput = input.text
+        query.message = userInput
+        updateInfo(questionNumber, userInput!)
+        let json = query.getDictObject()
+        //let postParameters = JSONSerialization.data(withJSONObject: json, options: .prettyPrinted)
+        let url = "http://localhost:5000/api/backend"
+        
+        Alamofire.request(url, method: .post, parameters: json, encoding: JSONEncoding.default).validate().responseJSON { response in
+            switch response.result {
+                case .success(let value):
+                    let json = JSON(value)
+                    print("JSON: \(json)")
+                    
+                    let messageData = json["message"].stringValue
+                    if (messageData == "") {
+                        self.sayBadInput(messageData)
+                        self.deleteInfo(self.questionNumber)
+                        self.askQuestion(self.questionNumber)
+                    } else {
+                        let resData = JSON(json["restaurants"].dictionaryObject)
+                        self.updateRestaurantList(resData)
+                        self.questionNumber += 1
+                    }
+                case .failure(let error):
+                    print(error)
+                    self.sayBadInput()
+                    self.deleteInfo(self.questionNumber)
+            }
+        }
+    }
+    
+    func updateRestaurantList(_ jsonData: JSON){
+        //test: with preloaded json
+        //let path = Bundle.main.path(forResource: "restaurant", ofType: "json")
+        
+        //print(path)
+        //let jsonData = NSData(contentsOfFile:path!)
+        do {
+            let json = try JSON(jsonData)
+            //print(json)
+            let jsonList = json.arrayValue
+            for item in jsonList {
+                print(item)
+                let restarauntJSON = JSON(item)
+                print(restarauntJSON)
+                restaurantList.append(Restaurant(json: restarauntJSON))
+            }
+            // print("success")
+        }catch let error {
+            print(error.localizedDescription)
+        }
+        
+        /*do {
+         //  let data = try Data(contentsOf: URL(fileURLWithPath: path!), options: .alwaysMapped)
+         // if let dataFromString = data.data(using: .utf8, allowLossyConversion: false) {
+         //   let json = JSON(data: dataFromString)
+         // let restaurantList = json["businesses"]
+         }
+         //let jsonObj = JSONSerializer.toJson(data)
+         //print(jsonObj)
+         //let json = JSON(data: data)
+         
+         } catch let error {
+         print(error.localizedDescription)
+         }
+         */
     }
     
     func updateInfo(_ currentQuestion: Int, _ newData: String) {
         if currentQuestion == 0 {
             query.location = newData
         } else if currentQuestion == 1 {
-            query.type = newData
+            query.category = newData
         } else if currentQuestion == 2 {
             query.price = newData
         }
@@ -104,7 +170,7 @@ class TempChatBotViewController: UIViewController, CLLocationManagerDelegate {
         if currentQuestion == 0 {
             query.location = nil
         } else if currentQuestion == 1 {
-            query.type = nil
+            query.category = nil
         } else if currentQuestion == 2 {
             query.price = nil
         }
@@ -122,8 +188,8 @@ class TempChatBotViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
     
-    func sayBadInput() {
-        craveBotText.text = "Sorry, I don't understand."
+    func sayBadInput(_ message: String = "Sorry, I don't understad.") {
+        craveBotText.text = message
     }
     
     
