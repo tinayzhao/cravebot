@@ -10,10 +10,10 @@ import Foundation
 import SwiftyJSON
 
 class Query {
-    var message: String?
-    var location: String?
-    var category: String?
-    var price: String?
+    var message: String = ""
+    var location: String = ""
+    var category: String = ""
+    var price: String = ""
     
     // which question we are at (starts at zero)
     var curr: Int = 0
@@ -31,6 +31,7 @@ class Query {
     }
     
     func getDictObject() -> [String: Any]{
+        /*
         var locationString = location
         if ((locationString?.isEmpty)!){
             locationString = ""
@@ -43,8 +44,9 @@ class Query {
         if ((priceString?.isEmpty)!){
             priceString = ""
         }
+        */
         
-        let dict = ["location" : locationString, "category": categoryString, "price": priceString, "message" : message] as [String: Any]
+        let dict = ["location" : location, "category": category, "price": price, "message" : message] as [String: Any]
         return dict
     }
 }
