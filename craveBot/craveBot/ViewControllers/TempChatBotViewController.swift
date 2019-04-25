@@ -83,9 +83,9 @@ class TempChatBotViewController: UIViewController, CLLocationManagerDelegate {
 
     @IBAction func sendToBot(_ sender: Any) {
 
-
+        
         let userInput = input.text
-        query.message = userInput                   // query message updated
+        query.message = userInput ?? ""             // query message updated
         updateInfo(self.query.curr, userInput!)     // query appropriate info updated as well as +1 to curr atrribute
         let json = query.getDictObject()
         print(json)
