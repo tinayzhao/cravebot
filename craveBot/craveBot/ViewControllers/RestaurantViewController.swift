@@ -28,6 +28,11 @@ class RestaurantViewController: UIViewController, KolodaViewDelegate, KolodaView
         kolodaView.dataSource = self
         kolodaView.delegate = self
         
+        // swipe gesture recognizer setup
+        let rightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(swipeAction(swipe:)))
+        rightSwipe.direction = UISwipeGestureRecognizer.Direction.right
+        self.view.addGestureRecognizer(rightSwipe)
+        
     }
 
     

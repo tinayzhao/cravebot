@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+=======
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SzD-3U-i3a">
+>>>>>>> f057f55e29aedf1d61503fcc409d4f919237663b
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -103,6 +107,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="kolodaView" destination="Pdw-Nm-90H" id="D26-dC-ft9"/>
+                        <segue destination="wvR-qc-kRE" kind="presentation" identifier="swipeRight" modalTransitionStyle="crossDissolve" id="W6g-lT-Utw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bPi-Uv-M7a" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -204,7 +209,7 @@
                         <outlet property="craveBotText" destination="ab5-L9-Vwb" id="1C3-7P-2hd"/>
                         <outlet property="input" destination="AVQ-Xf-y7y" id="S0U-LR-84A"/>
                         <outlet property="sendButton" destination="fIn-rY-tpP" id="tCA-oj-d7c"/>
-                        <segue destination="Afp-UW-Uk3" kind="show" identifier="chatToRestaurantSegue" id="EOU-N6-FR4"/>
+                        <segue destination="Afp-UW-Uk3" kind="presentation" identifier="swipeLeft" modalTransitionStyle="crossDissolve" id="EOU-N6-FR4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aw1-Zs-UGz" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -233,8 +238,11 @@
     <resources>
         <image name="chatBubble" width="322" height="222"/>
         <image name="craveLogo" width="152" height="41"/>
-        <image name="ic_like" width="76" height="68"/>
-        <image name="ic_skip" width="114" height="102"/>
-        <image name="ic_undo" width="21.5" height="21.5"/>
+        <image name="ic_like" width="38" height="34"/>
+        <image name="ic_skip" width="38" height="34"/>
+        <image name="ic_undo" width="21" height="21"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="W6g-lT-Utw"/>
+    </inferredMetricsTieBreakers>
 </document>
