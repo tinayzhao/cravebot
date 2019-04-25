@@ -165,8 +165,6 @@ class TempChatBotViewController: UIViewController, CLLocationManagerDelegate {
             query.price = ""
         }
         query.curr -= 1
-        print(self.questionNumber)
-        print(query.curr)
     }
 
 
