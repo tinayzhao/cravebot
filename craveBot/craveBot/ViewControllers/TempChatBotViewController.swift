@@ -30,13 +30,13 @@ class TempChatBotViewController: UIViewController, CLLocationManagerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         //gesture recognizer setup
-        
+
         let leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(swipeAction(swipe:)))
         leftSwipe.direction = UISwipeGestureRecognizer.Direction.left
         self.view.addGestureRecognizer(leftSwipe)
-        
+
 
         // sets up location manager
         manager.delegate = self
@@ -88,6 +88,7 @@ class TempChatBotViewController: UIViewController, CLLocationManagerDelegate {
         query.message = userInput                   // query message updated
         updateInfo(self.query.curr, userInput!)     // query appropriate info updated as well as +1 to curr atrribute
         let json = query.getDictObject()
+        print(json)
         //let postParameters = JSONSerialization.data(withJSONObject: json, options: .prettyPrinted)
         let url = "http://localhost:5000/api/backend"
 
@@ -106,7 +107,9 @@ class TempChatBotViewController: UIViewController, CLLocationManagerDelegate {
                     } else {
                         let resData = JSON(json["restaurants"].dictionaryObject)
                         self.updateRestaurantList(resData)
-                    }
+                        self.input.text = ""
+                        self.askQuestion(self.query.curr)
+                }
                 case .failure(let error):
                     print(".failure was entered")
                     print(error)
@@ -123,35 +126,20 @@ class TempChatBotViewController: UIViewController, CLLocationManagerDelegate {
 
         //print(path)
         //let jsonData = NSData(contentsOfFile:path!)
-        do {
-            let json = try JSON(jsonData)
-            //print(json)
-            let jsonList = json.arrayValue
-            for item in jsonList {
-                print(item)
-                let restarauntJSON = JSON(item)
-                print(restarauntJSON)
-                restaurantList.append(Restaurant(json: restarauntJSON))
-            }
-            // print("success")
-        }catch let error {
-            print(error.localizedDescription)
+        //do {
+        let json = try JSON(jsonData)
+        //print(json)
+        let jsonList = json.arrayValue
+        for item in jsonList {
+            print(item)
+            let restarauntJSON = JSON(item)
+            print(restarauntJSON)
+            restaurantList.append(Restaurant(json: restarauntJSON))
         }
-
-        /*do {
-         //  let data = try Data(contentsOf: URL(fileURLWithPath: path!), options: .alwaysMapped)
-         // if let dataFromString = data.data(using: .utf8, allowLossyConversion: false) {
-         //   let json = JSON(data: dataFromString)
-         // let restaurantList = json["businesses"]
-         }
-         //let jsonObj = JSONSerializer.toJson(data)
-         //print(jsonObj)
-         //let json = JSON(data: data)
-
-         } catch let error {
-         print(error.localizedDescription)
-         }
-         */
+            // print("success")
+        //}catch let error {
+            //print(error.localizedDescription)
+        //}
     }
 
     func updateInfo(_ currentQuestion: Int, _ newData: String) {
@@ -163,6 +151,9 @@ class TempChatBotViewController: UIViewController, CLLocationManagerDelegate {
             query.price = newData
         }
         query.curr += 1
+        //print(self.questionNumber)
+        //print(query.curr)
+
     }
 
     // for incorrect input / bad requests
@@ -175,16 +166,21 @@ class TempChatBotViewController: UIViewController, CLLocationManagerDelegate {
             query.price = nil
         }
         query.curr -= 1
+        print(self.questionNumber)
+        print(query.curr)
     }
 
 
     func askQuestion(_ n: Int) {
+        chefwiggle()
         if n == 0 {
             craveBotText.text = "Okay! Where would you \n like to eat today?"
         } else if n == 1 {
             craveBotText.text = "What kind of food \n are you craving?"
         } else if n == 2 {
             craveBotText.text = "How much are you \n looking to spend?"
+        } else if n > 2 {
+            craveBotText.text = "I found some restaurants! \n Swipe to take a look!"
         }
     }
 
