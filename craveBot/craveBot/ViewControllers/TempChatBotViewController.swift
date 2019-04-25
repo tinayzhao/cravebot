@@ -87,7 +87,7 @@ class TempChatBotViewController: UIViewController, CLLocationManagerDelegate {
 
         updateInfo(query.curr, userInput!)
         let json = query.getDictObject()
-        print(json)
+        //print(json)
         //let postParameters = JSONSerialization.data(withJSONObject: json, options: .prettyPrinted)
         let url = "http://localhost:5000/api/backend"
 
@@ -95,7 +95,7 @@ class TempChatBotViewController: UIViewController, CLLocationManagerDelegate {
             switch response.result {
                 case .success(let value):
                     let json = JSON(value)
-                    print("JSON: \(json)")
+                    //print("JSON: \(json)")
 
                     let messageData = json["message"].stringValue
                     if (messageData != "") {
@@ -130,11 +130,12 @@ class TempChatBotViewController: UIViewController, CLLocationManagerDelegate {
         //print(json)
         let jsonList = json.arrayValue
         for item in jsonList {
-            print(item)
+            //print(item)
             let restarauntJSON = JSON(item)
-            print(restarauntJSON)
             restaurantList.append(Restaurant(json: restarauntJSON))
         }
+        
+        print(restaurantList)
             // print("success")
         //}catch let error {
             //print(error.localizedDescription)
