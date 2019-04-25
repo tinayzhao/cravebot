@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
+
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-=======
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SzD-3U-i3a">
->>>>>>> f057f55e29aedf1d61503fcc409d4f919237663b
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
