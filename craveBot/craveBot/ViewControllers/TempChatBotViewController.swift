@@ -30,13 +30,13 @@ class TempChatBotViewController: UIViewController, CLLocationManagerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         //gesture recognizer setup
-        
+
         let leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(swipeAction(swipe:)))
         leftSwipe.direction = UISwipeGestureRecognizer.Direction.left
         self.view.addGestureRecognizer(leftSwipe)
-        
+
 
         // sets up location manager
         manager.delegate = self
@@ -82,10 +82,11 @@ class TempChatBotViewController: UIViewController, CLLocationManagerDelegate {
 
 
     @IBAction func sendToBot(_ sender: Any) {
-        let userInput = input.text
-        query.message = userInput ?? ""
 
-        updateInfo(query.curr, userInput!)
+        
+        let userInput = input.text
+        query.message = userInput ?? ""             // query message updated
+        updateInfo(self.query.curr, userInput!)     // query appropriate info updated as well as +1 to curr atrribute
         let json = query.getDictObject()
         //print(json)
         //let postParameters = JSONSerialization.data(withJSONObject: json, options: .prettyPrinted)
@@ -98,12 +99,11 @@ class TempChatBotViewController: UIViewController, CLLocationManagerDelegate {
                     //print("JSON: \(json)")
 
                     let messageData = json["message"].stringValue
-                    if (messageData != "") {
-                        self.sayBadInput(messageData)
-                        self.deleteInfo(self.query.curr)
-                        self.input.text = ""
-
-                        self.askQuestion(self.query.curr)
+                    if (messageData == "") {
+                        print("messageData was empty string")
+                        self.sayBadInput(messageData)       // simple message
+                        self.deleteInfo(self.query.curr)    // deletes appropriate info and -1 from curr attribute
+                        self.askQuestion(self.query.curr)   // asks the appropriate question
                     } else {
                         let resData = JSON(json["restaurants"].dictionaryObject)
                         self.updateRestaurantList(resData)
@@ -111,10 +111,11 @@ class TempChatBotViewController: UIViewController, CLLocationManagerDelegate {
                         self.askQuestion(self.query.curr)
                 }
                 case .failure(let error):
+                    print(".failure was entered")
                     print(error)
-                    self.sayBadInput()
-                    self.deleteInfo(self.query.curr)
-                    self.askQuestion(self.query.curr)
+                    self.sayBadInput()                      // simple message
+                    self.deleteInfo(self.query.curr)        // deletes appropriate info and -1 from curr attribute
+                    self.askQuestion(self.query.curr)       // asks the appropriate question
             }
         }
     }
@@ -153,26 +154,28 @@ class TempChatBotViewController: UIViewController, CLLocationManagerDelegate {
         query.curr += 1
         //print(self.questionNumber)
         //print(query.curr)
-        
+
     }
 
     // for incorrect input / bad requests
     func deleteInfo(_ currentQuestion: Int) {
-        if currentQuestion == 0 {
+        if currentQuestion == 1 {
             query.location = ""
-        } else if currentQuestion == 1 {
-            query.category = ""
         } else if currentQuestion == 2 {
+            query.category = ""
+        } else if currentQuestion == 3 {
             query.price = ""
         }
         query.curr -= 1
     }
+    
+    
 
 
     func askQuestion(_ n: Int) {
         chefwiggle()
         if n == 0 {
-            craveBotText.text = "Where would you \n like to eat today?"
+            craveBotText.text = "Okay! Where would you \n like to eat today?"
         } else if n == 1 {
             craveBotText.text = "What kind of food \n are you craving?"
         } else if n == 2 {
