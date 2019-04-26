@@ -70,6 +70,7 @@ class TempChatBotViewController: UIViewController, CLLocationManagerDelegate {
         chefAnimation?.center = self.view.center
         chefAnimation?.isUserInteractionEnabled = false
         self.view.addSubview(chefAnimation!)
+        
 
     }
 
@@ -96,16 +97,17 @@ class TempChatBotViewController: UIViewController, CLLocationManagerDelegate {
             switch response.result {
                 case .success(let value):
                     let json = JSON(value)
-                    //print("JSON: \(json)")
+                    print("JSON: \(json)")
 
                     let messageData = json["message"].stringValue
-                    if (messageData == "") {
-                        print("messageData was empty string")
+                    if (messageData != "") {
+                        print("messageData was not empty string")
                         self.sayBadInput(messageData)       // simple message
                         self.deleteInfo(self.query.curr)    // deletes appropriate info and -1 from curr attribute
                         self.askQuestion(self.query.curr)   // asks the appropriate question
                     } else {
-                        let resData = JSON(json["restaurants"].dictionaryObject)
+                        let resData = json["restaurants"]
+                        //print (resData)
                         self.updateRestaurantList(resData)
                         self.input.text = ""
                         self.askQuestion(self.query.curr)
@@ -127,7 +129,7 @@ class TempChatBotViewController: UIViewController, CLLocationManagerDelegate {
         //print(path)
         //let jsonData = NSData(contentsOfFile:path!)
         //do {
-        let json = try JSON(jsonData)
+        let json = JSON(jsonData)
         //print(json)
         let jsonList = json.arrayValue
         for item in jsonList {
@@ -137,6 +139,7 @@ class TempChatBotViewController: UIViewController, CLLocationManagerDelegate {
         }
         
         print(restaurantList)
+        print(restaurantList.count)
             // print("success")
         //}catch let error {
             //print(error.localizedDescription)
@@ -198,6 +201,14 @@ class TempChatBotViewController: UIViewController, CLLocationManagerDelegate {
         }
 
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "swipeLeft"){
+            if let dest = segue.destination as? RestaurantViewController {
+                dest.restaurantList = restaurantList
+            }
+        }
+    }
 }
 
 extension UIViewController {
@@ -211,4 +222,5 @@ extension UIViewController {
             break
         }
     }
+    
 }
