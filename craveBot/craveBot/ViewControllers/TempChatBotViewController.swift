@@ -101,7 +101,8 @@ class TempChatBotViewController: UIViewController, CLLocationManagerDelegate {
 
                     let messageData = json["message"].stringValue
                     if (messageData != "") {
-                        print("messageData was not empty string")
+                        print("message sent from backend: ")
+                        print(messageData)
                         self.sayBadInput(messageData)       // simple message
                         self.deleteInfo(self.query.curr)    // deletes appropriate info and -1 from curr attribute
                         self.askQuestion(self.query.curr)   // asks the appropriate question
@@ -117,7 +118,7 @@ class TempChatBotViewController: UIViewController, CLLocationManagerDelegate {
                     print(error)
                     self.sayBadInput()                      // simple message
                     self.deleteInfo(self.query.curr)        // deletes appropriate info and -1 from curr attribute
-                    self.askQuestion(self.query.curr)       // asks the appropriate question
+                    // asks the appropriate question
             }
         }
     }
@@ -170,6 +171,7 @@ class TempChatBotViewController: UIViewController, CLLocationManagerDelegate {
             query.price = ""
         }
         query.curr -= 1
+        self.askQuestion(self.query.curr)  
     }
     
     

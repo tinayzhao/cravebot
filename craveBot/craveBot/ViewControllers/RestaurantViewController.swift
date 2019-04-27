@@ -32,6 +32,8 @@ class RestaurantViewController: UIViewController, KolodaViewDelegate, KolodaView
         let rightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(swipeAction(swipe:)))
         rightSwipe.direction = UISwipeGestureRecognizer.Direction.right
         self.view.addGestureRecognizer(rightSwipe)
+        kolodaView.cornerRadius(radius: 20)
+        kolodaView.addShadow()
         
     }
 
@@ -70,6 +72,9 @@ class RestaurantViewController: UIViewController, KolodaViewDelegate, KolodaView
     func koloda(_ koloda: KolodaView, viewForCardAt index: Int) -> UIView {
         
         let v = CardView.instanceFromNib()
+        //v.cornerRadius(radius: 10)
+        v.addShadow()
+        
         currentRestaurant = restaurantList[index]
         
         if (currentRestaurant != nil) {
@@ -79,7 +84,7 @@ class RestaurantViewController: UIViewController, KolodaViewDelegate, KolodaView
         let url = URL(string: currentRestaurant.imageURL!)
         v.image.kf.setImage(with: url)
         v.address.text =  currentRestaurant.address!
-        v.distance.text  = String(currentRestaurant.distance!) + " away"
+        v.distance.text  = String(currentRestaurant.distance!) + "mi away"
         v.hours.text = ""
         v.rating.maxRating = 5
         
@@ -100,6 +105,9 @@ class RestaurantViewController: UIViewController, KolodaViewDelegate, KolodaView
             v.openStatus.text = "Closed"
             v.openStatus.textColor = UIColor.red
         }
+        print(currentRestaurant.cost!)
+        v.dollarSigns.text = currentRestaurant.cost!
+        
         
         return v
         

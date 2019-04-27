@@ -40,7 +40,7 @@ import UIKit
     }
     
     var distance: Double? {
-        return Double(round(1000*self.json["distance"].doubleValue)/1000)
+        return Double(round(100*self.json["distance"].doubleValue)/100)
     }
     
     var open: Bool? {

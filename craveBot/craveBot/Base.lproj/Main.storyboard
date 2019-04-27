@@ -57,21 +57,21 @@
                                 <rect key="frame" x="16" y="20" width="343" height="499"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6MH-Ah-ZGr">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6MH-Ah-ZGr">
                                 <rect key="frame" x="16" y="538" width="88" height="76"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="76" id="C2u-ko-D2J"/>
-                                    <constraint firstAttribute="width" constant="88" id="pBP-jt-68N"/>
+                                    <constraint firstAttribute="width" constant="88" id="UEv-LT-81v"/>
+                                    <constraint firstAttribute="height" constant="76" id="Zfs-RG-C0P"/>
                                 </constraints>
                                 <state key="normal" image="left_arrow"/>
                                 <connections>
                                     <action selector="leftButtonTapped" destination="0MN-Q5-4DM" eventType="touchUpInside" id="IVn-gc-sW5"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="01F-q1-dSE">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="01F-q1-dSE">
                                 <rect key="frame" x="271" y="538" width="88" height="76"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="88" id="8Eh-Rv-e9j"/>
+                                    <constraint firstAttribute="width" constant="88" id="5ln-E7-vp6"/>
                                 </constraints>
                                 <state key="normal" image="right_arrow"/>
                                 <connections>
@@ -81,17 +81,15 @@
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
-                            <constraint firstItem="01F-q1-dSE" firstAttribute="top" secondItem="6MH-Ah-ZGr" secondAttribute="top" id="DUJ-qj-PPX"/>
-                            <constraint firstItem="Pdw-Nm-90H" firstAttribute="leading" secondItem="IHh-p2-ivO" secondAttribute="leadingMargin" id="Jsi-UB-sh9"/>
-                            <constraint firstItem="6MH-Ah-ZGr" firstAttribute="leading" secondItem="Pdw-Nm-90H" secondAttribute="leading" id="LN8-i1-Y5E"/>
-                            <constraint firstItem="Pdw-Nm-90H" firstAttribute="trailing" secondItem="IHh-p2-ivO" secondAttribute="trailingMargin" id="S5G-i6-Ydj"/>
-                            <constraint firstItem="01F-q1-dSE" firstAttribute="top" secondItem="Pdw-Nm-90H" secondAttribute="bottom" constant="19" id="aAw-Tg-EOF"/>
-                            <constraint firstItem="ksl-f7-gLd" firstAttribute="bottom" secondItem="6MH-Ah-ZGr" secondAttribute="bottom" constant="64" id="eWo-gf-TUX"/>
-                            <constraint firstItem="6MH-Ah-ZGr" firstAttribute="top" secondItem="Pdw-Nm-90H" secondAttribute="bottom" constant="8" symbolic="YES" id="ghG-6e-Kq5"/>
-                            <constraint firstItem="ksl-f7-gLd" firstAttribute="bottom" secondItem="01F-q1-dSE" secondAttribute="bottom" constant="53" id="mHY-mG-Yhg"/>
-                            <constraint firstItem="Pdw-Nm-90H" firstAttribute="top" secondItem="ksl-f7-gLd" secondAttribute="top" id="mJf-W7-239"/>
-                            <constraint firstItem="01F-q1-dSE" firstAttribute="bottom" secondItem="6MH-Ah-ZGr" secondAttribute="bottom" id="miM-fT-wyb"/>
-                            <constraint firstItem="01F-q1-dSE" firstAttribute="trailing" secondItem="Pdw-Nm-90H" secondAttribute="trailing" id="otQ-uE-yxV"/>
+                            <constraint firstItem="6MH-Ah-ZGr" firstAttribute="top" secondItem="Pdw-Nm-90H" secondAttribute="bottom" constant="19" id="3w1-Xx-6mJ"/>
+                            <constraint firstItem="Pdw-Nm-90H" firstAttribute="top" secondItem="ksl-f7-gLd" secondAttribute="top" id="CHa-uE-Dwl"/>
+                            <constraint firstItem="6MH-Ah-ZGr" firstAttribute="bottom" secondItem="01F-q1-dSE" secondAttribute="bottom" id="E8D-q6-Qdb"/>
+                            <constraint firstItem="Pdw-Nm-90H" firstAttribute="trailing" secondItem="01F-q1-dSE" secondAttribute="trailing" id="Ehk-Ww-s2h"/>
+                            <constraint firstItem="6MH-Ah-ZGr" firstAttribute="top" secondItem="01F-q1-dSE" secondAttribute="top" id="Rjj-yT-u0V"/>
+                            <constraint firstItem="Pdw-Nm-90H" firstAttribute="leading" secondItem="6MH-Ah-ZGr" secondAttribute="leading" id="URy-ks-ko1"/>
+                            <constraint firstItem="ksl-f7-gLd" firstAttribute="bottom" secondItem="6MH-Ah-ZGr" secondAttribute="bottom" constant="53" id="bUJ-bD-qbK"/>
+                            <constraint firstItem="Pdw-Nm-90H" firstAttribute="leading" secondItem="IHh-p2-ivO" secondAttribute="leadingMargin" id="g94-og-HDM"/>
+                            <constraint firstItem="Pdw-Nm-90H" firstAttribute="trailing" secondItem="IHh-p2-ivO" secondAttribute="trailingMargin" id="oby-2Q-5Lx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ksl-f7-gLd"/>
                     </view>
