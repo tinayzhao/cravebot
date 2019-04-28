@@ -35,6 +35,12 @@ class RestaurantViewController: UIViewController, KolodaViewDelegate, KolodaView
         
     }
 
+    //JENNIFER: Link addy to respective restaurant
+    @IBAction func mapsButtonTapped() {
+        let v = CardView.instanceFromNib()
+        let addy = "http://maps.apple.com/?address=" + v.address.text!
+        UIApplication.shared.open(URL(string: addy)!, options: [:], completionHandler: nil)
+    }
     
     
     @IBAction func leftButtonTapped() {

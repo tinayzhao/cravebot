@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SD1-ef-hHw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SD1-ef-hHw">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -60,8 +60,8 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6MH-Ah-ZGr">
                                 <rect key="frame" x="16" y="538" width="88" height="76"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="88" id="UEv-LT-81v"/>
-                                    <constraint firstAttribute="height" constant="76" id="Zfs-RG-C0P"/>
+                                    <constraint firstAttribute="width" constant="88" id="Hlk-xD-81Y"/>
+                                    <constraint firstAttribute="height" constant="76" id="fd7-vz-aFA"/>
                                 </constraints>
                                 <state key="normal" image="left_arrow"/>
                                 <connections>
@@ -69,27 +69,36 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="01F-q1-dSE">
-                                <rect key="frame" x="271" y="538" width="88" height="76"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="88" id="5ln-E7-vp6"/>
-                                </constraints>
+                                <rect key="frame" x="272" y="538" width="87" height="76"/>
                                 <state key="normal" image="right_arrow"/>
                                 <connections>
                                     <action selector="rightButtonTapped" destination="0MN-Q5-4DM" eventType="touchUpInside" id="bih-CK-DBN"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Dm-QB-duK">
+                                <rect key="frame" x="143" y="538" width="89" height="76"/>
+                                <state key="normal" image="pinpoint"/>
+                                <connections>
+                                    <action selector="mapsButtonTapped" destination="0MN-Q5-4DM" eventType="touchUpInside" id="OaZ-QW-2jS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
-                            <constraint firstItem="6MH-Ah-ZGr" firstAttribute="top" secondItem="Pdw-Nm-90H" secondAttribute="bottom" constant="19" id="3w1-Xx-6mJ"/>
-                            <constraint firstItem="Pdw-Nm-90H" firstAttribute="top" secondItem="ksl-f7-gLd" secondAttribute="top" id="CHa-uE-Dwl"/>
-                            <constraint firstItem="6MH-Ah-ZGr" firstAttribute="bottom" secondItem="01F-q1-dSE" secondAttribute="bottom" id="E8D-q6-Qdb"/>
-                            <constraint firstItem="Pdw-Nm-90H" firstAttribute="trailing" secondItem="01F-q1-dSE" secondAttribute="trailing" id="Ehk-Ww-s2h"/>
-                            <constraint firstItem="6MH-Ah-ZGr" firstAttribute="top" secondItem="01F-q1-dSE" secondAttribute="top" id="Rjj-yT-u0V"/>
-                            <constraint firstItem="Pdw-Nm-90H" firstAttribute="leading" secondItem="6MH-Ah-ZGr" secondAttribute="leading" id="URy-ks-ko1"/>
-                            <constraint firstItem="ksl-f7-gLd" firstAttribute="bottom" secondItem="6MH-Ah-ZGr" secondAttribute="bottom" constant="53" id="bUJ-bD-qbK"/>
-                            <constraint firstItem="Pdw-Nm-90H" firstAttribute="leading" secondItem="IHh-p2-ivO" secondAttribute="leadingMargin" id="g94-og-HDM"/>
-                            <constraint firstItem="Pdw-Nm-90H" firstAttribute="trailing" secondItem="IHh-p2-ivO" secondAttribute="trailingMargin" id="oby-2Q-5Lx"/>
+                            <constraint firstItem="6MH-Ah-ZGr" firstAttribute="top" secondItem="Pdw-Nm-90H" secondAttribute="bottom" constant="19" id="5Z2-Rw-H92"/>
+                            <constraint firstItem="Pdw-Nm-90H" firstAttribute="leading" secondItem="IHh-p2-ivO" secondAttribute="leadingMargin" id="5b9-T5-UQ4"/>
+                            <constraint firstItem="4Dm-QB-duK" firstAttribute="top" secondItem="01F-q1-dSE" secondAttribute="top" id="9a2-L8-vxI"/>
+                            <constraint firstItem="4Dm-QB-duK" firstAttribute="bottom" secondItem="01F-q1-dSE" secondAttribute="bottom" id="Cjh-Z2-IOv"/>
+                            <constraint firstItem="Pdw-Nm-90H" firstAttribute="trailing" secondItem="01F-q1-dSE" secondAttribute="trailing" id="Fhg-WH-Fu9"/>
+                            <constraint firstItem="Pdw-Nm-90H" firstAttribute="leading" secondItem="6MH-Ah-ZGr" secondAttribute="leading" id="FtL-y3-vH8"/>
+                            <constraint firstItem="Pdw-Nm-90H" firstAttribute="centerX" secondItem="4Dm-QB-duK" secondAttribute="centerX" id="G3c-nI-0vM"/>
+                            <constraint firstItem="4Dm-QB-duK" firstAttribute="leading" secondItem="6MH-Ah-ZGr" secondAttribute="trailing" constant="39" id="TXQ-eW-qb6"/>
+                            <constraint firstItem="01F-q1-dSE" firstAttribute="leading" secondItem="4Dm-QB-duK" secondAttribute="trailing" constant="40" id="Tbf-QC-vM3"/>
+                            <constraint firstItem="Pdw-Nm-90H" firstAttribute="top" secondItem="ksl-f7-gLd" secondAttribute="top" id="Xdc-Ld-gAD"/>
+                            <constraint firstItem="Pdw-Nm-90H" firstAttribute="trailing" secondItem="IHh-p2-ivO" secondAttribute="trailingMargin" id="a7A-Rt-Mw1"/>
+                            <constraint firstItem="6MH-Ah-ZGr" firstAttribute="top" secondItem="4Dm-QB-duK" secondAttribute="top" id="cJs-5m-4TZ"/>
+                            <constraint firstItem="6MH-Ah-ZGr" firstAttribute="bottom" secondItem="4Dm-QB-duK" secondAttribute="bottom" id="nrJ-NX-EiN"/>
+                            <constraint firstItem="ksl-f7-gLd" firstAttribute="bottom" secondItem="6MH-Ah-ZGr" secondAttribute="bottom" constant="53" id="vFy-5f-kc3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ksl-f7-gLd"/>
                     </view>
@@ -150,7 +159,7 @@
                                 <rect key="frame" x="0.0" y="10" width="375" height="667"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chatBubble" translatesAutoresizingMaskIntoConstraints="NO" id="Vpf-WG-wpe">
-                                <rect key="frame" x="37.5" y="70" width="300" height="133.5"/>
+                                <rect key="frame" x="37.5" y="70" width="300.00000000000006" height="133.5"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ab5-L9-Vwb" customClass="CLTypingLabel" customModule="CLTypingLabel">
                                 <rect key="frame" x="37.5" y="95" width="300" height="99"/>
@@ -224,13 +233,13 @@
     <resources>
         <image name="chatBubble" width="322" height="222"/>
         <image name="craveLogo" width="152" height="41"/>
-        <image name="ic_undo" width="21" height="21"/>
+        <image name="ic_undo" width="21.5" height="21.5"/>
         <image name="kbbq" width="602" height="1052"/>
         <image name="left_arrow" width="350" height="300"/>
+        <image name="pinpoint" width="128" height="128"/>
         <image name="right_arrow" width="350" height="300"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Hme-kI-VS2"/>
         <segue reference="W6g-lT-Utw"/>
     </inferredMetricsTieBreakers>
 </document>
