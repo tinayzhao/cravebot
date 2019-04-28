@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SD1-ef-hHw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SD1-ef-hHw">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -146,6 +146,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kbbq" translatesAutoresizingMaskIntoConstraints="NO" id="VBo-Of-eNK">
+                                <rect key="frame" x="0.0" y="10" width="375" height="667"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chatBubble" translatesAutoresizingMaskIntoConstraints="NO" id="Vpf-WG-wpe">
                                 <rect key="frame" x="37.5" y="70" width="300" height="133.5"/>
                             </imageView>
@@ -187,9 +190,12 @@
                         <constraints>
                             <constraint firstItem="ab5-L9-Vwb" firstAttribute="width" secondItem="QCa-dS-Zkq" secondAttribute="width" multiplier="0.8" id="0gu-09-svH"/>
                             <constraint firstItem="ab5-L9-Vwb" firstAttribute="top" secondItem="QCa-dS-Zkq" secondAttribute="top" constant="75" id="1ac-cJ-z6z"/>
+                            <constraint firstItem="VBo-Of-eNK" firstAttribute="width" secondItem="33t-7z-HnA" secondAttribute="width" id="3au-fk-jGe"/>
                             <constraint firstItem="Vpf-WG-wpe" firstAttribute="height" secondItem="33t-7z-HnA" secondAttribute="height" multiplier="0.2" id="6A2-Pc-HgN"/>
                             <constraint firstItem="Vpf-WG-wpe" firstAttribute="width" secondItem="33t-7z-HnA" secondAttribute="width" multiplier="0.8" id="JBQ-Z5-vNA"/>
                             <constraint firstItem="AVQ-Xf-y7y" firstAttribute="centerY" secondItem="fIn-rY-tpP" secondAttribute="centerY" id="WMx-Zr-5D0"/>
+                            <constraint firstItem="VBo-Of-eNK" firstAttribute="height" secondItem="33t-7z-HnA" secondAttribute="height" id="cMV-Oc-2o0"/>
+                            <constraint firstItem="VBo-Of-eNK" firstAttribute="centerY" secondItem="QCa-dS-Zkq" secondAttribute="centerY" id="eKJ-Je-GkD"/>
                             <constraint firstItem="QCa-dS-Zkq" firstAttribute="bottom" secondItem="AVQ-Xf-y7y" secondAttribute="bottom" constant="19" id="inh-yC-FM9"/>
                             <constraint firstItem="Vpf-WG-wpe" firstAttribute="centerX" secondItem="QCa-dS-Zkq" secondAttribute="centerX" id="ldD-kc-VWg"/>
                             <constraint firstItem="ab5-L9-Vwb" firstAttribute="centerX" secondItem="QCa-dS-Zkq" secondAttribute="centerX" id="m8r-Zu-xms"/>
@@ -197,11 +203,13 @@
                             <constraint firstItem="AVQ-Xf-y7y" firstAttribute="leading" secondItem="QCa-dS-Zkq" secondAttribute="leading" constant="37" id="qTM-bA-NSE"/>
                             <constraint firstItem="QCa-dS-Zkq" firstAttribute="trailing" secondItem="fIn-rY-tpP" secondAttribute="trailing" constant="38" id="qes-3S-xgG"/>
                             <constraint firstItem="fIn-rY-tpP" firstAttribute="leading" secondItem="AVQ-Xf-y7y" secondAttribute="trailing" constant="33" id="qkL-BZ-6QT"/>
+                            <constraint firstItem="VBo-Of-eNK" firstAttribute="centerX" secondItem="QCa-dS-Zkq" secondAttribute="centerX" id="r9Y-PM-G3x"/>
                             <constraint firstItem="Vpf-WG-wpe" firstAttribute="top" secondItem="QCa-dS-Zkq" secondAttribute="top" constant="50" id="wuK-2M-qH9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QCa-dS-Zkq"/>
                     </view>
                     <connections>
+                        <outlet property="backgroundImage" destination="VBo-Of-eNK" id="TcS-qU-PMF"/>
                         <outlet property="craveBotText" destination="ab5-L9-Vwb" id="1C3-7P-2hd"/>
                         <outlet property="input" destination="AVQ-Xf-y7y" id="S0U-LR-84A"/>
                         <outlet property="sendButton" destination="fIn-rY-tpP" id="tCA-oj-d7c"/>
@@ -216,11 +224,13 @@
     <resources>
         <image name="chatBubble" width="322" height="222"/>
         <image name="craveLogo" width="152" height="41"/>
-        <image name="ic_undo" width="21.5" height="21.5"/>
-        <image name="left_arrow" width="700" height="600"/>
-        <image name="right_arrow" width="700" height="600"/>
+        <image name="ic_undo" width="21" height="21"/>
+        <image name="kbbq" width="602" height="1052"/>
+        <image name="left_arrow" width="350" height="300"/>
+        <image name="right_arrow" width="350" height="300"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="Hme-kI-VS2"/>
         <segue reference="W6g-lT-Utw"/>
     </inferredMetricsTieBreakers>
 </document>
