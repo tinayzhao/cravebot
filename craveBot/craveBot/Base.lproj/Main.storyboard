@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SD1-ef-hHw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SD1-ef-hHw">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -78,10 +78,18 @@
                                     <action selector="rightButtonTapped" destination="0MN-Q5-4DM" eventType="touchUpInside" id="bih-CK-DBN"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Dm-QB-duK">
+                                <rect key="frame" x="143" y="538" width="88" height="76"/>
+                                <state key="normal" image="pinpoint"/>
+                                <connections>
+                                    <action selector="mapsButtonTapped:" destination="0MN-Q5-4DM" eventType="touchUpInside" id="5yz-bU-CAV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
                             <constraint firstItem="6MH-Ah-ZGr" firstAttribute="top" secondItem="Pdw-Nm-90H" secondAttribute="bottom" constant="19" id="3w1-Xx-6mJ"/>
+                            <constraint firstItem="01F-q1-dSE" firstAttribute="leading" secondItem="4Dm-QB-duK" secondAttribute="trailing" constant="40" id="C88-Uu-7iK"/>
                             <constraint firstItem="Pdw-Nm-90H" firstAttribute="top" secondItem="ksl-f7-gLd" secondAttribute="top" id="CHa-uE-Dwl"/>
                             <constraint firstItem="6MH-Ah-ZGr" firstAttribute="bottom" secondItem="01F-q1-dSE" secondAttribute="bottom" id="E8D-q6-Qdb"/>
                             <constraint firstItem="Pdw-Nm-90H" firstAttribute="trailing" secondItem="01F-q1-dSE" secondAttribute="trailing" id="Ehk-Ww-s2h"/>
@@ -89,6 +97,7 @@
                             <constraint firstItem="Pdw-Nm-90H" firstAttribute="leading" secondItem="6MH-Ah-ZGr" secondAttribute="leading" id="URy-ks-ko1"/>
                             <constraint firstItem="ksl-f7-gLd" firstAttribute="bottom" secondItem="6MH-Ah-ZGr" secondAttribute="bottom" constant="53" id="bUJ-bD-qbK"/>
                             <constraint firstItem="Pdw-Nm-90H" firstAttribute="leading" secondItem="IHh-p2-ivO" secondAttribute="leadingMargin" id="g94-og-HDM"/>
+                            <constraint firstItem="4Dm-QB-duK" firstAttribute="leading" secondItem="6MH-Ah-ZGr" secondAttribute="trailing" constant="39" id="nGQ-Sq-Ypd"/>
                             <constraint firstItem="Pdw-Nm-90H" firstAttribute="trailing" secondItem="IHh-p2-ivO" secondAttribute="trailingMargin" id="oby-2Q-5Lx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ksl-f7-gLd"/>
@@ -150,7 +159,7 @@
                                 <rect key="frame" x="0.0" y="10" width="375" height="667"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chatBubble" translatesAutoresizingMaskIntoConstraints="NO" id="Vpf-WG-wpe">
-                                <rect key="frame" x="37.5" y="70" width="300" height="133.5"/>
+                                <rect key="frame" x="37.5" y="70" width="300.00000000000006" height="133.5"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ab5-L9-Vwb" customClass="CLTypingLabel" customModule="CLTypingLabel">
                                 <rect key="frame" x="37.5" y="95" width="300" height="99"/>
@@ -224,13 +233,13 @@
     <resources>
         <image name="chatBubble" width="322" height="222"/>
         <image name="craveLogo" width="152" height="41"/>
-        <image name="ic_undo" width="21" height="21"/>
+        <image name="ic_undo" width="21.5" height="21.5"/>
         <image name="kbbq" width="602" height="1052"/>
         <image name="left_arrow" width="350" height="300"/>
+        <image name="pinpoint" width="128" height="128"/>
         <image name="right_arrow" width="350" height="300"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Hme-kI-VS2"/>
         <segue reference="W6g-lT-Utw"/>
     </inferredMetricsTieBreakers>
 </document>
