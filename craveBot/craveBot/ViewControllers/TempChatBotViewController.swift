@@ -106,6 +106,8 @@ class TempChatBotViewController: UIViewController, CLLocationManagerDelegate {
                         self.sayBadInput(messageData)       // simple message
                         self.deleteInfo(self.query.curr)    // deletes appropriate info and -1 from curr attribute
                         // asks the appropriate question
+                        self.askQuestion(self.query.curr)
+                        self.input.text = ""
                     } else {
                         let resData = json["restaurants"]
                         //print (resData)
@@ -128,11 +130,17 @@ class TempChatBotViewController: UIViewController, CLLocationManagerDelegate {
     
     // changes the background image with a cross dissolve transition
     func changeBackgroundImage() {
-        if (self.query.curr == 1) {
-            UIView.transition(with: self.backgroundImage, duration: 1, options: .transitionCrossDissolve, animations: {self.backgroundImage.image = UIImage(named: "salad")}, completion: nil)
-        } else if (self.query.curr) == 2 {
-            UIView.transition(with: self.backgroundImage, duration: 1, options: .transitionCrossDissolve, animations: {self.backgroundImage.image = UIImage(named: "burrito")}, completion: nil)
+        
+        if (restaurantList.count != 0){
+            
+        } else{
+            if (self.query.curr == 1) {
+                UIView.transition(with: self.backgroundImage, duration: 1, options: .transitionCrossDissolve, animations: {self.backgroundImage.image = UIImage(named: "salad")}, completion: nil)
+            } else if (self.query.curr) == 2 {
+                UIView.transition(with: self.backgroundImage, duration: 1, options: .transitionCrossDissolve, animations: {self.backgroundImage.image = UIImage(named: "burrito")}, completion: nil)
+            }
         }
+       
     }
 
     func updateRestaurantList(_ jsonData: JSON){

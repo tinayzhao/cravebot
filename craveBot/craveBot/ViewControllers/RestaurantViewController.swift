@@ -13,9 +13,6 @@ import Kingfisher
 import FloatRatingView
 
 
-//to do for jennifer, do the restaurant by the end of the week
-//ask david if he wants to do what, eg maybe the animating parts in the beginning? or other extra features 
-//help howie with front screen and have him fill in some other parts of the networking using my parts as an example
 class RestaurantViewController: UIViewController, KolodaViewDelegate, KolodaViewDataSource {
     var restaurantList: [Restaurant] = []
     var currentRestaurant: Restaurant! = nil
