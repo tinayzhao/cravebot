@@ -105,7 +105,7 @@ class TempChatBotViewController: UIViewController, CLLocationManagerDelegate {
                         print(messageData)
                         self.sayBadInput(messageData)       // simple message
                         self.deleteInfo(self.query.curr)    // deletes appropriate info and -1 from curr attribute
-                        self.askQuestion(self.query.curr)   // asks the appropriate question
+                        // asks the appropriate question
                     } else {
                         let resData = json["restaurants"]
                         //print (resData)
@@ -130,16 +130,17 @@ class TempChatBotViewController: UIViewController, CLLocationManagerDelegate {
         //print(path)
         //let jsonData = NSData(contentsOfFile:path!)
         //do {
+        restaurantList = []
         let json = JSON(jsonData)
         //print(json)
         let jsonList = json.arrayValue
         for item in jsonList {
-            //print(item)
             let restarauntJSON = JSON(item)
             restaurantList.append(Restaurant(json: restarauntJSON))
+            print(restarauntJSON["name"])
         }
         
-        print(restaurantList)
+        //print(restaurantList)
         print(restaurantList.count)
             // print("success")
         //}catch let error {
@@ -171,7 +172,7 @@ class TempChatBotViewController: UIViewController, CLLocationManagerDelegate {
             query.price = ""
         }
         query.curr -= 1
-        self.askQuestion(self.query.curr)  
+        //self.askQuestion(self.query.curr)
     }
     
     
@@ -188,11 +189,13 @@ class TempChatBotViewController: UIViewController, CLLocationManagerDelegate {
         } else if n > 2 {
             craveBotText.text = "I found some restaurants! \n Swipe to take a look!"
         }
+        print(craveBotText.text!)
     }
 
     func sayBadInput(_ message: String = "Sorry, I don't understad.") {
         chefwiggle()
-        craveBotText.text = message
+        craveBotText.pauseTyping()
+        askQuestion(query.curr)
     }
 
 

@@ -34,6 +34,7 @@ class RestaurantViewController: UIViewController, KolodaViewDelegate, KolodaView
         self.view.addGestureRecognizer(rightSwipe)
         kolodaView.cornerRadius(radius: 20)
         kolodaView.addShadow()
+        kolodaView.addShadowOnBottom()
         
     }
 
@@ -41,6 +42,7 @@ class RestaurantViewController: UIViewController, KolodaViewDelegate, KolodaView
     
     @IBAction func leftButtonTapped() {
         kolodaView?.swipe(.left)
+        kolodaView?.revertAction()
     }
     
     @IBAction func rightButtonTapped() {
