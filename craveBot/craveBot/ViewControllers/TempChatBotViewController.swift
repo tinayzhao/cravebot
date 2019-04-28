@@ -21,7 +21,8 @@ class TempChatBotViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet var craveBotText: CLTypingLabel!
     @IBOutlet var input: UITextField!
     @IBOutlet var sendButton: UIButton!
-
+    @IBOutlet var backgroundImage: UIImageView!
+    
     var query = Query()
     var restaurantList: [Restaurant] = []
 
@@ -66,7 +67,7 @@ class TempChatBotViewController: UIViewController, CLLocationManagerDelegate {
 
         // place the chef icon in the middle of the view
         chefAnimation = AnimationView(name: "chefSpeaks")
-        chefAnimation?.frame = CGRect.init(x: 0, y: 0, width: self.view.frame.width * 2, height: self.view.frame.height * 2)
+        chefAnimation?.frame = CGRect.init(x: 0, y: 0, width: self.view.frame.width * 2.1, height: self.view.frame.height * 2.1)
         chefAnimation?.center = self.view.center
         chefAnimation?.isUserInteractionEnabled = false
         self.view.addSubview(chefAnimation!)
@@ -84,7 +85,6 @@ class TempChatBotViewController: UIViewController, CLLocationManagerDelegate {
 
     @IBAction func sendToBot(_ sender: Any) {
 
-        
         let userInput = input.text
         query.message = userInput ?? ""             // query message updated
         updateInfo(self.query.curr, userInput!)     // query appropriate info updated as well as +1 to curr atrribute
@@ -111,6 +111,9 @@ class TempChatBotViewController: UIViewController, CLLocationManagerDelegate {
                         //print (resData)
                         self.updateRestaurantList(resData)
                         self.input.text = ""
+                        
+                        // changes bg image
+                        self.changeBackgroundImage()
                         self.askQuestion(self.query.curr)
                 }
                 case .failure(let error):
@@ -120,6 +123,15 @@ class TempChatBotViewController: UIViewController, CLLocationManagerDelegate {
                     self.deleteInfo(self.query.curr)        // deletes appropriate info and -1 from curr attribute
                     // asks the appropriate question
             }
+        }
+    }
+    
+    // changes the background image with a cross dissolve transition
+    func changeBackgroundImage() {
+        if (self.query.curr == 1) {
+            UIView.transition(with: self.backgroundImage, duration: 1, options: .transitionCrossDissolve, animations: {self.backgroundImage.image = UIImage(named: "salad")}, completion: nil)
+        } else if (self.query.curr) == 2 {
+            UIView.transition(with: self.backgroundImage, duration: 1, options: .transitionCrossDissolve, animations: {self.backgroundImage.image = UIImage(named: "burrito")}, completion: nil)
         }
     }
 
