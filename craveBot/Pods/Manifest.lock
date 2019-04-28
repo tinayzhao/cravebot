@@ -2,6 +2,7 @@ PODS:
   - Alamofire (4.0.1)
   - CLTypingLabel (0.3.0)
   - FloatRatingView (3.0)
+  - IHKeyboardAvoiding (4.6)
   - Kingfisher (5.3.1)
   - Koloda (4.7):
     - pop (~> 1.0)
@@ -16,6 +17,7 @@ DEPENDENCIES:
   - Alamofire (~> 4.0.0)
   - CLTypingLabel
   - FloatRatingView
+  - IHKeyboardAvoiding
   - Kingfisher
   - Koloda
   - lottie-ios
@@ -28,6 +30,7 @@ SPEC REPOS:
     - Alamofire
     - CLTypingLabel
     - FloatRatingView
+    - IHKeyboardAvoiding
     - Kingfisher
     - Koloda
     - lottie-ios
@@ -40,6 +43,7 @@ SPEC CHECKSUMS:
   Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
   CLTypingLabel: e5f3adf9467a38664a505e6475c23946c3b3c424
   FloatRatingView: 0f7b45733124516ac6b8f535e5b5f4fa2e122180
+  IHKeyboardAvoiding: 2a664fdb5f964359fa7ec8fc5c9aebb447583ff8
   Kingfisher: d9e7e0b209b59b8f9873aa2f37654e81a7beea51
   Koloda: f456d003d2ce15ef9f10c2874a444f1f570b490c
   lottie-ios: 55a2de40418f8de2b155efaba4d4d1a025a5c570
@@ -48,6 +52,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
   Toolbar: 240546f9a531266f639b713994b8b9eb7bb3391b
 
-PODFILE CHECKSUM: 0701bf1e5a9507bfc04cc93e985f48fc11c2bfe2
+PODFILE CHECKSUM: 386b7a75c0e2fbe54dedbb873d346e681bd1660d
 
 COCOAPODS: 1.5.3

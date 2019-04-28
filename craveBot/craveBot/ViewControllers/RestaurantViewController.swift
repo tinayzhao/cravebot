@@ -17,6 +17,7 @@ class RestaurantViewController: UIViewController, KolodaViewDelegate, KolodaView
     var restaurantList: [Restaurant] = []
     var currentRestaurant: Restaurant! = nil
     
+    
     @IBOutlet weak var kolodaView: KolodaView!
     
     override func viewDidLoad() {

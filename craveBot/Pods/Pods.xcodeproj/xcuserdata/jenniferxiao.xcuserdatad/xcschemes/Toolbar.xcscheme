@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "35C9C9892566DE3BB032F48AB0C74E6A"
+               BlueprintIdentifier = "2F0108BBB0F096C370E89BA0393F80A4"
                BlueprintName = "Toolbar"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "Toolbar.framework">

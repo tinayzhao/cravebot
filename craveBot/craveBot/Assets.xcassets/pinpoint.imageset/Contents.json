@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "maps-and-flags.jpg",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "maps-and-flags.png",
       "scale" : "2x"
     },
     {
