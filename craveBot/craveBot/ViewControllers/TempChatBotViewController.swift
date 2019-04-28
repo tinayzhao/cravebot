@@ -67,7 +67,7 @@ class TempChatBotViewController: UIViewController, CLLocationManagerDelegate {
 
         // place the chef icon in the middle of the view
         chefAnimation = AnimationView(name: "chefSpeaks")
-        chefAnimation?.frame = CGRect.init(x: 0, y: 0, width: self.view.frame.width * 2, height: self.view.frame.height * 2)
+        chefAnimation?.frame = CGRect.init(x: 0, y: 0, width: self.view.frame.width * 2.1, height: self.view.frame.height * 2.1)
         chefAnimation?.center = self.view.center
         chefAnimation?.isUserInteractionEnabled = false
         self.view.addSubview(chefAnimation!)
