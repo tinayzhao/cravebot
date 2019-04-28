@@ -7,7 +7,7 @@ def yelp_call(*args):
     users_location = args[0]
     users_term = args[1]
     users_price = args[2]
-    limit = 5
+    limit = 10
 
     bool_location = users_location != ""
     bool_term = users_term != ""
@@ -16,7 +16,7 @@ def yelp_call(*args):
         try:
             response = yelp_api.search_query(location = users_location)
             retlst = []
-            limit = min(limit, len(response))
+            limit = min(limit, len(response['businesses']))
 
             for i in range (limit):
                 dict = {}
@@ -41,7 +41,7 @@ def yelp_call(*args):
         try:
             response = yelp_api.search_query(location = users_location, term = users_term)
             retlst = []
-            limit = min(limit, len(response))
+            limit = min(limit, len(response['businesses']))
 
             for i in range (limit):
                 dict = {}
@@ -67,7 +67,7 @@ def yelp_call(*args):
         try:
             response = yelp_api.search_query(location = users_location)
             retlst = []
-            limit = min(limit, len(response))
+            limit = min(limit, len(response['businesses']))
 
             for i in range (limit):
                 dict = {}
