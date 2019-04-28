@@ -3,15 +3,15 @@ from spellchecker import SpellChecker
 spell = SpellChecker()
 
 def check(*args):
-    users_location = arg[0]
+    users_location = args[0]
     check_location = ""
-    for c in arg[0]:
+    for c in args[0]:
         if c.isalnum():
             check_location += c.lower()
     #print(check_location)
-    users_term = arg[1]
+    users_term = args[1]
     check_term = ""
-    for c in arg[1]:
+    for c in args[1]:
         if c.isalnum():
             check_term += c.lower()
 
