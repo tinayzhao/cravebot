@@ -86,7 +86,7 @@ class TempChatBotViewController: UIViewController, CLLocationManagerDelegate,  U
         craveBotText.charInterval = 0.05
 
         // place the chef icon in the middle of the view
-        chefAnimation = AnimationView(name: "chefSpeaks")
+        chefAnimation = AnimationView(name: "edgelord")
         let center = self.view.center
         chefAnimation?.frame = CGRect.init(x: -center.x - 20, y: -center.y - 150
             ,  width: self.view.frame.width * 2.1, height: self.view.frame.height * 2.1)
@@ -253,9 +253,10 @@ class TempChatBotViewController: UIViewController, CLLocationManagerDelegate,  U
         print(craveBotText.text!)
     }
 
-    func sayBadInput(_ n: Int, message: String = "Sorry, I don't understad.") {
+    func sayBadInput(_ n: Int, message: String = "Sorry, I don't understand. ") {
         chefwiggle()
         let personality = chefPersonality[currChefPersonality]
+        
         var messageDict = normie
         if (personality == "sassy"){
             messageDict = sassy
