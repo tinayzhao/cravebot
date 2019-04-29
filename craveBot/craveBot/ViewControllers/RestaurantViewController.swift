@@ -38,9 +38,16 @@ class RestaurantViewController: UIViewController, KolodaViewDelegate, KolodaView
 
     //JENNIFER: Link addy to respective restaurant
     @IBAction func mapsButtonTapped() {
-        let v = CardView.instanceFromNib()
-        let addy = "http://maps.apple.com/?address=" + v.address.text!
-        UIApplication.shared.open(URL(string: addy)!, options: [:], completionHandler: nil)
+        var addy = currentRestaurant.locationForMaps
+        let googleAddyString = "comgooglemaps://?" + addy! + "&directionsmode=transit"
+        //let addyString = "http://maps.apple.com/?address=" + addy +
+        if (UIApplication.shared.canOpenURL(URL(string:"comgooglemaps-x-callback://")!)) {
+                UIApplication.shared.open(URL(string: googleAddyString)!, options: [:], completionHandler: nil)
+        }
+        addy = addy!.replacingOccurrences(of: "+", with: ",", options: .literal, range: nil)
+        let appleAddyString = "http://maps.apple.com/" + addy!
+        UIApplication.shared.open(URL(string: appleAddyString)!, options: [:], completionHandler: nil)
+        
     }
     
     

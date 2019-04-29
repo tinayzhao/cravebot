@@ -54,6 +54,13 @@ import UIKit
     //hours?
     //
     
-    
+    var locationForMaps: String? {
+        var address = self.json["location"]["address1"].stringValue
+        var city = self.json["location"]["city"].stringValue
+        address = address.replacingOccurrences(of: " ", with: "+", options: .literal, range: nil)
+        var state = self.json["location"]["state"].stringValue
+        return address + "," + city + "," + state
+        //daddr=John+F.+Kennedy+International+Airport,+Van+Wyck+Expressway,+Jamaica,+New+York&directionsmode=transit
+    }
     
 }
