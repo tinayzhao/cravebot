@@ -100,7 +100,8 @@ class TempChatBotViewController: UIViewController, CLLocationManagerDelegate,  U
     override func viewDidAppear(_ animated: Bool) {
 
         chefwiggle()
-        craveBotText.text = "Hi there! I'm Cravebot\n Where would you like\n to eat today?"
+        //craveBotText.text = "Hi there! I'm Cravebot\n Where would you like\n to eat today?"
+        self.askQuestion(self.query.curr)
         KeyboardAvoiding.avoidingView = UserInputView
         KeyboardAvoiding.paddingForCurrentAvoidingView = 5
 
@@ -117,7 +118,7 @@ class TempChatBotViewController: UIViewController, CLLocationManagerDelegate,  U
         query.message = userInput ?? ""             // query message updated
         updateInfo(self.query.curr, userInput!)     // query appropriate info updated as well as +1 to curr atrribute
         let json = query.getDictObject()
-        //print(json)
+        print(json)
         //let postParameters = JSONSerialization.data(withJSONObject: json, options: .prettyPrinted)
         let url = "http://localhost:5000/api/backend"
         
@@ -125,14 +126,15 @@ class TempChatBotViewController: UIViewController, CLLocationManagerDelegate,  U
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
-                print("JSON: \(json)")
+                //print("JSON: \(json)")
                 
                 let messageData = json["message"].stringValue
                 if (messageData != "") {
                     print("message sent from backend: ")
                     print(messageData)
+                    self.deleteInfo(self.query.curr)
                     self.sayBadInput(self.query.curr, message: messageData)       // simple message
-                    self.deleteInfo(self.query.curr)    // deletes appropriate info and -1 from curr attribute
+                     // deletes appropriate info and -1 from curr attribute
                     // asks the appropriate question
                     //self.askQuestion(self.query.curr)
                     self.input.text = ""
@@ -203,11 +205,11 @@ class TempChatBotViewController: UIViewController, CLLocationManagerDelegate,  U
     }
 
     func updateInfo(_ currentQuestion: Int, _ newData: String) {
-        if currentQuestion == 0 {
+        if currentQuestion == 0 || currentQuestion == 1 {
             query.location = newData
-        } else if currentQuestion == 1 {
-            query.category = newData
         } else if currentQuestion == 2 {
+            query.category = newData
+        } else if currentQuestion == 3 {
             query.price = newData
         }
         query.curr += 1
@@ -243,14 +245,18 @@ class TempChatBotViewController: UIViewController, CLLocationManagerDelegate,  U
         chefwiggle()
         if n == 0 {
             craveBotText.text = messageDict[0]
+            query.curr += 1
         } else if n == 1 {
             craveBotText.text = messageDict[1]
         } else if n == 2 {
             craveBotText.text = messageDict[2]
-        } else if n > 2 {
+        } else if n == 3 {
             craveBotText.text = messageDict[3]
+            print( messageDict[3])
+        } else {
+            craveBotText.text = messageDict[4]
         }
-        print(craveBotText.text!)
+       
     }
 
     func sayBadInput(_ n: Int, message: String = "Sorry, I don't understand. ") {
@@ -266,14 +272,17 @@ class TempChatBotViewController: UIViewController, CLLocationManagerDelegate,  U
         chefwiggle()
         if n == 0 {
             craveBotText.text = message + messageDict[0]!
+            query.curr += 1
         } else if n == 1 {
             craveBotText.text = message + messageDict[1]!
         } else if n == 2 {
             craveBotText.text = message + messageDict[2]!
-        } else if n > 2 {
+        } else if n == 3 {
             craveBotText.text = message + messageDict[3]!
+        } else {
+            craveBotText.text = messageDict[4]
         }
-        print(craveBotText.text!)
+        //print(craveBotText.text!)
     }
 
 
