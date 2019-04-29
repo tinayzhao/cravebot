@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SD1-ef-hHw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SD1-ef-hHw">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -159,12 +159,15 @@
                                 <rect key="frame" x="0.0" y="10" width="375" height="667"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chatBubble" translatesAutoresizingMaskIntoConstraints="NO" id="Vpf-WG-wpe">
-                                <rect key="frame" x="37.5" y="70" width="300.00000000000006" height="133.5"/>
+                                <rect key="frame" x="38" y="70" width="299" height="134"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="134" id="m31-fT-OTd"/>
+                                </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ab5-L9-Vwb" customClass="CLTypingLabel" customModule="CLTypingLabel">
-                                <rect key="frame" x="37.5" y="95" width="300" height="99"/>
+                                <rect key="frame" x="38" y="80" width="299" height="99"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="99" id="Vqg-Nh-j0V"/>
+                                    <constraint firstAttribute="height" constant="99" id="oUP-CV-xUr"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -175,49 +178,60 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AVQ-Xf-y7y">
-                                <rect key="frame" x="37" y="618" width="223" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fIn-rY-tpP">
-                                <rect key="frame" x="293" y="616" width="44" height="35"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gfL-UZ-emF">
+                                <rect key="frame" x="16" y="612" width="343" height="35"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AVQ-Xf-y7y">
+                                        <rect key="frame" x="17" y="0.0" width="254" height="35"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="editingDidEnd:" destination="wvR-qc-kRE" eventType="editingDidEnd" id="2xw-uK-G4M"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fIn-rY-tpP">
+                                        <rect key="frame" x="291" y="-2" width="44" height="35"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <state key="normal" title="Send">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="sendToBot:" destination="wvR-qc-kRE" eventType="touchUpInside" id="OeH-xX-GsS"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="44" id="aAz-Ky-042"/>
+                                    <constraint firstItem="fIn-rY-tpP" firstAttribute="leading" secondItem="gfL-UZ-emF" secondAttribute="leading" constant="291" id="DZX-br-jSY"/>
+                                    <constraint firstItem="AVQ-Xf-y7y" firstAttribute="top" secondItem="gfL-UZ-emF" secondAttribute="top" id="DcN-eT-Nws"/>
+                                    <constraint firstItem="fIn-rY-tpP" firstAttribute="top" secondItem="gfL-UZ-emF" secondAttribute="top" constant="-2" id="Ppp-zq-t3L"/>
+                                    <constraint firstAttribute="bottom" secondItem="AVQ-Xf-y7y" secondAttribute="bottom" id="Rl0-Ml-0DX"/>
+                                    <constraint firstItem="AVQ-Xf-y7y" firstAttribute="leading" secondItem="gfL-UZ-emF" secondAttribute="leading" constant="17" id="TDe-YX-bj9"/>
+                                    <constraint firstItem="fIn-rY-tpP" firstAttribute="leading" secondItem="AVQ-Xf-y7y" secondAttribute="trailing" constant="20" id="ZEx-n0-CzF"/>
+                                    <constraint firstAttribute="bottom" secondItem="fIn-rY-tpP" secondAttribute="bottom" constant="2" id="aaa-z8-LcA"/>
+                                    <constraint firstItem="fIn-rY-tpP" firstAttribute="trailing" secondItem="gfL-UZ-emF" secondAttribute="trailingMargin" id="gbg-aV-x0I"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="Send">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="sendToBot:" destination="wvR-qc-kRE" eventType="touchUpInside" id="OeH-xX-GsS"/>
-                                </connections>
-                            </button>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="ab5-L9-Vwb" firstAttribute="width" secondItem="QCa-dS-Zkq" secondAttribute="width" multiplier="0.8" id="0gu-09-svH"/>
-                            <constraint firstItem="ab5-L9-Vwb" firstAttribute="top" secondItem="QCa-dS-Zkq" secondAttribute="top" constant="75" id="1ac-cJ-z6z"/>
-                            <constraint firstItem="VBo-Of-eNK" firstAttribute="width" secondItem="33t-7z-HnA" secondAttribute="width" id="3au-fk-jGe"/>
-                            <constraint firstItem="Vpf-WG-wpe" firstAttribute="height" secondItem="33t-7z-HnA" secondAttribute="height" multiplier="0.2" id="6A2-Pc-HgN"/>
-                            <constraint firstItem="Vpf-WG-wpe" firstAttribute="width" secondItem="33t-7z-HnA" secondAttribute="width" multiplier="0.8" id="JBQ-Z5-vNA"/>
-                            <constraint firstItem="AVQ-Xf-y7y" firstAttribute="centerY" secondItem="fIn-rY-tpP" secondAttribute="centerY" id="WMx-Zr-5D0"/>
-                            <constraint firstItem="VBo-Of-eNK" firstAttribute="height" secondItem="33t-7z-HnA" secondAttribute="height" id="cMV-Oc-2o0"/>
-                            <constraint firstItem="VBo-Of-eNK" firstAttribute="centerY" secondItem="QCa-dS-Zkq" secondAttribute="centerY" id="eKJ-Je-GkD"/>
-                            <constraint firstItem="QCa-dS-Zkq" firstAttribute="bottom" secondItem="AVQ-Xf-y7y" secondAttribute="bottom" constant="19" id="inh-yC-FM9"/>
-                            <constraint firstItem="Vpf-WG-wpe" firstAttribute="centerX" secondItem="QCa-dS-Zkq" secondAttribute="centerX" id="ldD-kc-VWg"/>
-                            <constraint firstItem="ab5-L9-Vwb" firstAttribute="centerX" secondItem="QCa-dS-Zkq" secondAttribute="centerX" id="m8r-Zu-xms"/>
-                            <constraint firstItem="QCa-dS-Zkq" firstAttribute="bottom" secondItem="fIn-rY-tpP" secondAttribute="bottom" constant="16" id="p9Q-1f-vaS"/>
-                            <constraint firstItem="AVQ-Xf-y7y" firstAttribute="leading" secondItem="QCa-dS-Zkq" secondAttribute="leading" constant="37" id="qTM-bA-NSE"/>
-                            <constraint firstItem="QCa-dS-Zkq" firstAttribute="trailing" secondItem="fIn-rY-tpP" secondAttribute="trailing" constant="38" id="qes-3S-xgG"/>
-                            <constraint firstItem="fIn-rY-tpP" firstAttribute="leading" secondItem="AVQ-Xf-y7y" secondAttribute="trailing" constant="33" id="qkL-BZ-6QT"/>
-                            <constraint firstItem="VBo-Of-eNK" firstAttribute="centerX" secondItem="QCa-dS-Zkq" secondAttribute="centerX" id="r9Y-PM-G3x"/>
-                            <constraint firstItem="Vpf-WG-wpe" firstAttribute="top" secondItem="QCa-dS-Zkq" secondAttribute="top" constant="50" id="wuK-2M-qH9"/>
+                            <constraint firstItem="VBo-Of-eNK" firstAttribute="top" secondItem="33t-7z-HnA" secondAttribute="topMargin" constant="-10" id="7vW-zw-p4S"/>
+                            <constraint firstItem="QCa-dS-Zkq" firstAttribute="bottom" secondItem="gfL-UZ-emF" secondAttribute="bottom" constant="21" id="Cth-Qm-5WD"/>
+                            <constraint firstItem="ab5-L9-Vwb" firstAttribute="leading" secondItem="QCa-dS-Zkq" secondAttribute="leading" constant="38" id="EZ7-PR-qp5"/>
+                            <constraint firstItem="Vpf-WG-wpe" firstAttribute="top" secondItem="QCa-dS-Zkq" secondAttribute="top" constant="50" id="Hk6-oo-EBf"/>
+                            <constraint firstItem="VBo-Of-eNK" firstAttribute="leading" secondItem="33t-7z-HnA" secondAttribute="leading" id="LEr-0K-ZCA"/>
+                            <constraint firstItem="Vpf-WG-wpe" firstAttribute="trailing" secondItem="ab5-L9-Vwb" secondAttribute="trailing" id="W5R-ml-0f9"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="VBo-Of-eNK" secondAttribute="bottom" constant="-10" id="itc-Ge-s9i"/>
+                            <constraint firstItem="ab5-L9-Vwb" firstAttribute="top" secondItem="QCa-dS-Zkq" secondAttribute="top" constant="60" id="mzR-lW-u1R"/>
+                            <constraint firstItem="Vpf-WG-wpe" firstAttribute="leading" secondItem="ab5-L9-Vwb" secondAttribute="leading" id="tHR-L4-fCa"/>
+                            <constraint firstItem="gfL-UZ-emF" firstAttribute="leading" secondItem="ab5-L9-Vwb" secondAttribute="leading" id="utm-ok-4rG"/>
+                            <constraint firstItem="VBo-Of-eNK" firstAttribute="centerX" secondItem="Vpf-WG-wpe" secondAttribute="centerX" id="xRO-HW-wK2"/>
+                            <constraint firstAttribute="trailing" secondItem="VBo-Of-eNK" secondAttribute="trailing" id="xxe-x8-gKM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QCa-dS-Zkq"/>
                     </view>
                     <connections>
+                        <outlet property="UserInputView" destination="gfL-UZ-emF" id="yn9-at-CIa"/>
                         <outlet property="backgroundImage" destination="VBo-Of-eNK" id="TcS-qU-PMF"/>
                         <outlet property="craveBotText" destination="ab5-L9-Vwb" id="1C3-7P-2hd"/>
                         <outlet property="input" destination="AVQ-Xf-y7y" id="S0U-LR-84A"/>
@@ -234,12 +248,13 @@
         <image name="chatBubble" width="322" height="222"/>
         <image name="craveLogo" width="152" height="41"/>
         <image name="ic_undo" width="21.5" height="21.5"/>
-        <image name="kbbq" width="602" height="1052"/>
-        <image name="left_arrow" width="350" height="300"/>
-        <image name="pinpoint" width="128" height="128"/>
-        <image name="right_arrow" width="350" height="300"/>
+        <image name="kbbq" width="301" height="526"/>
+        <image name="left_arrow" width="700" height="600"/>
+        <image name="pinpoint" width="9216" height="9216"/>
+        <image name="right_arrow" width="700" height="600"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="Hme-kI-VS2"/>
         <segue reference="W6g-lT-Utw"/>
     </inferredMetricsTieBreakers>
 </document>

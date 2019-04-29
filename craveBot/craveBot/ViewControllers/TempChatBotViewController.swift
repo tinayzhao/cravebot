@@ -13,11 +13,14 @@ import Lottie
 import CoreLocation
 import SwiftyJSON
 import Alamofire
+import Kingfisher
+import IHKeyboardAvoiding
 
-class TempChatBotViewController: UIViewController, CLLocationManagerDelegate {
+class TempChatBotViewController: UIViewController, CLLocationManagerDelegate,  UITextFieldDelegate {
 
     var chefAnimation: AnimationView?
 
+    @IBOutlet weak var UserInputView: UIView!
     @IBOutlet var craveBotText: CLTypingLabel!
     @IBOutlet var input: UITextField!
     @IBOutlet var sendButton: UIButton!
@@ -28,7 +31,16 @@ class TempChatBotViewController: UIViewController, CLLocationManagerDelegate {
 
     let manager = CLLocationManager()
 
-
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        sendToBackend()
+        return true
+    }
+    
+    @IBAction func editingDidEnd(_ sender: Any) {
+        sendToBackend()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -67,11 +79,13 @@ class TempChatBotViewController: UIViewController, CLLocationManagerDelegate {
 
         // place the chef icon in the middle of the view
         chefAnimation = AnimationView(name: "chefSpeaks")
-        chefAnimation?.frame = CGRect.init(x: 0, y: 0, width: self.view.frame.width * 2.1, height: self.view.frame.height * 2.1)
-        chefAnimation?.center = self.view.center
+        let center = self.view.center
+        chefAnimation?.frame = CGRect.init(x: -center.x - 20, y: -center.y - 150
+            , width: self.view.frame.width * 2.1, height: self.view.frame.height * 2.1)
         chefAnimation?.isUserInteractionEnabled = false
         self.view.addSubview(chefAnimation!)
-        
+
+
 
     }
 
@@ -79,12 +93,13 @@ class TempChatBotViewController: UIViewController, CLLocationManagerDelegate {
 
         chefwiggle()
         craveBotText.text = "Hi there! I'm Cravebot\n Where would you like\n to eat today?"
+        KeyboardAvoiding.avoidingView = UserInputView
+        KeyboardAvoiding.paddingForCurrentAvoidingView = 5
 
     }
 
-
-    @IBAction func sendToBot(_ sender: Any) {
-
+    
+    func sendToBackend() {
         let userInput = input.text
         query.message = userInput ?? ""             // query message updated
         updateInfo(self.query.curr, userInput!)     // query appropriate info updated as well as +1 to curr atrribute
@@ -92,47 +107,61 @@ class TempChatBotViewController: UIViewController, CLLocationManagerDelegate {
         //print(json)
         //let postParameters = JSONSerialization.data(withJSONObject: json, options: .prettyPrinted)
         let url = "http://localhost:5000/api/backend"
-
+        
         Alamofire.request(url, method: .post, parameters: json, encoding: JSONEncoding.default).validate().responseJSON { response in
             switch response.result {
-                case .success(let value):
-                    let json = JSON(value)
-                    print("JSON: \(json)")
-
-                    let messageData = json["message"].stringValue
-                    if (messageData != "") {
-                        print("message sent from backend: ")
-                        print(messageData)
-                        self.sayBadInput(messageData)       // simple message
-                        self.deleteInfo(self.query.curr)    // deletes appropriate info and -1 from curr attribute
-                        // asks the appropriate question
-                    } else {
-                        let resData = json["restaurants"]
-                        //print (resData)
-                        self.updateRestaurantList(resData)
-                        self.input.text = ""
-                        
-                        // changes bg image
-                        self.changeBackgroundImage()
-                        self.askQuestion(self.query.curr)
-                }
-                case .failure(let error):
-                    print(".failure was entered")
-                    print(error)
-                    self.sayBadInput()                      // simple message
-                    self.deleteInfo(self.query.curr)        // deletes appropriate info and -1 from curr attribute
+            case .success(let value):
+                let json = JSON(value)
+                print("JSON: \(json)")
+                
+                let messageData = json["message"].stringValue
+                if (messageData != "") {
+                    print("message sent from backend: ")
+                    print(messageData)
+                    self.sayBadInput(messageData)       // simple message
+                    self.deleteInfo(self.query.curr)    // deletes appropriate info and -1 from curr attribute
                     // asks the appropriate question
+                    self.askQuestion(self.query.curr)
+                    self.input.text = ""
+                } else {
+                    let resData = json["restaurants"]
+                    //print (resData)
+                    self.updateRestaurantList(resData)
+                    self.input.text = ""
+                    
+                    // changes bg image
+                    self.changeBackgroundImage()
+                    self.askQuestion(self.query.curr)
+                }
+            case .failure(let error):
+                print(".failure was entered")
+                print(error)
+                self.sayBadInput()                      // simple message
+                self.deleteInfo(self.query.curr)        // deletes appropriate info and -1 from curr attribute
+                // asks the appropriate question
             }
         }
+    }
+
+    
+    
+    @IBAction func sendToBot(_ sender: Any) {
+        sendToBackend()
     }
     
     // changes the background image with a cross dissolve transition
     func changeBackgroundImage() {
-        if (self.query.curr == 1) {
-            UIView.transition(with: self.backgroundImage, duration: 1, options: .transitionCrossDissolve, animations: {self.backgroundImage.image = UIImage(named: "salad")}, completion: nil)
-        } else if (self.query.curr) == 2 {
-            UIView.transition(with: self.backgroundImage, duration: 1, options: .transitionCrossDissolve, animations: {self.backgroundImage.image = UIImage(named: "burrito")}, completion: nil)
+        if (restaurantList.count != 0){
+            let url = URL(string: restaurantList[0].imageURL!)
+            UIView.transition(with: self.backgroundImage, duration: 1, options: .transitionCrossDissolve, animations: {self.backgroundImage.kf.setImage(with: url)}, completion: nil)
+        } else{
+            if (self.query.curr == 1) {
+                UIView.transition(with: self.backgroundImage, duration: 1, options: .transitionCrossDissolve, animations: {self.backgroundImage.image = UIImage(named: "salad")}, completion: nil)
+            } else if (self.query.curr) == 2 {
+                UIView.transition(with: self.backgroundImage, duration: 1, options: .transitionCrossDissolve, animations: {self.backgroundImage.image = UIImage(named: "burrito")}, completion: nil)
+            }
         }
+       
     }
 
     func updateRestaurantList(_ jsonData: JSON){
@@ -208,6 +237,11 @@ class TempChatBotViewController: UIViewController, CLLocationManagerDelegate {
         chefwiggle()
         craveBotText.pauseTyping()
         askQuestion(query.curr)
+       // didSet {
+         //   if (loaded){
+             //   loadChartData()
+           // }
+        //}
     }
 
 
@@ -225,6 +259,16 @@ class TempChatBotViewController: UIViewController, CLLocationManagerDelegate {
                 dest.restaurantList = restaurantList
             }
         }
+    }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if (identifier == "swipeLeft"){
+            if (restaurantList.count == 0){
+                return false
+            }
+            return true
+        }
+        return false
     }
 }
 

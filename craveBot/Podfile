@@ -14,7 +14,7 @@ target 'craveBot' do
   pod 'Kingfisher'
   pod 'CLTypingLabel'
   pod 'lottie-ios'
- #pod 'Alamofire-SwiftyJSON'
+  pod 'IHKeyboardAvoiding'
 
   # Pods for craveBot
 
