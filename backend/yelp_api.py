@@ -65,7 +65,7 @@ def yelp_call(*args):
             return [dict]
     elif bool_location and bool_term and bool_price:
         try:
-            response = yelp_api.search_query(location = users_location)
+            response = yelp_api.search_query(location = users_location, term = users_term, price = users_price)
             retlst = []
             limit = min(limit, len(response['businesses']))
 
