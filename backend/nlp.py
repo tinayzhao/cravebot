@@ -17,7 +17,7 @@ def check(*args):
 
     bool_location = users_location != ""
     bool_term = users_term != ""
-
+    print("USERS TERM " + users_term)
     lst = [];
     if (bool_location):
         lst.append(users_location)
@@ -28,14 +28,23 @@ def check(*args):
     suggestions = []
     for word in misspelled:
         check_word = ""
+        special = False
         for c in word:
             if c.isalnum():
                 check_word += c.lower()
+            else:
+                special = True
         if not bool_term:
-            if check_word != check_location:
+            if special:
+                if check_word != check_location:
+                    suggestions.append(list(spell.candidates(word)))
+            else:
                 suggestions.append(list(spell.candidates(word)))
         else:
-            if check_word != check_term:
+            if special:
+                if check_word != check_term:
+                    suggestions.append(list(spell.candidates(word)))
+            else:
                 suggestions.append(list(spell.candidates(word)))
     #print("=======")
     #print(check_word)
