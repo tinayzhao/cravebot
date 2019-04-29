@@ -7,14 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1922F49D2276B9A500897797 /* edgelord.json in Resources */ = {isa = PBXBuildFile; fileRef = 1922F49B2276B9A500897797 /* edgelord.json */; };
+		1922F4A02276BA9200897797 /* chefgirl.json in Resources */ = {isa = PBXBuildFile; fileRef = 1922F49F2276BA9200897797 /* chefgirl.json */; };
 		19259BDD226A313B001AE9F0 /* TempChatBotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19259BDC226A313B001AE9F0 /* TempChatBotViewController.swift */; };
 		19259BDF226A3784001AE9F0 /* chefSpeaks.json in Resources */ = {isa = PBXBuildFile; fileRef = 19259BDE226A3784001AE9F0 /* chefSpeaks.json */; };
 		1958CF4D227155BE00ECFCC3 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1958CF4C227155BE00ECFCC3 /* CoreLocation.framework */; };
 		1958CF532271782400ECFCC3 /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1958CF522271782400ECFCC3 /* Query.swift */; };
-		2916903422699FE200384325 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
-		291690362269AE0500384325 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
-		2916903C2269B1B700384325 /* BuildFile in Resources */ = {isa = PBXBuildFile; };
-		2916903E2269B1BF00384325 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
+		2916903422699FE200384325 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		291690362269AE0500384325 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		2916903C2269B1B700384325 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		2916903E2269B1BF00384325 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		291913112268B5D8000498C5 /* RestaurantExamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291913102268B5D8000498C5 /* RestaurantExamples.swift */; };
 		291913132268B92F000498C5 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 291913122268B92F000498C5 /* data.json */; };
 		29237F222265B70300B332EE /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29237F212265B70200B332EE /* CardView.xib */; };
@@ -53,6 +55,8 @@
 
 /* Begin PBXFileReference section */
 		06E5DC638331D3BBEE335A00 /* Pods-craveBotTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-craveBotTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-craveBotTests/Pods-craveBotTests.release.xcconfig"; sourceTree = "<group>"; };
+		1922F49B2276B9A500897797 /* edgelord.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = edgelord.json; path = ../../../../../Desktop/edgelord.json; sourceTree = "<group>"; };
+		1922F49F2276BA9200897797 /* chefgirl.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = chefgirl.json; path = ../../../../../Desktop/chefgirl.json; sourceTree = "<group>"; };
 		19259BDC226A313B001AE9F0 /* TempChatBotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempChatBotViewController.swift; sourceTree = "<group>"; };
 		19259BDE226A3784001AE9F0 /* chefSpeaks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chefSpeaks.json; sourceTree = "<group>"; };
 		1958CF4C227155BE00ECFCC3 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -159,6 +163,8 @@
 				29807FE62262AF7400B785F7 /* Assets.xcassets */,
 				29807FE82262AF7400B785F7 /* LaunchScreen.storyboard */,
 				19259BDE226A3784001AE9F0 /* chefSpeaks.json */,
+				1922F49F2276BA9200897797 /* chefgirl.json */,
+				1922F49B2276B9A500897797 /* edgelord.json */,
 				29807FEB2262AF7400B785F7 /* Info.plist */,
 			);
 			path = craveBot;
@@ -336,12 +342,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				19259BDF226A3784001AE9F0 /* chefSpeaks.json in Resources */,
+				1922F4A02276BA9200897797 /* chefgirl.json in Resources */,
 				29807FEA2262AF7400B785F7 /* LaunchScreen.storyboard in Resources */,
 				29807FE72262AF7400B785F7 /* Assets.xcassets in Resources */,
+				1922F49D2276B9A500897797 /* edgelord.json in Resources */,
 				29237F222265B70300B332EE /* CardView.xib in Resources */,
 				291913132268B92F000498C5 /* data.json in Resources */,
-				2916903C2269B1B700384325 /* BuildFile in Resources */,
-				2916903422699FE200384325 /* BuildFile in Resources */,
+				2916903C2269B1B700384325 /* (null) in Resources */,
+				2916903422699FE200384325 /* (null) in Resources */,
 				29807FE52262AF7100B785F7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -415,7 +423,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-craveBot/Pods-craveBot-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-craveBot/Pods-craveBot-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/CLTypingLabel/CLTypingLabel.framework",
 				"${BUILT_PRODUCTS_DIR}/FloatRatingView/FloatRatingView.framework",
@@ -446,7 +454,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-craveBot/Pods-craveBot-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-craveBot/Pods-craveBot-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DDDF4DE0F2AB2F8D5588D194 /* [CP] Check Pods Manifest.lock */ = {
@@ -478,7 +486,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				291690362269AE0500384325 /* BuildFile in Sources */,
+				291690362269AE0500384325 /* (null) in Sources */,
 				298080142262B16A00B785F7 /* Restaurant.swift in Sources */,
 				29807FE22262AF7100B785F7 /* LoadingScreenviewController.swift in Sources */,
 				291913112268B5D8000498C5 /* RestaurantExamples.swift in Sources */,
@@ -486,7 +494,7 @@
 				1958CF532271782400ECFCC3 /* Query.swift in Sources */,
 				19259BDD226A313B001AE9F0 /* TempChatBotViewController.swift in Sources */,
 				29807FE02262AF7100B785F7 /* AppDelegate.swift in Sources */,
-				2916903E2269B1BF00384325 /* BuildFile in Sources */,
+				2916903E2269B1BF00384325 /* (null) in Sources */,
 				29237F242265B76600B332EE /* CardView.swift in Sources */,
 				298080102262B13C00B785F7 /* ChatBotViewController.swift in Sources */,
 			);
