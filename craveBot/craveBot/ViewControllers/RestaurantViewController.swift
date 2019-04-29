@@ -45,7 +45,7 @@ class RestaurantViewController: UIViewController, KolodaViewDelegate, KolodaView
     
     
     @IBAction func leftButtonTapped() {
-        kolodaView?.swipe(.left)
+        //kolodaView?.swipe(.left)
         kolodaView?.revertAction()
     }
     

@@ -212,15 +212,27 @@
                                     <constraint firstItem="fIn-rY-tpP" firstAttribute="trailing" secondItem="gfL-UZ-emF" secondAttribute="trailingMargin" id="gbg-aV-x0I"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MxM-9s-F8A">
+                                <rect key="frame" x="95" y="212" width="197" height="159"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="159" id="nwf-7a-ytD"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="tappedChef:" destination="wvR-qc-kRE" eventType="touchUpInside" id="pfb-uq-Zzg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="MxM-9s-F8A" firstAttribute="top" secondItem="Vpf-WG-wpe" secondAttribute="bottom" constant="8" symbolic="YES" id="1qY-hv-rVj"/>
                             <constraint firstItem="VBo-Of-eNK" firstAttribute="top" secondItem="33t-7z-HnA" secondAttribute="topMargin" constant="-10" id="7vW-zw-p4S"/>
                             <constraint firstItem="QCa-dS-Zkq" firstAttribute="bottom" secondItem="gfL-UZ-emF" secondAttribute="bottom" constant="21" id="Cth-Qm-5WD"/>
                             <constraint firstItem="ab5-L9-Vwb" firstAttribute="leading" secondItem="QCa-dS-Zkq" secondAttribute="leading" constant="38" id="EZ7-PR-qp5"/>
                             <constraint firstItem="Vpf-WG-wpe" firstAttribute="top" secondItem="QCa-dS-Zkq" secondAttribute="top" constant="50" id="Hk6-oo-EBf"/>
                             <constraint firstItem="VBo-Of-eNK" firstAttribute="leading" secondItem="33t-7z-HnA" secondAttribute="leading" id="LEr-0K-ZCA"/>
+                            <constraint firstItem="QCa-dS-Zkq" firstAttribute="trailing" secondItem="MxM-9s-F8A" secondAttribute="trailing" constant="83" id="SUb-C7-BkD"/>
                             <constraint firstItem="Vpf-WG-wpe" firstAttribute="trailing" secondItem="ab5-L9-Vwb" secondAttribute="trailing" id="W5R-ml-0f9"/>
+                            <constraint firstItem="MxM-9s-F8A" firstAttribute="leading" secondItem="QCa-dS-Zkq" secondAttribute="leading" constant="95" id="YgU-uH-87E"/>
                             <constraint firstAttribute="bottomMargin" secondItem="VBo-Of-eNK" secondAttribute="bottom" constant="-10" id="itc-Ge-s9i"/>
                             <constraint firstItem="ab5-L9-Vwb" firstAttribute="top" secondItem="QCa-dS-Zkq" secondAttribute="top" constant="60" id="mzR-lW-u1R"/>
                             <constraint firstItem="Vpf-WG-wpe" firstAttribute="leading" secondItem="ab5-L9-Vwb" secondAttribute="leading" id="tHR-L4-fCa"/>
@@ -254,7 +266,6 @@
         <image name="right_arrow" width="700" height="600"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Hme-kI-VS2"/>
         <segue reference="W6g-lT-Utw"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -19,6 +19,14 @@ import IHKeyboardAvoiding
 class TempChatBotViewController: UIViewController, CLLocationManagerDelegate,  UITextFieldDelegate {
 
     var chefAnimation: AnimationView?
+    var currChefPersonality: Int = 0
+    var chefPersonality = [0: "normie", 1: "sassy", 2: "edgelord"]
+    
+    var normie = [0: "Hi there! I'm Cravebot\n Where would you like\n to eat today?", 1: "Okay! Where would you \n like to eat today?", 2: "What kind of food \n are you craving?", 3: "How much are you \n looking to spend?", 4: "I found some restaurants! \n Swipe to take a look!"]
+    
+    var sassy = [0: "Hiya, ya gurl is called Cravebot, where ya wanna eat sis?", 1: "Hiiiiiii. So do you know where you want to eat or what?", 2: "What type of food do you want? \n Omg do I have to do everything for you...", 3: "So how’s the bank account lookin? \n How much do you wanna spend?", 4: "Girl, I found the spot for us. \n Swipe left to take a look :P"]
+    var edgelord = [0: "Dude holla at your Cravebot. \n What's your addy tho? I'm tryin come through ;)", 1: "Yo\n Whatsup playa, wya?", 2: "Aight. \n So whatcha feeling fam?", 3: "Ooh boi its lit, \n so how many stacks are we trying to burn thru today", 4: "Ya yeet, we got you a match, \n and we wont ghost you like that tinder ho. Swipe to see ;)"]
+    
 
     @IBOutlet weak var UserInputView: UIView!
     @IBOutlet var craveBotText: CLTypingLabel!
@@ -81,11 +89,11 @@ class TempChatBotViewController: UIViewController, CLLocationManagerDelegate,  U
         chefAnimation = AnimationView(name: "chefSpeaks")
         let center = self.view.center
         chefAnimation?.frame = CGRect.init(x: -center.x - 20, y: -center.y - 150
-            , width: self.view.frame.width * 2.1, height: self.view.frame.height * 2.1)
+            ,  width: self.view.frame.width * 2.1, height: self.view.frame.height * 2.1)
         chefAnimation?.isUserInteractionEnabled = false
         self.view.addSubview(chefAnimation!)
 
-
+    
 
     }
 
@@ -98,6 +106,11 @@ class TempChatBotViewController: UIViewController, CLLocationManagerDelegate,  U
 
     }
 
+    @IBAction func tappedChef(_ sender: Any) {
+        print("Tapped on Chefbot")
+        currChefPersonality = (currChefPersonality + 1)%3
+    }
+    
     
     func sendToBackend() {
         let userInput = input.text
@@ -118,10 +131,10 @@ class TempChatBotViewController: UIViewController, CLLocationManagerDelegate,  U
                 if (messageData != "") {
                     print("message sent from backend: ")
                     print(messageData)
-                    self.sayBadInput(messageData)       // simple message
+                    self.sayBadInput(self.query.curr, message: messageData)       // simple message
                     self.deleteInfo(self.query.curr)    // deletes appropriate info and -1 from curr attribute
                     // asks the appropriate question
-                    self.askQuestion(self.query.curr)
+                    //self.askQuestion(self.query.curr)
                     self.input.text = ""
                 } else {
                     let resData = json["restaurants"]
@@ -136,7 +149,7 @@ class TempChatBotViewController: UIViewController, CLLocationManagerDelegate,  U
             case .failure(let error):
                 print(".failure was entered")
                 print(error)
-                self.sayBadInput()                      // simple message
+                self.sayBadInput(self.query.curr)                      // simple message
                 self.deleteInfo(self.query.curr)        // deletes appropriate info and -1 from curr attribute
                 // asks the appropriate question
             }
@@ -220,28 +233,46 @@ class TempChatBotViewController: UIViewController, CLLocationManagerDelegate,  U
 
 
     func askQuestion(_ n: Int) {
+        let personality = chefPersonality[currChefPersonality]
+        var messageDict = normie
+        if (personality == "sassy"){
+            messageDict = sassy
+        } else if (personality == "edgelord") {
+            messageDict = edgelord
+        }
         chefwiggle()
         if n == 0 {
-            craveBotText.text = "Okay! Where would you \n like to eat today?"
+            craveBotText.text = messageDict[0]
         } else if n == 1 {
-            craveBotText.text = "What kind of food \n are you craving?"
+            craveBotText.text = messageDict[1]
         } else if n == 2 {
-            craveBotText.text = "How much are you \n looking to spend?"
+            craveBotText.text = messageDict[2]
         } else if n > 2 {
-            craveBotText.text = "I found some restaurants! \n Swipe to take a look!"
+            craveBotText.text = messageDict[3]
         }
         print(craveBotText.text!)
     }
 
-    func sayBadInput(_ message: String = "Sorry, I don't understad.") {
+    func sayBadInput(_ n: Int, message: String = "Sorry, I don't understad.") {
         chefwiggle()
-        craveBotText.pauseTyping()
-        askQuestion(query.curr)
-       // didSet {
-         //   if (loaded){
-             //   loadChartData()
-           // }
-        //}
+        let personality = chefPersonality[currChefPersonality]
+        var messageDict = normie
+        if (personality == "sassy"){
+            messageDict = sassy
+        } else if (personality == "edgelord") {
+            messageDict = edgelord
+        }
+        chefwiggle()
+        if n == 0 {
+            craveBotText.text = message + messageDict[0]!
+        } else if n == 1 {
+            craveBotText.text = message + messageDict[1]!
+        } else if n == 2 {
+            craveBotText.text = message + messageDict[2]!
+        } else if n > 2 {
+            craveBotText.text = message + messageDict[3]!
+        }
+        print(craveBotText.text!)
     }
 
 
@@ -261,14 +292,14 @@ class TempChatBotViewController: UIViewController, CLLocationManagerDelegate,  U
         }
     }
     
+    
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        if (identifier == "swipeLeft"){
-            if (restaurantList.count == 0){
-                return false
-            }
-            return true
+        if (restaurantList.count == 0){
+            return false
         }
-        return false
+         print(restaurantList.count)
+        return true
+
     }
 }
 
@@ -276,9 +307,13 @@ extension UIViewController {
     @objc func swipeAction(swipe:UISwipeGestureRecognizer) {
         switch swipe.direction.rawValue {
         case 1:
-            performSegue(withIdentifier: "swipeRight", sender: self)
+            if (shouldPerformSegue(withIdentifier: "swipeRight", sender: self)){
+                performSegue(withIdentifier: "swipeRight", sender: self)
+            }
         case 2:
-            performSegue(withIdentifier: "swipeLeft", sender: self)
+            if (shouldPerformSegue(withIdentifier: "swipeLeft", sender: self)){
+                performSegue(withIdentifier: "swipeLeft", sender: self)
+            }
         default:
             break
         }

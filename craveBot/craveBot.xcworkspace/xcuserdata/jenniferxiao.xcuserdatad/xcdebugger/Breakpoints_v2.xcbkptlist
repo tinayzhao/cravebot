@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "craveBot/ViewControllers/TempChatBotViewController.swift"
-            timestampString = "578122285.278168"
+            timestampString = "578197015.267924"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "craveBot/ViewControllers/TempChatBotViewController.swift"
-            timestampString = "578122285.2788219"
+            timestampString = "578197015.268766"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "craveBot/ViewControllers/TempChatBotViewController.swift"
-            timestampString = "578122285.279174"
+            timestampString = "578197015.2693909"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
             landmarkName = "textFieldShouldReturn(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "craveBot/ViewControllers/TempChatBotViewController.swift"
-            timestampString = "578122285.279492"
+            timestampString = "578197015.27042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
             landmarkName = "textFieldShouldReturn(_:)"
             landmarkType = "7">
          </BreakpointContent>
