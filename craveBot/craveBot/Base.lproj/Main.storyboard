@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SD1-ef-hHw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SD1-ef-hHw">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -126,16 +126,7 @@
                     <view key="view" contentMode="scaleToFill" id="tZ9-Hi-ttq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="craveLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Psc-vz-I1r">
-                                <rect key="frame" x="111.5" y="323" width="152" height="41"/>
-                            </imageView>
-                        </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="Psc-vz-I1r" firstAttribute="centerX" secondItem="0XS-C0-uAE" secondAttribute="centerX" id="2XY-ku-pbq"/>
-                            <constraint firstItem="Psc-vz-I1r" firstAttribute="centerY" secondItem="0XS-C0-uAE" secondAttribute="centerY" id="cPz-ui-Cd2"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="0XS-C0-uAE"/>
                     </view>
                     <navigationItem key="navigationItem" id="dFl-Vb-FBC"/>
@@ -258,14 +249,13 @@
     </scenes>
     <resources>
         <image name="chatBubble" width="322" height="222"/>
-        <image name="craveLogo" width="152" height="41"/>
-        <image name="ic_undo" width="21.5" height="21.5"/>
-        <image name="kbbq" width="301" height="526"/>
-        <image name="left_arrow" width="700" height="600"/>
-        <image name="pinpoint" width="9216" height="9216"/>
-        <image name="right_arrow" width="700" height="600"/>
+        <image name="ic_undo" width="21" height="21"/>
+        <image name="kbbq" width="602" height="1052"/>
+        <image name="left_arrow" width="350" height="300"/>
+        <image name="pinpoint" width="64" height="64"/>
+        <image name="right_arrow" width="350" height="300"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="W6g-lT-Utw"/>
+        <segue reference="hmH-Hx-a56"/>
     </inferredMetricsTieBreakers>
 </document>
