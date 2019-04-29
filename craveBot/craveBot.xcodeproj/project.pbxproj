@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1922F49D2276B9A500897797 /* edgelord.json in Resources */ = {isa = PBXBuildFile; fileRef = 1922F49B2276B9A500897797 /* edgelord.json */; };
-		1922F4A02276BA9200897797 /* chefgirl.json in Resources */ = {isa = PBXBuildFile; fileRef = 1922F49F2276BA9200897797 /* chefgirl.json */; };
+		1922F4A42276C9CF00897797 /* chefgirl.json in Resources */ = {isa = PBXBuildFile; fileRef = 1922F4A22276C9CF00897797 /* chefgirl.json */; };
+		1922F4A52276C9CF00897797 /* edgelord.json in Resources */ = {isa = PBXBuildFile; fileRef = 1922F4A32276C9CF00897797 /* edgelord.json */; };
 		19259BDD226A313B001AE9F0 /* TempChatBotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19259BDC226A313B001AE9F0 /* TempChatBotViewController.swift */; };
 		19259BDF226A3784001AE9F0 /* chefSpeaks.json in Resources */ = {isa = PBXBuildFile; fileRef = 19259BDE226A3784001AE9F0 /* chefSpeaks.json */; };
 		1958CF4D227155BE00ECFCC3 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1958CF4C227155BE00ECFCC3 /* CoreLocation.framework */; };
@@ -55,8 +55,8 @@
 
 /* Begin PBXFileReference section */
 		06E5DC638331D3BBEE335A00 /* Pods-craveBotTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-craveBotTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-craveBotTests/Pods-craveBotTests.release.xcconfig"; sourceTree = "<group>"; };
-		1922F49B2276B9A500897797 /* edgelord.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = edgelord.json; path = ../../../../../Desktop/edgelord.json; sourceTree = "<group>"; };
-		1922F49F2276BA9200897797 /* chefgirl.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = chefgirl.json; path = ../../../../../Desktop/chefgirl.json; sourceTree = "<group>"; };
+		1922F4A22276C9CF00897797 /* chefgirl.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chefgirl.json; sourceTree = "<group>"; };
+		1922F4A32276C9CF00897797 /* edgelord.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = edgelord.json; sourceTree = "<group>"; };
 		19259BDC226A313B001AE9F0 /* TempChatBotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempChatBotViewController.swift; sourceTree = "<group>"; };
 		19259BDE226A3784001AE9F0 /* chefSpeaks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chefSpeaks.json; sourceTree = "<group>"; };
 		1958CF4C227155BE00ECFCC3 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -120,6 +120,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1922F4A12276C94100897797 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		2919130F2268B572000498C5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -154,6 +161,7 @@
 		29807FDE2262AF7100B785F7 /* craveBot */ = {
 			isa = PBXGroup;
 			children = (
+				1922F4A12276C94100897797 /* Resources */,
 				2919130F2268B572000498C5 /* Views */,
 				29807FDF2262AF7100B785F7 /* AppDelegate.swift */,
 				291913122268B92F000498C5 /* data.json */,
@@ -163,8 +171,8 @@
 				29807FE62262AF7400B785F7 /* Assets.xcassets */,
 				29807FE82262AF7400B785F7 /* LaunchScreen.storyboard */,
 				19259BDE226A3784001AE9F0 /* chefSpeaks.json */,
-				1922F49F2276BA9200897797 /* chefgirl.json */,
-				1922F49B2276B9A500897797 /* edgelord.json */,
+				1922F4A22276C9CF00897797 /* chefgirl.json */,
+				1922F4A32276C9CF00897797 /* edgelord.json */,
 				29807FEB2262AF7400B785F7 /* Info.plist */,
 			);
 			path = craveBot;
@@ -342,15 +350,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				19259BDF226A3784001AE9F0 /* chefSpeaks.json in Resources */,
-				1922F4A02276BA9200897797 /* chefgirl.json in Resources */,
 				29807FEA2262AF7400B785F7 /* LaunchScreen.storyboard in Resources */,
 				29807FE72262AF7400B785F7 /* Assets.xcassets in Resources */,
-				1922F49D2276B9A500897797 /* edgelord.json in Resources */,
 				29237F222265B70300B332EE /* CardView.xib in Resources */,
 				291913132268B92F000498C5 /* data.json in Resources */,
+				1922F4A42276C9CF00897797 /* chefgirl.json in Resources */,
 				2916903C2269B1B700384325 /* (null) in Resources */,
 				2916903422699FE200384325 /* (null) in Resources */,
 				29807FE52262AF7100B785F7 /* Main.storyboard in Resources */,
+				1922F4A52276C9CF00897797 /* edgelord.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
